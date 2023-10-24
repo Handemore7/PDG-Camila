@@ -1,0 +1,74 @@
+---
+import { logoBlanco } from '../../public/assets/index'
+import { logoNegro } from '../../public/assets/index'
+const { path } = Astro.props
+
+---
+
+<style>
+    .navBarTransition {
+        background-color: white;
+        opacity: 100%;
+        color: black;
+    }
+
+    .imgTransition{
+        height: 10vh;
+    }
+
+    .logoContainerTransition {
+        margin: .5rem 0px;
+    }
+</style>
+
+<nav id="navBar" class="bg-black opacity-75 flex flex-row justify-between text-white px-[5vw] items-center text-lg fixed w-full top-0 left-0 transition-all z-50">
+    <div class="hover:scale-105 transition-all group">
+        <a href="/AreasDeTrabajo" class="inline-flex justify-center w-full rounded-md px-4 py-2 text-jet-1 text-lg">Áreas de trabajo</a>
+        <span class={`absolute -bottom-1 left-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2
+       `}/>
+		<span class={`absolute -bottom-1 right-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
+    </div>
+    <div class="hover:scale-105 transition-all group">
+        <a href="/VocesDeLasComunidades">Voces de las comunidades </a>
+        <span class={`absolute -bottom-1 left-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
+		<span class={`absolute -bottom-1 right-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
+    </div>
+    <div class="hover:scale-105 transition-all group">
+        <a href="/PolicyBrief">Policy brief</a>
+        <span class={`absolute -bottom-1 left-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
+		<span class={`absolute -bottom-1 right-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
+    </div>
+    <div id="logoContainer" class="my-4 hover:scale-105 transition-all">
+        <a href="/" class="">
+            <img id="navBarLogo" src={logoBlanco.src} alt="logo" class="h-[15vh] transition-all">
+        </a>
+    </div>
+    <div class="hover:scale-105 transition-all group">
+        <a href="/GaleriaDigital">Galeria digital</a>
+        <span class={`absolute -bottom-1 left-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
+		<span class={`absolute -bottom-1 right-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
+    </div>
+    <div class="hover:scale-105 transition-all group">
+        <a href="/QuienesSomos">¿Quienes somos?</a>
+        <span class={`absolute -bottom-1 left-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
+		<span class={`absolute -bottom-1 right-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
+    </div>
+</nav>
+
+<script is:inline define:vars={{logoNegro, logoBlanco}}>
+    window.addEventListener('scroll', function () {
+        var header = this.document.querySelector('#navBar')
+        var logo = this.document.querySelector('#navBarLogo')
+        var logoContainer = this.document.querySelector('#logoContainer')
+
+        header.classList.toggle('navBarTransition',this.window.scrollY > 0)
+        logo.classList.toggle('imgTransition',this.window.scrollY > 0)
+        logoContainer.classList.toggle('logoContainerTransition',this.window.scrollY > 0)
+
+        if (this.window.scrollY > 0) {
+            logo.src = logoNegro.src
+        } else {
+            logo.src = logoBlanco.src
+        }
+    })
+</script>
