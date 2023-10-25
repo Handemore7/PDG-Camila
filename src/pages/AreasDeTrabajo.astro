@@ -1,7 +1,61 @@
 ---
 import NavBar from "../Components/NavBar.astro";
+import Footer from "../Components/Footer.astro";
+import section1 from '../../public/assets/section1.png'
+import section2 from '../../public/assets/section2.png'
+import section3 from '../../public/assets/section3.png'
+
+const itemsAreas = [
+    {
+        img: section1.src,
+        title: 'Reincorporación',
+        description: 'Reincorporación de las mujeres firmantes de paz a la vida del común',
+        url: ''
+    },
+    {
+        img: section2.src,
+        title: 'PDETS',
+        description: 'Programas de Desarrollo con Enfoque  Territorial',
+        url: ''
+    },
+    {
+        img: section3.src,
+        title: 'Comunidad LGBT en la construcción de paz',
+        description: 'Participación de comunidad LGBT para la construcción de paz',
+        url: ''
+    },
+    {
+        img: section3.src,
+        title: 'Mujeres indigenas en contsrucción de paz',
+        description: 'Participación de mujeres indigenas para la construcción de paz',
+        url: ''
+    },
+]
 ---
 
-<div>
+<div class="bg-black">
     <NavBar path="AreasDeTrabajo"/>
+    <div class="text-white pt-[20vh] px-[15vh] mb-20">
+        <p class="text-[2rem]">Áreas de trabajo en el </p>
+        <p class="text-[3rem]">Acuerdo Final de  paz</p>
+        <p class="">Se identificaron 4 principales áreas de mejora en la implementación del acuerdo para los grupos diferentes grupos afectados</p>
+    </div>
+    <div class="flex justify-center mb-20">
+        <div class="flex flex-wrap w-[80%] justify-center">
+            {
+                itemsAreas.map((item)=> 
+                <div class="text-white w-[30vw] h-[50vh] m-5 flex flex-col justify-center items-center relative overflow-hidden">
+                    <img src={item.img} class=" object-fill absolute z-10" alt=""/>
+                    <div class="w-full h-full bg-black absolute opacity-70 z-20"/>
+                    <div class="w-[70%] mb-10 text-center z-30">
+                        <p class="text-[1.7rem] font-semibold">{item.title}</p>
+                        <p class=" font-light">{item.description}</p>
+                    </div>
+                    <button class="z-30 bg-[#BA68C8] px-10 py-1 hover:scale-110 transition-all rounded-full">Ver</button>
+                </div>
+                )
+            }
+        </div>
+    </div>
+    <Footer />
 </div>

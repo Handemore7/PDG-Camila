@@ -1,8 +1,40 @@
 ---
 import NavBar from "../Components/NavBar.astro";
+import Footer from '../Components/Footer.astro'
+import iconPopUp from '../../public/assets/policyPopUpIcon.png'
 ---
 
-<div>
+<div class="">
     <NavBar path="PolicyBrief"/>
-    policybrief
+    <div id="popUp" class="fixed top-0 flex items-center z-10 h-[100vh]">
+        <div class="w-2/3 bg-gradient-to-tr from-[#515152] from-[35%] to-[#C3A9E4] z-50 mx-auto rounded-3xl border-2 border-white flex flex-col items-center text-justify translate-y-[5%]">
+            <p class="w-[85%] py-[10vh] text-white">En el 2023 se cumplen los primeros cinco años de implementación de los Planes de Desarrollo con Enfoque Territorial (PDET) creados con base en el Punto 1 del Acuerdo Final de Paz. La norma relevante (Decreto-Ley 893 de 2017, art. 4º) abre la posibilidad para que los PDET se puedan revisar y actualizar de forma participativa cada cinco años, de modo que se encamine su complimiento hacia la finalidad de superar las desigualdades estructurales que afectan a las zonas rurales del país. t, en particular a la Unidad para la Implementación del Acuerdo de Paz, a la Agencia para la Renovación del Territorio (ART), y a las Alcaldías municipales de los 24 municipios que conforman el mencionado PDET.</p>
+            <div class="w-full flex items-center justify-center">
+                <button id="popUpBtn" class="bg-gradient-to-r from-[#CD84F1] to-[#7158E2] text-white px-10 py-1 rounded-full mb-16 transition-all hover:scale-110">Ver mas</button>
+            </div>
+            <img src={iconPopUp.src} class="absolute right-16 bottom-0" alt="">
+        </div>
+        <div class="absolute top-0 w-[100vw] h-[100vh] bg-black opacity-50"/>
+        
+    </div>
+    <div class="mt-[20vh] px-[15vh]">
+        <h1 class="text-[3rem] text-[#BA68C8] font-semibold">Policy Brief</h1>
+        <h2 class="text-[2rem] w-[70%] my-7 font-semibold">Implementación de las iniciativas de género en el PDET Alto Patía – Norte del Cauca</h2>
+        <p class="columns-2 gap-14 text-justify mb-10">
+            El Acuerdo de Paz de 2016 entre la guerrilla de las FARC-EP y el Estado colombiano consagró un amplio catálogo de disposiciones dirigidas a transformar las consecuencias negativas del conflicto en mujeres y personas LGBTI. Esto es lo que se conoce como el enfoque de género del Acuerdo de Paz. Que dichas disposiciones hayan sido incluidas en la negociación y en el Acuerdo firmado por las partes ha sido elogiado por quienes trabajan en temas de construcción de paz, y con mucha razón pues significó un gran avance (aunque inicialmente solo sea en el papel) en comparación con otros procesos de paz previos tanto en Colombia como en otras partes del mundo.
+            <br/>
+            <br/>
+            Este ejercicio, en este momento, es relevante por varias razones. Primero, es el resultado de un proceso participativo realizado conjuntamente entre el equipo de investigación del proyecto ‘(des)igualdad de género y proceso de paz’ y organizaciones sociales con presencia en el PDET Alto Patía y Norte del Cauca. El proceso seguido por el equipo de investigación y las organizaciones sociales aliadas complementa entonces la importante labor realizada por la Veeduría Social al PDET de Alto Patía y Norte del Cauca, que viene desarrollando una labor de seguimiento al PDET desde hace varios años. Segundo, porque este proyecto buscó apoyar las voces de las organizaciones sociales y comunidades que habitan en los municipios del PDET, con el objetivo de contribuir a la evaluación de la implementación del Acuerdo de Paz de 2016 desde la voz de las comunidades para completar otros informes presentados por los organismos e instituciones que hacen seguimiento al Acuerdo. Y tercero, porque, como otras instituciones lo han señalado ya1, en el 2023 se cumplen los primeros cinco años de la ejecución de los PDET-PATR y es necesario evaluar su implementación para proponer los ajustes que sean necesarios. Lo anterior, con base en el último inciso del artículo 4º del Decreto-Ley 893 de 2017, según el cual “El PATR se revisará y actualizará cada cinco (5) años de forma participativa en el territorio, en los términos establecidos en el Artículo 5 del presente Decreto.”
+            <br/>
+            <br/>
+            Sin embargo, pasar del papel a la práctica, de lo general a lo concreto, siempre conlleva unas dificultades que es mejor identificar lo más pronto posible para realizar los ajustes necesarios oportunamente. Eso es lo que nos proponemos realizar en este documento, que aborda de forma específica las iniciativas de género incluidas en el PDET Alto Patía – Norte del Cauca. A partir de la recolección de información primaria a través de la consulta de los sistemas de información disponibles, de derechos de petición a la Agencia de Renovación del Territorio (ART) y de la realización de dos talleres con mujeres lideresas provenientes de los 24 municipios que conforman el PDET Alto Patía – Norte del Cauca, este documento se compone de una primera parte diagnóstica, que identifica las principales dificultades que enfrenta la implementación de dichas medidas de género, y una segunda parte propositiva que recoge un conjunto de recomendaciones elaboradas colectivamente con las mujeres lideresas durante los mencionados talleres.
+        </p>
+    </div>
+    <Footer />
 </div>
+
+<script is:inline>
+    document.querySelector('#popUpBtn').addEventListener('click', ()=> {
+        document.querySelector('#popUp').classList.add('hidden')
+    })
+</script>
