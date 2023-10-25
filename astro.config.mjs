@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://Handemore7.github.io',
-  base: '/PDG-Camila',
+  /* base: '/PDG-Camila', */
 });
