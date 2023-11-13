@@ -2,7 +2,12 @@
 import NavBar from '../Components/NavBar.astro'
 import Footer from '../Components/Footer.astro'
 import bannerBG from '../../public/assets/Banner.png'
+import bannerContent from '../../public/assets/Banner2.png'
 import documental from '../../public/assets/documental.png'
+import lorem from '../../public/assets/Lorem.png'
+import secciones1 from '../../public/assets/SeccionVocesDeLasComunidades.png'
+import secciones2 from '../../public/assets/SeccionFundacionLasManuelitas.png'
+import secciones3 from '../../public/assets/SeccionAreasDeTrabajo.png'
 
 ---
 
@@ -16,8 +21,38 @@ import documental from '../../public/assets/documental.png'
 	</head>
 	<body>
 		<NavBar path="home"/>
-		<section id="banner" class="">
-			<img class="w-full h-[100vh]" src={bannerBG.src}/>
+		<section id="banner" class="bg-[#79097E] pt-[20vh]">
+			<div class=" w-full h-[80vh] flex absolute">
+				<img src={bannerContent.src} class=" m-auto">
+			</div>
+			<img class="w-full h-[80vh]" src={bannerBG.src}/>
+		</section>
+		<div class="h-[12vh] bg-[#EDEDED] overflow-hidden">
+			<div class="flex h-full w-[200vw]">
+				<img src={lorem.src} class="h-[50%] m-auto">
+			</div>
+		</div>
+		<section id="secciones">
+			<div class=" w-full flex flex-row">
+				<div class="w-1/3 relative flex">
+					<div class="w-full flex absolute bottom-24 ">
+						<button class="bg-[#19001B] h-12 mx-auto w-32 rounded-full font-bold text-white py-3 hover:shadow-sm hover:shadow-white hover:scale-110 transition-all">Ver</button>
+					</div>
+					<img src={secciones1.src}>
+				</div>
+				<div class="w-1/3 relative">
+					<div class="w-full flex absolute bottom-24 ">
+						<button class="bg-[#19001B] h-12 mx-auto w-32 rounded-full font-bold text-white py-3 hover:shadow-sm hover:shadow-white hover:scale-110 transition-all">Ver</button>
+					</div>
+					<img src={secciones2.src}>
+				</div>
+				<div class="w-1/3 relative">
+					<div class="w-full flex absolute bottom-24 ">
+						<button class="bg-[#19001B] h-12 mx-auto w-32 rounded-full font-bold text-white py-3 hover:shadow-sm hover:shadow-white hover:scale-110 transition-all">Ver</button>
+					</div>
+					<img src={secciones3.src}>
+				</div>
+			</div>
 		</section>
 		<section id="mainContent" class="bg-black px-[15vh] py-10">
 			<div class="flex flex-row w-full justify-between text-white">
