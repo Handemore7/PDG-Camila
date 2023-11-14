@@ -2,16 +2,14 @@
 import NavBar from "../Components/NavBar.astro";
 import Footer from "../Components/Footer.astro";
 import Tela from '../../public/assets/Tela.png';
-import ChumbeBasico from '../../public/assets/Chumpo-basico1.png';
+import Img1 from '../../public/assets/img1.png';
 import ChumbeVerde from '../../public/assets/chumpeVerde.png';
 import ChumbeRojo from '../../public/assets/chumpeRojo.png';
 import ChumbeAmarillo from '../../public/assets/chumpeAmarillo.png';
 import ChumbeMorado from '../../public/assets/chumpeMorado.png';
 ---
 
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-</style>
+
 
 <html lang="es">
     <NavBar path="TelaDeLaResistencia"/>
@@ -22,24 +20,35 @@ import ChumbeMorado from '../../public/assets/chumpeMorado.png';
         </div>
         <div class="relative">
             <img src={Tela.src} class="h-[80vh]" alt="">
-            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[63%] left-[32%]" onclick='hola(event)'/>
-            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[53%]" />
-            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[55%] left-[75%]" />
-            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[73%] left-[22%]" />
-            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[60%] left-[40%]" />
-            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[50%] left-[80%]" />
-            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[75%] left-[30%]" />
-            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[54%] left-[49%]" />
-            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[22%] left-[55%]" />
-            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[46%]" />
-            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[62%] left-[73%]" />
-            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[71%] left-[81%]" />
+            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[63%] left-[32%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
+            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[53%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
+            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[55%] left-[75%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
+            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[73%] left-[22%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
+            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[60%] left-[40%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
+            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[50%] left-[80%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
+            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[75%] left-[30%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
+            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[54%] left-[49%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
+            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[22%] left-[55%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
+            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[46%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
+            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[62%] left-[73%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
+            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[71%] left-[81%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
         </div>
         <div class="">
-            <img id="verde" src={ChumbeVerde.src}      class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event)" />
-            <img id="rojo" src={ChumbeRojo.src}       class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event)" />
-            <img id="amarillo" src={ChumbeAmarillo.src}   class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event)" />
-            <img id="morado" src={ChumbeMorado.src}     class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event)" />
+            <img id="verde" src={ChumbeVerde.src}      class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
+            <img id="rojo" src={ChumbeRojo.src}       class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
+            <img id="amarillo" src={ChumbeAmarillo.src}   class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
+            <img id="morado" src={ChumbeMorado.src}     class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
+        </div>
+        <div id="modal" class=" absolute w-[95vw] backdrop-blur-md hidden "onclick="closeModal()" >
+            <div class="w-[80vw] h-[70vh] m-auto rounded-2xl text-white flex flex-col items-center">
+                <div class="z-20 flex flex-col items-center absolute">
+                    <span class=" text-center w-[40vw] font-tipo font-bold text-2xl my-7">Resistencia en lo politico</span>
+                    <p class="text-center w-[45vw] font-robot italic">“A veces a los hombres se les sube como la cerveza, entonces consultan las ideas con nosotras, por si no es descabellada. Por eso le digo yo que en ese tema de resistencia acá, nosotras hemos sido fundamentales. Las mujeres somos como un polo a tierra de la organización”</p>
+                    <img src={Img1.src} class="w-[25%] my-4" >
+                    <p class="w-[60vw] font-robot font-semibold">Aunque los hombres suelen hablar primero, siempre piden la opinión de las mujeres para asegurarse de que las decisiones sean sensatas. Por ejemplo, en la consejeria de Caldono, hay 3 hombres y 3 mujeres, y al momento de tomar una desición los hombres se aseguran de consultarlo con ellas, porque son más aterrizadas. Esto demuestra que las mujeres no solo equilibran las decisiones, sino que también las enriquecen. Es como si fueran la base sólida en la organización, asegurándose de que todo funcione bien.</p>
+                </div>
+                <div class="w-[80vw] h-full absolute z-10 opacity-60 border-2 border-white bg-gradient-to-tr from-[#010E12] to-[#DABBFF] "/>
+            </div>
         </div>
     </div>
     <Footer />
@@ -57,14 +66,16 @@ import ChumbeMorado from '../../public/assets/chumpeMorado.png';
     const puntosAmarillos = document.querySelectorAll('#amarillos')
     const puntosMorados = document.querySelectorAll('#morados')
 
+    const modal = document.querySelector('#modal')
+
     function showPoints(event) {
         switch (event.target.id) {
             case 'verde':
             if (event.target.className.includes('active')) {
-                    chumbeVerde.classList.remove('grayscale');
-                    chumbeRojo.classList.remove('grayscale');
-                    chumbeAmarillo.classList.remove('grayscale');
-                    chumbeMorado.classList.remove('grayscale');
+                    chumbeVerde.classList.add('grayscale');
+                    chumbeRojo.classList.add('grayscale');
+                    chumbeAmarillo.classList.add('grayscale');
+                    chumbeMorado.classList.add('grayscale');
                     chumbeVerde.classList.remove('active');
                 for (let index = 0; index < puntosVerdes.length; index++) {
                     puntosVerdes[index].classList.add('hidden')
@@ -91,10 +102,10 @@ import ChumbeMorado from '../../public/assets/chumpeMorado.png';
                 break;
             case 'rojo':
             if (event.target.className.includes('active')) {
-                    chumbeVerde.classList.remove('grayscale');
-                    chumbeRojo.classList.remove('grayscale');
-                    chumbeAmarillo.classList.remove('grayscale');
-                    chumbeMorado.classList.remove('grayscale');
+                    chumbeVerde.classList.add('grayscale');
+                    chumbeRojo.classList.add('grayscale');
+                    chumbeAmarillo.classList.add('grayscale');
+                    chumbeMorado.classList.add('grayscale');
                     chumbeRojo.classList.remove('active');
                 for (let index = 0; index < puntosVerdes.length; index++) {
                     puntosVerdes[index].classList.add('hidden')
@@ -121,10 +132,10 @@ import ChumbeMorado from '../../public/assets/chumpeMorado.png';
                 break;
             case 'amarillo':
             if (event.target.className.includes('active')) {
-                    chumbeVerde.classList.remove('grayscale');
-                    chumbeRojo.classList.remove('grayscale');
-                    chumbeAmarillo.classList.remove('grayscale');
-                    chumbeMorado.classList.remove('grayscale');
+                    chumbeVerde.classList.add('grayscale');
+                    chumbeRojo.classList.add('grayscale');
+                    chumbeAmarillo.classList.add('grayscale');
+                    chumbeMorado.classList.add('grayscale');
                     chumbeAmarillo.classList.remove('active');
                 for (let index = 0; index < puntosVerdes.length; index++) {
                     puntosVerdes[index].classList.add('hidden')
@@ -151,10 +162,10 @@ import ChumbeMorado from '../../public/assets/chumpeMorado.png';
                 break;
             case 'morado':
                 if (event.target.className.includes('active')) {
-                    chumbeVerde.classList.remove('grayscale');
-                    chumbeRojo.classList.remove('grayscale');
-                    chumbeAmarillo.classList.remove('grayscale');
-                    chumbeMorado.classList.remove('grayscale');
+                    chumbeVerde.classList.add('grayscale');
+                    chumbeRojo.classList.add('grayscale');
+                    chumbeAmarillo.classList.add('grayscale');
+                    chumbeMorado.classList.add('grayscale');
                     chumbeMorado.classList.remove('active');
                 for (let index = 0; index < puntosVerdes.length; index++) {
                     puntosVerdes[index].classList.add('hidden')
@@ -182,7 +193,11 @@ import ChumbeMorado from '../../public/assets/chumpeMorado.png';
         }
     }
 
-    function name(params) {
-        
+    function showModal(titulo, textoArriba, textoAbajo, img) {
+        modal.classList.toggle('hidden')
+    }
+
+    function closeModal() {
+        modal.classList.add('hidden')
     }
 </script>
