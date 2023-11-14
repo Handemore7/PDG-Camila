@@ -10,6 +10,9 @@ import secciones2 from '../../public/assets/SeccionFundacionLasManuelitas.png'
 import secciones3 from '../../public/assets/SeccionAreasDeTrabajo.png'
 
 ---
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+</style>
 
 <html lang="es">
 	<head>
@@ -34,52 +37,27 @@ import secciones3 from '../../public/assets/SeccionAreasDeTrabajo.png'
 		</div>
 		<section id="secciones">
 			<div class=" w-full flex flex-row">
-				<div class="w-1/3 relative flex">
-					<div class="w-full flex absolute bottom-24 ">
-						<button class="bg-[#19001B] h-12 mx-auto w-32 rounded-full font-bold text-white py-3 hover:shadow-sm hover:shadow-white hover:scale-110 transition-all">Ver</button>
+				<div class="w-1/3 relative flex z-10 hover:z-20 hover:scale-105 transition-all">
+					<div class="w-full flex absolute bottom-24">
+						<button class="bg-[#19001B] h-12 mx-auto w-32 rounded-full font-bold text-white py-3 hover:shadow-sm hover:shadow-white hover:scale-110 transition-all font-tipo">Ver</button>
 					</div>
 					<img src={secciones1.src}>
 				</div>
-				<div class="w-1/3 relative">
+				<div class="w-1/3 relative z-10 hover:z-20 hover:scale-105 transition-all">
 					<div class="w-full flex absolute bottom-24 ">
-						<button class="bg-[#19001B] h-12 mx-auto w-32 rounded-full font-bold text-white py-3 hover:shadow-sm hover:shadow-white hover:scale-110 transition-all">Ver</button>
+						<button class="bg-[#19001B] h-12 mx-auto w-32 rounded-full font-bold text-white py-3 hover:shadow-sm hover:shadow-white hover:scale-110 transition-all font-tipo">Ver</button>
 					</div>
 					<img src={secciones2.src}>
 				</div>
-				<div class="w-1/3 relative">
+				<div class="w-1/3 relative z-10 hover:z-20 hover:scale-105 transition-all">
 					<div class="w-full flex absolute bottom-24 ">
-						<button class="bg-[#19001B] h-12 mx-auto w-32 rounded-full font-bold text-white py-3 hover:shadow-sm hover:shadow-white hover:scale-110 transition-all">Ver</button>
+						<button class="bg-[#19001B] h-12 mx-auto w-32 rounded-full font-bold text-white py-3 hover:shadow-sm hover:shadow-white hover:scale-110 transition-all font-tipo">Ver</button>
 					</div>
 					<img src={secciones3.src}>
 				</div>
 			</div>
 		</section>
-		<section id="mainContent" class="bg-black px-[15vh] py-10">
-			<div class="flex flex-row w-full justify-between text-white">
-				<div class="bg-[#221931] h-[50vh] w-[52%] rounded-2xl p-7 relative">
-					<p class="font-bold text-2xl">Implementación de las iniciativas calificadas como de género y mujer rural en el PDET de Alto Patía – Norte del Cauca</p>
-					<p class="font-light mt-5">Conoce las principales dificultades que se observan en la implementación de las iniciativas calificadas como de género y mujer rural en el PDET de Alto Patía – Norte del Cauca, al tiempo que se formulan algunas recomendaciones a la institucionalidad involucrada</p>
-					<a href="/PolicyBrief">
-						<button class="bg-[#BA68C8] absolute bottom-7 px-12 py-1 rounded-full hover:bg-[#9a55a7] transition-all hover:scale-105">Ver</button>
-					</a>
-				</div>
-				<div class="bg-[#088831] h-[50vh] w-[42%] rounded-2xl p-7 relative">
-					<p class="font-bold text-2xl w-1/2">Voces de las comunidades</p>
-					<p class="font-light mt-5">Conoce de cara las historias de como las mujeres del municipio de Caldono, Cauca han estado viviendo el proceso de paz tras 5 años de su firma. Sus formas de resistencia frente a la violencia y las secuelas que esta ha dejado para ellas y sus comunidades</p>
-					<a href="/VocesDeLasComunidades">
-						<button class="bg-[#BA68C8] absolute bottom-7 px-12 py-1 rounded-full hover:bg-[#9a55a7] transition-all hover:scale-105">Ver</button>
-					</a>
-				</div>
-			</div>
-
-			<div class="w-full h-[50vh] relative mt-10">
-				<span class="text-white absolute z-10 text-5xl px-7 py-10">
-					Documental
-				</span>
-				<div class="bg-[rgba(121,9,126,.5)] w-full h-full rounded-2xl  absolute"/>
-				<img class="w-full h-full" src={documental.src} alt="">
-			</div>
-		</section>
+		
 		<Footer />
 	</body>
 </html>

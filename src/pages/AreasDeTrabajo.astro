@@ -4,6 +4,8 @@ import Footer from "../Components/Footer.astro";
 import section1 from '../../public/assets/section1.png'
 import section2 from '../../public/assets/section2.png'
 import section3 from '../../public/assets/section3.png'
+import section4 from '../../public/assets/section4.png'
+import flor from '../../public/assets/flor.png'
 
 const itemsAreas = [
     {
@@ -25,13 +27,20 @@ const itemsAreas = [
         url: ''
     },
     {
-        img: section3.src,
+        img: section4.src,
         title: 'Mujeres indigenas en contsrucción de paz',
         description: 'Participación de mujeres indigenas para la construcción de paz',
         url: ''
     },
 ]
+
+/* <div class="w-full h-full bg-black absolute opacity-70 z-20"/> */
+
 ---
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+</style>
+
 
 <div class="bg-black">
     <NavBar path="AreasDeTrabajo"/>
@@ -41,18 +50,21 @@ const itemsAreas = [
         <p class="">Se identificaron 4 principales áreas de mejora en la implementación del acuerdo para los grupos diferentes grupos afectados</p>
     </div>
     <div class="flex justify-center mb-20">
-        <div class="flex flex-wrap w-[80%] justify-center">
+        <div class="flex flex-wrap w-[80%] justify-center relative">
+            <img src={flor.src} class="absolute z-30 top-0 right-0 -translate-y-1/2 -translate-x-1/2" alt=""/>
             {
-                itemsAreas.map((item)=> 
+                itemsAreas.map((item, index)=> 
+                <>
                 <div class="text-white w-[30vw] h-[50vh] m-5 flex flex-col justify-center items-center relative overflow-hidden">
+                    
                     <img src={item.img} class=" object-fill absolute z-10" alt=""/>
-                    <div class="w-full h-full bg-black absolute opacity-70 z-20"/>
                     <div class="w-[70%] mb-10 text-center z-30">
-                        <p class="text-[1.7rem] font-semibold">{item.title}</p>
+                        <p class="text-[1.7rem] font-semibold font-tipo">{item.title}</p>
                         <p class=" font-light">{item.description}</p>
                     </div>
                     <button class="z-30 bg-[#BA68C8] px-10 py-1 hover:scale-110 transition-all rounded-full">Ver</button>
                 </div>
+                </>
                 )
             }
         </div>

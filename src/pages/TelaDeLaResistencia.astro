@@ -1,0 +1,46 @@
+---
+import NavBar from "../Components/NavBar.astro";
+import Footer from "../Components/Footer.astro";
+import Tela from '../../public/assets/Tela.png';
+import ChumbeBasico from '../../public/assets/Chumpo-basico1.png';
+import ChumbeVerde from '../../public/assets/chumpeVerde.png';
+import ChumbeRojo from '../../public/assets/chumpeRojo.png';
+import ChumbeAmarillo from '../../public/assets/chumpeAmarillo.png';
+import ChumbeMorado from '../../public/assets/chumpeMorado.png';
+---
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+</style>
+
+<html lang="es">
+    <NavBar path="TelaDeLaResistencia"/>
+    <div class="bg-[#19001B] flex flex-row w-full h-[100vh] pt-[20vh] items-center px-10 gap-10">
+        <div class="text-white flex-row w-[20%]">
+            <span class="font-tipo">La tela de la resistencia</span>
+            <p>Da clic sobre  el chumbe de la derecha y aparecerán puntos de colores. Cada uno de ellos te llevará a las disferentes formas de resistencia de diferentes resguardos indigenas Nasas Yuwe</p>
+        </div>
+        <div class="relative">
+            <img src={Tela.src} class="h-[80vh]" alt="">
+            <div id="verde" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[63%] left-[32%]" />
+            <div id="verde" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[53%]" />
+            <div id="verde" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[55%] left-[75%]" />
+            <div id="morado" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[73%] left-[22%]" />
+            <div id="morado" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[60%] left-[40%]" />
+            <div id="morado" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[50%] left-[80%]" />
+            <div id="Amarillo" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[75%] left-[30%]" />
+            <div id="Amarillo" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[54%] left-[49%]" />
+            <div id="Amarillo" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[22%] left-[55%]" />
+            <div id="Rojo" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[46%]" />
+            <div id="Rojo" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[62%] left-[73%]" />
+            <div id="Rojo" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[71%] left-[81%]" />
+        </div>
+        <div class="">
+            <img src={ChumbeVerde.src}      class="hover:scale-105 transition-all">
+            <img src={ChumbeRojo.src}       class="hover:scale-105 transition-all">
+            <img src={ChumbeAmarillo.src}   class="hover:scale-105 transition-all">
+            <img src={ChumbeMorado.src}     class="hover:scale-105 transition-all">
+        </div>
+    </div>
+    <Footer />
+</html>

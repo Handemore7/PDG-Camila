@@ -6,6 +6,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['"TT Norms"', 'sans-serif', ...defaultTheme.fontFamily.sans],
+				tipo: ['Rock Salt']
 			},
 		},
 	},
