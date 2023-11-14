@@ -22,25 +22,167 @@ import ChumbeMorado from '../../public/assets/chumpeMorado.png';
         </div>
         <div class="relative">
             <img src={Tela.src} class="h-[80vh]" alt="">
-            <div id="verde" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[63%] left-[32%]" />
-            <div id="verde" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[53%]" />
-            <div id="verde" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[55%] left-[75%]" />
-            <div id="morado" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[73%] left-[22%]" />
-            <div id="morado" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[60%] left-[40%]" />
-            <div id="morado" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[50%] left-[80%]" />
-            <div id="Amarillo" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[75%] left-[30%]" />
-            <div id="Amarillo" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[54%] left-[49%]" />
-            <div id="Amarillo" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[22%] left-[55%]" />
-            <div id="Rojo" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[46%]" />
-            <div id="Rojo" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[62%] left-[73%]" />
-            <div id="Rojo" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[71%] left-[81%]" />
+            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[63%] left-[32%]" onclick='hola(event)'/>
+            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[53%]" />
+            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[55%] left-[75%]" />
+            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[73%] left-[22%]" />
+            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[60%] left-[40%]" />
+            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[50%] left-[80%]" />
+            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[75%] left-[30%]" />
+            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[54%] left-[49%]" />
+            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[22%] left-[55%]" />
+            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[46%]" />
+            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[62%] left-[73%]" />
+            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[71%] left-[81%]" />
         </div>
         <div class="">
-            <img src={ChumbeVerde.src}      class="hover:scale-105 transition-all">
-            <img src={ChumbeRojo.src}       class="hover:scale-105 transition-all">
-            <img src={ChumbeAmarillo.src}   class="hover:scale-105 transition-all">
-            <img src={ChumbeMorado.src}     class="hover:scale-105 transition-all">
+            <img id="verde" src={ChumbeVerde.src}      class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event)" />
+            <img id="rojo" src={ChumbeRojo.src}       class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event)" />
+            <img id="amarillo" src={ChumbeAmarillo.src}   class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event)" />
+            <img id="morado" src={ChumbeMorado.src}     class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event)" />
         </div>
     </div>
     <Footer />
 </html>
+
+<script is:inline>
+
+    const chumbeVerde = document.querySelector('#verde')
+    const chumbeRojo = document.querySelector('#rojo')
+    const chumbeAmarillo = document.querySelector('#amarillo')
+    const chumbeMorado = document.querySelector('#morado')
+
+    const puntosVerdes = document.querySelectorAll('#verdes')
+    const puntosRojos = document.querySelectorAll('#rojos')
+    const puntosAmarillos = document.querySelectorAll('#amarillos')
+    const puntosMorados = document.querySelectorAll('#morados')
+
+    function showPoints(event) {
+        switch (event.target.id) {
+            case 'verde':
+            if (event.target.className.includes('active')) {
+                    chumbeVerde.classList.remove('grayscale');
+                    chumbeRojo.classList.remove('grayscale');
+                    chumbeAmarillo.classList.remove('grayscale');
+                    chumbeMorado.classList.remove('grayscale');
+                    chumbeVerde.classList.remove('active');
+                for (let index = 0; index < puntosVerdes.length; index++) {
+                    puntosVerdes[index].classList.add('hidden')
+                    puntosRojos[index].classList.add('hidden')
+                    puntosAmarillos[index].classList.add('hidden')
+                    puntosMorados[index].classList.add('hidden')
+                    } 
+                } else {
+                    chumbeVerde.classList.remove('grayscale');
+                    chumbeRojo.classList.add('grayscale');
+                    chumbeAmarillo.classList.add('grayscale');
+                    chumbeMorado.classList.add('grayscale');
+                    chumbeMorado.classList.remove('active');
+                    chumbeRojo.classList.remove('active');
+                    chumbeAmarillo.classList.remove('active');
+                    chumbeVerde.classList.add('active');
+                    for (let index = 0; index < puntosVerdes.length; index++) {
+                        puntosVerdes[index].classList.remove('hidden')
+                        puntosRojos[index].classList.add('hidden')
+                        puntosAmarillos[index].classList.add('hidden')
+                        puntosMorados[index].classList.add('hidden')
+                    }
+                }
+                break;
+            case 'rojo':
+            if (event.target.className.includes('active')) {
+                    chumbeVerde.classList.remove('grayscale');
+                    chumbeRojo.classList.remove('grayscale');
+                    chumbeAmarillo.classList.remove('grayscale');
+                    chumbeMorado.classList.remove('grayscale');
+                    chumbeRojo.classList.remove('active');
+                for (let index = 0; index < puntosVerdes.length; index++) {
+                    puntosVerdes[index].classList.add('hidden')
+                    puntosRojos[index].classList.add('hidden')
+                    puntosAmarillos[index].classList.add('hidden')
+                    puntosMorados[index].classList.add('hidden')
+                    } 
+                } else {
+                    chumbeVerde.classList.add('grayscale');
+                    chumbeRojo.classList.remove('grayscale');
+                    chumbeAmarillo.classList.add('grayscale');
+                    chumbeMorado.classList.add('grayscale');
+                    chumbeMorado.classList.remove('active');
+                    chumbeRojo.classList.add('active');
+                    chumbeAmarillo.classList.remove('active');
+                    chumbeVerde.classList.remove('active');
+                    for (let index = 0; index < puntosVerdes.length; index++) {
+                        puntosVerdes[index].classList.add('hidden')
+                        puntosRojos[index].classList.remove('hidden')
+                        puntosAmarillos[index].classList.add('hidden')
+                        puntosMorados[index].classList.add('hidden')
+                    }
+                }
+                break;
+            case 'amarillo':
+            if (event.target.className.includes('active')) {
+                    chumbeVerde.classList.remove('grayscale');
+                    chumbeRojo.classList.remove('grayscale');
+                    chumbeAmarillo.classList.remove('grayscale');
+                    chumbeMorado.classList.remove('grayscale');
+                    chumbeAmarillo.classList.remove('active');
+                for (let index = 0; index < puntosVerdes.length; index++) {
+                    puntosVerdes[index].classList.add('hidden')
+                    puntosRojos[index].classList.add('hidden')
+                    puntosAmarillos[index].classList.add('hidden')
+                    puntosMorados[index].classList.add('hidden')
+                    } 
+                } else {
+                    chumbeVerde.classList.add('grayscale');
+                    chumbeRojo.classList.add('grayscale');
+                    chumbeAmarillo.classList.remove('grayscale');
+                    chumbeMorado.classList.add('grayscale');
+                    chumbeMorado.classList.remove('active');
+                    chumbeRojo.classList.remove('active');
+                    chumbeAmarillo.classList.add('active');
+                    chumbeVerde.classList.remove('active');
+                    for (let index = 0; index < puntosVerdes.length; index++) {
+                        puntosVerdes[index].classList.add('hidden')
+                        puntosRojos[index].classList.add('hidden')
+                        puntosAmarillos[index].classList.remove('hidden')
+                        puntosMorados[index].classList.add('hidden')
+                    }
+                }
+                break;
+            case 'morado':
+                if (event.target.className.includes('active')) {
+                    chumbeVerde.classList.remove('grayscale');
+                    chumbeRojo.classList.remove('grayscale');
+                    chumbeAmarillo.classList.remove('grayscale');
+                    chumbeMorado.classList.remove('grayscale');
+                    chumbeMorado.classList.remove('active');
+                for (let index = 0; index < puntosVerdes.length; index++) {
+                    puntosVerdes[index].classList.add('hidden')
+                    puntosRojos[index].classList.add('hidden')
+                    puntosAmarillos[index].classList.add('hidden')
+                    puntosMorados[index].classList.add('hidden')
+                    } 
+                } else {
+                    chumbeVerde.classList.add('grayscale');
+                    chumbeRojo.classList.add('grayscale');
+                    chumbeAmarillo.classList.add('grayscale');
+                    chumbeMorado.classList.remove('grayscale');
+                    chumbeMorado.classList.add('active');
+                    chumbeRojo.classList.remove('active');
+                    chumbeAmarillo.classList.remove('active');
+                    chumbeVerde.classList.remove('active');
+                    for (let index = 0; index < puntosVerdes.length; index++) {
+                        puntosVerdes[index].classList.add('hidden')
+                        puntosRojos[index].classList.add('hidden')
+                        puntosAmarillos[index].classList.add('hidden')
+                        puntosMorados[index].classList.remove('hidden')
+                    }
+                }
+                break;
+        }
+    }
+
+    function name(params) {
+        
+    }
+</script>
