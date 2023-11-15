@@ -7,47 +7,51 @@ import ChumbeVerde from '../../public/assets/chumpeVerde.png';
 import ChumbeRojo from '../../public/assets/chumpeRojo.png';
 import ChumbeAmarillo from '../../public/assets/chumpeAmarillo.png';
 import ChumbeMorado from '../../public/assets/chumpeMorado.png';
+import x from '../../public/assets/X.png';
+
 ---
 
 
 
 <html lang="es">
     <NavBar path="TelaDeLaResistencia"/>
-    <div class="bg-[#19001B] flex flex-row w-full h-[100vh] pt-[20vh] items-center px-10 gap-10">
+    <div class="bg-[#19001B] flex flex-row w-full pt-[20vh] items-center px-10 gap-10 pb-12">
         <div class="text-white flex-row w-[20%]">
             <span class="font-tipo">La tela de la resistencia</span>
             <p>Da clic sobre  el chumbe de la derecha y aparecerán puntos de colores. Cada uno de ellos te llevará a las disferentes formas de resistencia de diferentes resguardos indigenas Nasas Yuwe</p>
         </div>
         <div class="relative">
             <img src={Tela.src} class="h-[80vh]" alt="">
-            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[63%] left-[32%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
-            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[53%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
-            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[55%] left-[75%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
-            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[73%] left-[22%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
-            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[60%] left-[40%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
-            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[50%] left-[80%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
-            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[75%] left-[30%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
-            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[54%] left-[49%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
-            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[22%] left-[55%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
-            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[46%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
-            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[62%] left-[73%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
-            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[71%] left-[81%] hover:scale-125 transition-all cursor-pointer" onclick="showModal();"/>
+            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[63%] left-[32%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde1);"/>
+            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[53%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde2);"/>
+            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[55%] left-[75%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde3);"/>
+            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[73%] left-[22%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado1);"/>
+            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[60%] left-[40%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado2);"/>
+            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[50%] left-[80%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado3);"/>
+            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[75%] left-[30%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo1);"/>
+            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[54%] left-[49%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo2);"/>
+            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[22%] left-[55%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo3);"/>
+            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[46%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo1);"/>
+            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[62%] left-[73%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo2);"/>
+            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[71%] left-[81%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo3);"/>
         </div>
-        <div class="">
+        <div class="ml-10">
             <img id="verde" src={ChumbeVerde.src}      class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
             <img id="rojo" src={ChumbeRojo.src}       class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
             <img id="amarillo" src={ChumbeAmarillo.src}   class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
             <img id="morado" src={ChumbeMorado.src}     class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
         </div>
-        <div id="modal" class=" absolute w-[95vw] backdrop-blur-md hidden "onclick="closeModal()" >
-            <div class="w-[80vw] h-[70vh] m-auto rounded-2xl text-white flex flex-col items-center">
-                <div class="z-20 flex flex-col items-center absolute">
-                    <span class=" text-center w-[40vw] font-tipo font-bold text-2xl my-7">Resistencia en lo politico</span>
-                    <p class="text-center w-[45vw] font-robot italic">“A veces a los hombres se les sube como la cerveza, entonces consultan las ideas con nosotras, por si no es descabellada. Por eso le digo yo que en ese tema de resistencia acá, nosotras hemos sido fundamentales. Las mujeres somos como un polo a tierra de la organización”</p>
+        <div id="modal" class=" absolute w-[95vw] hidden" >
+            <div id="backDropModal" class="w-[80vw] h-[100vh] top-0 left-0 absolute" onclick="closeModal()"/>
+            <div class="w-[80vw] h-[70vh] m-auto text-white flex flex-col items-center backdrop-blur-md">
+                <div class="z-20 flex flex-col items-center absolute ">
+                    <span id="modalTitle" class=" text-center w-[40vw] font-tipo font-bold text-2xl my-7">Resistencia en lo politico</span>
+                    <img src={x.src} class="absolute top-5 right-[-10%] hover:scale-110 hover:cursor-pointer transition-all" onclick="closeModal();">
+                    <p id="modalArriba" class="text-center w-[45vw] font-robot italic">“A veces a los hombres se les sube como la cerveza, entonces consultan las ideas con nosotras, por si no es descabellada. Por eso le digo yo que en ese tema de resistencia acá, nosotras hemos sido fundamentales. Las mujeres somos como un polo a tierra de la organización”</p>
                     <img src={Img1.src} class="w-[25%] my-4" >
-                    <p class="w-[60vw] font-robot font-semibold">Aunque los hombres suelen hablar primero, siempre piden la opinión de las mujeres para asegurarse de que las decisiones sean sensatas. Por ejemplo, en la consejeria de Caldono, hay 3 hombres y 3 mujeres, y al momento de tomar una desición los hombres se aseguran de consultarlo con ellas, porque son más aterrizadas. Esto demuestra que las mujeres no solo equilibran las decisiones, sino que también las enriquecen. Es como si fueran la base sólida en la organización, asegurándose de que todo funcione bien.</p>
+                    <p id="modalAbajo" class=" mb-5 w-[60vw] font-robot font-semibold">Aunque los hombres suelen hablar primero, siempre piden la opinión de las mujeres para asegurarse de que las decisiones sean sensatas. Por ejemplo, en la consejeria de Caldono, hay 3 hombres y 3 mujeres, y al momento de tomar una desición los hombres se aseguran de consultarlo con ellas, porque son más aterrizadas. Esto demuestra que las mujeres no solo equilibran las decisiones, sino que también las enriquecen. Es como si fueran la base sólida en la organización, asegurándose de que todo funcione bien.</p>
+                    <div class="w-[80vw] -z-10 h-full absolute opacity-60 border-2 border-white bg-gradient-to-tr from-[#010E12] to-[#DABBFF] rounded-2xl "/>
                 </div>
-                <div class="w-[80vw] h-full absolute z-10 opacity-60 border-2 border-white bg-gradient-to-tr from-[#010E12] to-[#DABBFF] "/>
             </div>
         </div>
     </div>
@@ -55,6 +59,69 @@ import ChumbeMorado from '../../public/assets/chumpeMorado.png';
 </html>
 
 <script is:inline>
+
+const infoButtons = {
+    verde1: {
+        titulo: 'Resistencia en lo politico',
+        arriba: '“A veces a los hombres se les sube como la cerveza, entonces consultan las ideas con nosotras, por si no es descabellada. Por eso le digo yo que en ese tema de resistencia acá, nosotras hemos sido fundamentales. Las mujeres somos como un polo a tierra de la organización”',
+        abajo: ' Aunque los hombres suelen hablar primero, siempre piden la opinión de las mujeres para asegurarse de que las decisiones sean sensatas. Por ejemplo, en la consejeria de Caldono, hay 3 hombres y 3 mujeres, y al momento de tomar una desición los hombres se aseguran de consultarlo con ellas, porque son más aterrizadas. Esto demuestra que las mujeres no solo equilibran las decisiones, sino que también las enriquecen. Es como si fueran la base sólida en la organización, asegurándose de que todo funcione bien.'
+    },
+    verde2: {
+        titulo: 'Resistencia en lo politico',
+        arriba: '“Hemos ganado mucho en estos 50 años porque antes de los 50 años, ninguna mujer era capaz de subir y decir algo en espacios públicos pues el que mandaba era el hombre , pero ahora si toca discutir y si toca poner la mano fuerte, nosotras también lo hacemos”',
+        abajo: 'Durante la década de 1970 se establecio un cambio significativo en la percepción del papel de la mujer en la política de la comunidad indígena. Los líderes de los cabildos (autoridades indigenas) reconocieron que solo tener hombres en las autoridades no era lo más eficiente. Comenzaron a comprender la importancia de incluir a las mujeres en los roles de toma de decisiones, pero inicialmente limitaban su participación a tareas como cocinar. La razón detrás de esta limitación era la creencia de que si se involucraba demasiado en las responsabilidades de la comunidad, descuidaría a su familia. Sin embargo, las mismas mujeres pelearon con las garras para ganarse estos espacios y hacer valer su capacidad de gobernabilidad y realización de políticas, permitiéndoles no solo participar en tareas domésticas, sino también tener voz en la toma de decisiones y en el cuidado de la comunidad.'
+    },
+    verde3: {
+        titulo: 'Resistencia en lo politico',
+        arriba: '“Nosotras como mujeres también estamos abriéndonos a los espacios públicos, porque sino pues antes uno andaba atrás como haciendo bulto”',
+        abajo: 'Aunque en algunos territorios como Caldono, no se le ha dado la oportunidad de gobernabilidad a la mujer, en otros territorios como Pueblo Nuevo, las mujeres están logrando tener más voz en la política local, gobernadoras como Alicia, Dilma, María Luz y Maritza han abierto camino. Pese a que persisten ciertos estereotipos machistas que desestiman la contribución de las mujeres como que “Las mujeres van a esos espacios solo a hacer bulto, porque son los hombres los que hacen” estas mujeres han demostrado su valía en la política, abriendo puerta para que más mujeres participen en la toma de decisiones importantes en la comunidad.'
+    },
+    rojo1: {
+        titulo: 'Resistencia en el conflicto',
+        arriba: "“Con respecto al tema del conflicto, y todo esto del reclutamiento, las mujeres son las que más rápido salen, son las que piden ayuda, un hombre mientras piensa, la mujer grita y dice 'ayúdenme que se me llevaron a mi hijo'. Ahora ya también hay mujeres guardias y son muy arriesgadas, ellas no le tienen miedo a salir, ellas sí le pelean al que sea”",
+        abajo: 'En el contexto del conflicto armado y el reclutamiento de jóvenes en Colombia, las mujeres son las primeras en actuar y pedir ayuda cuando sus hijos son reclutados. A pesar del peligro y la incertidumbre, no se quedan de brazos cruzados, mientras los hombres pueden tomarse más tiempo en reaccionar. Al actuar rápidamente y pedir ayuda, están resistiendo la violencia y protegiendo a sus seres queridos. Algunas incluso se convierten en valientes guardias que protegen a su comunidad sin temor a nadie. Lo anterior, demuestra que también son fuertes y capaces, desafiando los roles tradicionales de género, donde se percibe a la mujer como débil y a la espera de un hombre para ser salvada o protegida.'
+    },
+    rojo2: {
+        titulo: 'Resistencia en el conflicto',
+        arriba: '“Las mujeres y las niñas éramos el escudo de los papás, los hermanos, de todo mundo”',
+        abajo: 'En tiempos pasados, las mujeres y las niñas eran vistas como un escudo protector para sus comunidades, ofreciendo defensa y cuidado a sus familias y vecinos. Aunque históricamente se les otorgaba cierto nivel de respeto, en la actualidad enfrentan riesgos y amenazas sin importar su género. A pesar de estos desafíos, las mujeres están dispuestas a sacrificarse por la seguridad y el bienestar de los demás, lo que convierte su valentía y fuerza ante situaciones de alto riesgo en el conflicto en una forma de resistencia.'
+    },
+    rojo3: {
+        titulo: 'Resistencia en el conflicto',
+        arriba: '“Desafortunadamente ahorita después de la firma del Acuerdo de paz como han quedado esos grupos residuales, se empezaron a organizar grupos de jóvenes y ¿cuáles son los jóvenes que están ahorita ahí?, los que de pronto la mamita los dejó y se fueron”',
+        abajo: 'Los jóvenes, particularmente aquellos que han sido abandonados por sus familias y que han experimentado abusos y traumas, se ven afectados psicológicamente en el contexto del conflicto armado. Estos jóvenes, en medio de su resentimiento y dolor, pueden recurrir a actividades como unirse a grupos armados como una forma de resistir su situación o como una manifestación de su rencor hacia la sociedad. Sin embargo,  antes de juzgar, las mujeres destacan la importancia de escuchar y comprender las experiencias individuales de estos jóvenes, resaltando la necesidad de empatía y comprensión para abordar las causas profundas del reclutamiento y la violencia. Esto muestra cómo la resistencia de las mujeres en el conflicto también implica una comprensión compasiva y un esfuerzo por enfrentar las raíces complejas de la violencia en la sociedad.'
+    },
+    amarillo1: {
+        titulo: 'Tejido como resistencia',
+        arriba: '“En tiempo de resistencia nos sirve para echar piedras para apoyar al hombre atrás, para cargar alimentos también no sirve mucho, para cargar muchas cosas”',
+        abajo: 'El tejido es considerado una forma de resistencia, por su capacidad para brindar apoyo y protección en situaciones desafiantes o de peligro. Además de ser útil para cargar alimentos y otros objetos, también tiene un valor cultural y simbólico que se remonta a generaciones anteriores, lo que lo convierte en un símbolo importante de identidad y herencia cultural, ya que sus tejidos las identifica en cualquier parte, pues mujeres de otras etnias tienen su propio tejido'
+    },
+    amarillo2: {
+        titulo: 'Tejido como resistencia',
+        arriba: '”La mujer que no teje no está tejiendo la vida, dicen los mayores. Entonces eso hace parte de nosotros, de nuestra vida, del quehacer y si las mujeres tejen un chumbe también ahí están plasmando lo que ellas sienten, la vivencia, porque al estar tejiendo uno está pensando cómo vivió todo eso, entonces uno lo plasma ahí”',
+        abajo: 'El acto de tejer no solo implica crear objetos físicos, sino que también representa la creación y preservación de la vida y la historia de una persona. La idea de que las mujeres plasman sus sentimientos y experiencias en sus tejidos resalta cómo el acto de tejer se convierte en una forma de expresión y comunicación. Al tejer, las mujeres reflejan sus vivencias y emociones, convirtiendo el tejido en un medio para expresar su identidad y sus experiencias personales y colectivas.'
+    },
+    amarillo3: {
+        titulo: 'Tejido como resistencia',
+        arriba: '“El tejido es el que demuestra que nosotros tenemos unas raíces, porque la mochila está hablando de la mujer de la fecundación y pues para terciar todo eso, y la cincha es la que representa el ombligo de nosotros; entonces mire que tiene toda una simbología eso. La mochila es la matriz. Entonces mire que todo eso viene enraizado desde los antiguos y es una riqueza y una resistencia, que si nosotros no tuviéramos todo eso, no tendríamos esa resistencia”',
+        abajo: 'El tejido puede ser considerado como un símbolo de resistencia cultural y ancestral ya que el acto de tejer y crear estos objetos se convierte en un medio para preservar y transmitir la historia y la identidad cultural de la comunidad. La idea de resistencia puede interpretarse como la capacidad del tejido y sus simbolismos asociados para preservar la cultura y las tradiciones a lo largo del tiempo. En este sentido, el tejido actúa como un recordatorio tangible de la resistencia del pueblo y su capacidad para mantener vivas sus raíces y tradiciones a pesar de los desafíos y cambios externos.'
+    },
+    morado1: {
+        titulo: 'Resistencia desde el cuidado en la casa',
+        arriba: '“Decimos acá que matar una mujer es matar a una familia, que puede tener hijos pequeños entonces desde la cocina se hace resistencia, lavando ropa se hace resistencia.”',
+        abajo: 'Las tareas cotidianas son una forma de resistencia, ya que representan la persistencia de las mujeres en mantener la estabilidad y la vida diaria en medio de circunstancias difíciles. A través de actividades como cocinar y lavar la ropa, cuidar a los niños, etc, las mujeres aseguran la supervivencia física de sus familias. Aunque algunos hombres también colaboran, en la mayoria de los casos, son las mujeres quienes asumen el papel principal en sostener los cuidados básicos en el hogar, entonces desde ahí empieza la resistencia porque deben ser mamás, compañeras, amigas, cómplices, y el pilar fundamental para  la preservación de la vida cotidiana en el hogar.'
+    },
+    morado2: {
+        titulo: 'Resistencia desde el cuidado en la casa',
+        arriba: '“Cuando empezó lo de la guardia indígena la mujer no estaba en la guardia, pero por ejemplo desde el 99 tuvimos la primera gobernadora, tuvo mucha restricción porque le exigieron mucho, también exigen a los hombres, pero a las mujeres le exigen mucho más, pero es que resulta que la mujer para poder salir a la reunión, la casa tiene que quedar arreglada, que quede comida hecha, que los niños queden atendidos. En cambio ¿qué hace un hombre?”',
+        abajo: 'En muchas ocasiones, las mujeres se encuentran en conflicto con los hombres debido a la distribución desigual de las tareas del hogar. Mientras las mujeres se encargan de la mayoría de los quehaceres, los hombres a menudo muestran impaciencia si ellas se demoran al momento de salir, pero ellas expresan que ¿el hombre que hizo en la casa?, ¿barrió, dejó lavados trastes, dejó arreglada la casa”? No, ellos salen y llegan por la tarde y todo está listo, en cambio ellas tienen que llegar después de todo el trabajo de la tarde a recoger desorden y hacer los quehaceres. Dicen ellas que al menos tardan como 2 horas en eso, y el hombre en 5 minutos ya esta listo y no dicen ni gracias.'
+    },
+    morado3: {
+        titulo: 'Resistencia desde el cuidado en la casa',
+        arriba: '“Por eso dicen que los hombres se mueren y no hacen falta, en cambio se muere una mujer y la casa se cae”',
+        abajo: 'Las mujeres a menudo asumen un papel fundamental en el sostenimiento del hogar y la familia. Esto implica que, en caso de que las mujeres falten, las estructuras de cuidado y mantenimiento del hogar podrían colapsar. Su presencia garantiza la estabilidad de la familia, ya que se encargan de proporcionar cuidado y apoyo en momentos de necesidad.'
+    }
+}
 
     const chumbeVerde = document.querySelector('#verde')
     const chumbeRojo = document.querySelector('#rojo')
@@ -67,6 +134,7 @@ import ChumbeMorado from '../../public/assets/chumpeMorado.png';
     const puntosMorados = document.querySelectorAll('#morados')
 
     const modal = document.querySelector('#modal')
+    const backModal = document.querySelector('#backDropModal')
 
     function showPoints(event) {
         switch (event.target.id) {
@@ -193,11 +261,18 @@ import ChumbeMorado from '../../public/assets/chumpeMorado.png';
         }
     }
 
-    function showModal(titulo, textoArriba, textoAbajo, img) {
+    function showModal(data) {
+        console.log(data);
         modal.classList.toggle('hidden')
+        backModal.classList.remove('hidden')
+
+        document.querySelector('#modalTitle').textContent = data.titulo;
+        document.querySelector('#modalArriba').textContent = data.arriba;
+        document.querySelector('#modalAbajo').textContent = data.abajo;
     }
 
     function closeModal() {
         modal.classList.add('hidden')
+        backModal.classList.add('hidden')
     }
 </script>
