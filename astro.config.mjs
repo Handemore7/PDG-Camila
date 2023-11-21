@@ -1,10 +1,11 @@
 import { defineConfig } from 'astro/config';
-
 import tailwind from "@astrojs/tailwind";
+
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
-  site: 'https://Handemore7.github.io',
+  integrations: [tailwind(), react()],
+  site: 'https://Handemore7.github.io'
   /* base: '/PDG-Camila', */
 });
