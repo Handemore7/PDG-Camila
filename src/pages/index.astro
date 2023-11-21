@@ -1,17 +1,11 @@
 ---
 import NavBar from '../Components/NavBar.astro'
 import Footer from '../Components/Footer.astro'
+import SeccionMain from '../Components/SeccionMain.astro'
 import bannerBG from '../../public/assets/Banner.png'
 import bannerContent from '../../public/assets/Banner2.png'
 import documental from '../../public/assets/documental.png'
 import lorem from '../../public/assets/Lorem.png'
-import secciones1 from '../../public/assets/SeccionVocesDeLasComunidades.png'
-import secciones2 from '../../public/assets/SeccionFundacionLasManuelitas.png'
-import secciones3 from '../../public/assets/SeccionAreasDeTrabajo.png'
-import secciones1Color from '../../public/assets/SeccionVocesDeLasComunidadesColor.png'
-import secciones2Color from '../../public/assets/SeccionFundacionLasManuelitasColor.png'
-import secciones3Color from '../../public/assets/SeccionAreasDeTrabajoColor.png'
-import SeccionMain from '../Components/SeccionMain'
 
 ---
 <style>
@@ -39,14 +33,10 @@ import SeccionMain from '../Components/SeccionMain'
 				<img src={lorem.src} class="h-[50%] m-auto">
 			</div>
 		</div>
-		<section id="secciones">
-			<div class=" w-full flex flex-row">
-				<SeccionMain texto='Voces de las comunidades' img={secciones1.src} imgColor={secciones1Color.src} ref=""/>
-				<SeccionMain texto='Asomanuelitas' img={secciones2.src} imgColor={secciones2Color.src} ref=""/>
-				<SeccionMain texto='No hay paz sin justicia social' img={secciones3.src} imgColor={secciones3Color.src} ref=""/>
-			</div>
-		</section>
+		
+		<SeccionMain />
 		
 		<Footer />
+		
 	</body>
 </html>
