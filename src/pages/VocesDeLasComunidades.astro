@@ -1,7 +1,43 @@
 ---
 import NavBar from "../Components/NavBar.astro";
+import { voces_seccion1_1, voces_seccion1_2, voces_seccion1_3, voces_seccion2, voces_seccion3_1, voces_seccion3_2, video} from '../../public/assets/index'
 ---
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+</style>
 
 <div>
     <NavBar path="VocesDeLasComunidades"/>
+    <div class="relative">
+        <img src={voces_seccion1_1.src} class="w-full h-[100vh]" alt="">
+        <img src={voces_seccion1_2.src} class="absolute top-[20vh] mx-auto left-[20vh]" alt="">
+        <img src={voces_seccion1_3.src} class="absolute bottom-[-5vh] right-[5vw] w-[40%]" alt="">
+    </div>
+
+    <div class="bg-[#FDE0FF] h-[100vh] w-full flex">
+        <img src={voces_seccion2.src} class=" w-[50%] m-auto" alt="">
+    </div>
+
+    <div class="bg-[#FDE0FF] flex flex-row h-[100vh] w-full gap-10 px-[10%] text-white">
+        <div class="bg-[#076F28] w-[45%] h-[90%] p-5">
+            <img src={voces_seccion3_1.src} class="w-[100%]" alt="">
+            <p class=" text-2xl font-semibold">RESISTENCIA MUJERES NASA</p>
+        </div>
+        <div class="flex flex-col w-[45%]  p-5 gap-10">
+            <div class="bg-[#FF6D6D] flex flex-col">
+                <img src={voces_seccion3_2.src} class="w-[90%] m-auto" alt="">
+                <p class="px-6 py-3">COMUNIDAD LGBTQ+ EN CONSTRUCCIÓN DE PAZ</p>
+            </div>
+            <div class="bg-[#FF6D6D] flex flex-col">
+                <img src={voces_seccion3_2.src} class="w-[90%] m-auto" alt="">
+                <p class="px-6 py-3">COMUNIDAD LGBTQ+ EN CONSTRUCCIÓN DE PAZ</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#292032] rounded-3xl w-full h-[100vh]">
+        <div></div>
+        <div class="flex">
+            <img src={video.src} class="w-[70%] m-auto" alt="">
+        </div>
+    </div>
 </div>
