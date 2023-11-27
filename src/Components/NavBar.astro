@@ -1,5 +1,6 @@
 ---
 /* import { logoBlanco, logoNegro, navBar, fondoSeccion1 } from '../../public/assets/index' */
+import navBar from '../../public/assets/navBar.png'
 const { path } = Astro.props
 
 ---
@@ -31,7 +32,7 @@ const { path } = Astro.props
     </div>
 </nav>
 
-<script is:inline define:vars={{logoNegro, logoBlanco}}>
+<script is:inline >
     document.querySelector('#mainNavBar').addEventListener('click', () => {document.querySelector('#optNavBar').classList.toggle('hidden')})
     document.querySelector('#mainNavBar').addEventListener('click', () => {document.querySelector('#mainNavBar').classList.toggle('rounded-t-2xl')})
     document.querySelector('#mainNavBar').addEventListener('click', () => {document.querySelector('#mainNavBar').classList.toggle('rounded-2xl')})
