@@ -1,4 +1,4 @@
-import logoBlanco from './logo-blanco.png'
+/* import logoBlanco from './logo-blanco.png'
 import logoNegro from './logo-negro.png'
 import navBar from './navBar.png'
 import fondoSeccion1 from './FondoSeccion1.png';
@@ -22,4 +22,4 @@ export {
     seccion3img,
     seccion3_2,
     seccion3_2title
-}
+} */
