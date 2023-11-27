@@ -1,77 +1,49 @@
 ---
-import { logoBlanco } from '../../public/assets/index'
-import { logoNegro } from '../../public/assets/index'
+import { logoBlanco, logoNegro, navBar, fondoSeccion1 } from '../../public/assets/index'
 const { path } = Astro.props
 
 ---
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&family=Rock+Salt&display=swap');
-
-    .navBarTransition {
-        background-color: white;
-        opacity: 100%;
-        color: black;
-    }
-
-    .imgTransition{
-        height: 10vh;
-    }
-
-    .logoContainerTransition {
-        margin: .5rem 0px;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&family=Rock+Salt&display=swap'); 
 </style>
 
-<nav id="navBar" class="bg-black opacity-75 flex flex-row justify-between text-white px-[5vw] items-center text-lg fixed w-full top-0 left-0 transition-all z-50">
-    <div class="hover:scale-105 transition-all group">
-        <a href="/AreasDeTrabajo" class="inline-flex justify-center w-full rounded-md px-4 py-2 text-jet-1 text-lg">Áreas de trabajo</a>
-        <span class={`absolute -bottom-1 left-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2
-       `}/>
-		<span class={`absolute -bottom-1 right-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
-    </div>
-    <div class="hover:scale-105 transition-all group">
-        <a href="/VocesDeLasComunidades">Voces de las comunidades </a>
-        <span class={`absolute -bottom-1 left-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
-		<span class={`absolute -bottom-1 right-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
-    </div>
-    <div class="hover:scale-105 transition-all group">
-        <a href="/PolicyBrief">Policy brief</a>
-        <span class={`absolute -bottom-1 left-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
-		<span class={`absolute -bottom-1 right-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
-    </div>
-    <div id="logoContainer" class="my-4 hover:scale-105 transition-all">
-        <a href="/" class="">
-            <img id="navBarLogo" src={logoBlanco.src} alt="logo" class="h-[15vh] transition-all">
-        </a>
-    </div>
-    <div class="hover:scale-105 transition-all group">
-        <a href="/GaleriaDigital">Galeria digital</a>
-        <span class={`absolute -bottom-1 left-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
-		<span class={`absolute -bottom-1 right-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
-    </div>
-    <div class="hover:scale-105 transition-all group">
-        <a href="/TelaDeLaResistencia">¿Quienes somos?</a>
-        <span class={`absolute -bottom-1 left-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
-		<span class={`absolute -bottom-1 right-1/2 w-0 bg-white h-[2px] bg-yale-3 transition-all group-hover:w-1/2`}/>
+<nav id="navBar" class="w-full fixed flex pt-10 z-[100] transition-all">
+    <div class="m-auto transition-all ">
+        <div id="mainNavBar" class="py-3 m-auto bg-[#FDE0FF] rounded-2xl cursor-pointer hover:bg-[#dcb5df] transition-all border border-[#292032]">
+            <img src={navBar.src} class="w-[80%] h-[80%] m-auto">
+        </div>
+        <div id="optNavBar" class="backdrop-blur rounded-b-2xl flex-col text-center text-white font-bold font-robot hidden border border-[#292032] border-t-0">
+            <a href="/TelaDeLaResistencia">
+                <p class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer">ÁREAS DE TRABAJO</p>
+            </a>
+            <a href="/TelaDeLaResistencia">
+                <p class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer">VOCES DE LAS COMUNIDADES</p>
+            </a>
+            <a href="/TelaDeLaResistencia">
+                <p class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer">ASOMANUELITAS</p>
+            </a>
+            <a href="/TelaDeLaResistencia">
+                <p class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer">GALERIA DIGITAL</p>
+            </a>
+        </div>
     </div>
 </nav>
 
 <script is:inline define:vars={{logoNegro, logoBlanco}}>
+    document.querySelector('#mainNavBar').addEventListener('click', () => {document.querySelector('#optNavBar').classList.toggle('hidden')})
+    document.querySelector('#mainNavBar').addEventListener('click', () => {document.querySelector('#mainNavBar').classList.toggle('rounded-t-2xl')})
+    document.querySelector('#mainNavBar').addEventListener('click', () => {document.querySelector('#mainNavBar').classList.toggle('rounded-2xl')})
+
     window.addEventListener('scroll', function () {
-        var header = this.document.querySelector('#navBar')
-        var logo = this.document.querySelector('#navBarLogo')
-        var logoContainer = this.document.querySelector('#logoContainer')
+        var navbar = this.document.querySelector('#navBar')
+        var header = this.document.querySelector('#mainNavBar')
+        var options = this.document.querySelector('#optNavBar')
 
-        header.classList.toggle('navBarTransition',this.window.scrollY > 0)
-        logo.classList.toggle('imgTransition',this.window.scrollY > 0)
-        logoContainer.classList.toggle('logoContainerTransition',this.window.scrollY > 0)
-
-        if (this.window.scrollY > 0) {
-            logo.src = logoNegro.src
-        } else {
-            logo.src = logoBlanco.src
-        }
+        navbar.classList.toggle('translate-y-[-5vh]',this.window.scrollY > 0)
+        header.classList.toggle('scale-[.80]',this.window.scrollY > 0)
+        options.classList.toggle('scale-[.80]',this.window.scrollY > 0)
+        options.classList.toggle('translate-y-[-6vh]',this.window.scrollY > 0)
     })
 </script>

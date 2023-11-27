@@ -2,6 +2,7 @@
 import NavBar from "../Components/NavBar.astro";
 import Footer from "../Components/Footer.astro";
 import Tela from '../../public/assets/Tela.png';
+import Tela2 from '../../public/assets/TelaRojo1.png';
 import Img1 from '../../public/assets/img1.png';
 import ChumbeVerde from '../../public/assets/chumpeVerde.png';
 import ChumbeRojo from '../../public/assets/chumpeRojo.png';
@@ -10,7 +11,37 @@ import ChumbeMorado from '../../public/assets/chumpeMorado.png';
 import x from '../../public/assets/X.png';
 
 ---
+<style>
+    .breathing {
+        animation: breathing 5s ease-out infinite normal;
+    }
 
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.8);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.8);
+  }
+}
+</style>
 
 
 <html lang="es">
@@ -21,25 +52,28 @@ import x from '../../public/assets/X.png';
             <p>Da clic sobre  el chumbe de la derecha y aparecerán puntos de colores. Cada uno de ellos te llevará a las disferentes formas de resistencia de diferentes resguardos indigenas Nasas Yuwe</p>
         </div>
         <div class="relative">
-            <img src={Tela.src} class="h-[80vh]" alt="">
-            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[63%] left-[32%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde1);"/>
-            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[53%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde2);"/>
-            <div id="verdes" class="bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[55%] left-[75%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde3);"/>
-            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[73%] left-[22%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado1);"/>
-            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[60%] left-[40%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado2);"/>
-            <div id="morados" class="bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[50%] left-[80%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado3);"/>
-            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[75%] left-[30%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo1);"/>
-            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[54%] left-[49%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo2);"/>
-            <div id="amarillos" class="bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[22%] left-[55%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo3);"/>
-            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[46%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo1);"/>
-            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[62%] left-[73%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo2);"/>
-            <div id="rojos" class="bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[71%] left-[81%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo3);"/>
+            <div>
+                <img src={Tela.src} class="h-[80vh]" alt="">
+                <img id="TelaRojo1" src={Tela2.src} class="h-[80vh] absolute top-0 opacity-0" alt="">
+            </div>
+            <div id="verdes" class="breathing bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[63%] left-[32%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde1);"/>
+            <div id="verdes" class="breathing bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[44%] left-[53%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde2);"/>
+            <div id="verdes" class="breathing bg-[#088831] border border-black w-[25px] h-[25px] rounded-full absolute top-[55%] left-[75%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde3);"/>
+            <div id="morados" class="breathing bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[73%] left-[22%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado1);"/>
+            <div id="morados" class="breathing bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[60%] left-[40%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado2);"/>
+            <div id="morados" class="breathing bg-[#79097E] border border-black w-[25px] h-[25px] rounded-full absolute top-[50%] left-[80%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado3);"/>
+            <div id="amarillos" class="breathing bg-[#fff] border border-black w-[25px] h-[25px] rounded-full absolute top-[22%] left-[55%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo3);"/>
+            <div id="amarillos" class="breathing bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[75%] left-[30%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo1);"/>
+            <div id="amarillos" class="breathing bg-[#F4C664] border border-black w-[25px] h-[25px] rounded-full absolute top-[54%] left-[49%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo2);"/>
+            <div id="rojos" class="bg-[#FF6D6D] rojos1 opacity-0 border border-black w-[70px] h-[70px] rounded-full absolute top-[20%] left-[46%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo1);"/>
+            <div id="rojos" class=" breathing  bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[62%] left-[73%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo2);"/>
+            <div id="rojos" class="breathing bg-[#FF6D6D] border border-black w-[25px] h-[25px] rounded-full absolute top-[71%] left-[81%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo3);"/>
         </div>
         <div class="ml-10">
-            <img id="verde" src={ChumbeVerde.src}      class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
-            <img id="rojo" src={ChumbeRojo.src}       class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
-            <img id="amarillo" src={ChumbeAmarillo.src}   class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
-            <img id="morado" src={ChumbeMorado.src}     class="hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
+            <img id="verde" src={ChumbeVerde.src}      class="opacity-80 hover:opacity-100 hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
+            <img id="rojo" src={ChumbeRojo.src}       class=" opacity-80 hover:opacity-100 hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
+            <img id="amarillo" src={ChumbeAmarillo.src}   class="opacity-60 hover:opacity-100 hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
+            <img id="morado" src={ChumbeMorado.src}     class="opacity-60 hover:opacity-100 hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
         </div>
         <div id="modal" class=" absolute w-[95vw] hidden" >
             <div id="backDropModal" class="w-[80vw] h-[100vh] top-0 left-0 absolute" onclick="closeModal()"/>
@@ -122,6 +156,14 @@ const infoButtons = {
         abajo: 'Las mujeres a menudo asumen un papel fundamental en el sostenimiento del hogar y la familia. Esto implica que, en caso de que las mujeres falten, las estructuras de cuidado y mantenimiento del hogar podrían colapsar. Su presencia garantiza la estabilidad de la familia, ya que se encargan de proporcionar cuidado y apoyo en momentos de necesidad.'
     }
 }
+
+    document.querySelector('.rojos1').addEventListener('mouseover', ()=>{
+        document.querySelector('#TelaRojo1').classList.add('opacity-100')
+    })
+    document.querySelector('.rojos1').addEventListener('mouseleave', ()=>{
+        document.querySelector('#TelaRojo1').classList.remove('opacity-100')
+    })
+
 
     const chumbeVerde = document.querySelector('#verde')
     const chumbeRojo = document.querySelector('#rojo')
