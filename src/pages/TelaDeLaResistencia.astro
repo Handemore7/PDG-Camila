@@ -9,6 +9,7 @@ import ChumbeRojo from '../../public/assets/chumpeRojo.png';
 import ChumbeAmarillo from '../../public/assets/chumpeAmarillo.png';
 import ChumbeMorado from '../../public/assets/chumpeMorado.png';
 import x from '../../public/assets/X.png';
+import { telaResistencia1, telaResistencia2} from '../../public/assets/index'
 
 ---
 <style>
@@ -46,7 +47,19 @@ import x from '../../public/assets/X.png';
 
 <html lang="es">
     <NavBar path="TelaDeLaResistencia"/>
+    <div class="bg-[#FDE0FF] w-full flex pb-[20vh]">
+        <div class="relative w-[60%]  bg-[#292032] flex flex-col mx-auto mt-[25vh] rounded-2xl px-7 pt-5 pb-10">
+            <img src={telaResistencia1.src} class="w-[60%]" alt="">
+            <img src={telaResistencia2.src} class=" w-[35%] absolute top-0 right-0" alt="">
+            <p class="text-[#FDE0FF] font-robot w-[80%] pl-7 mt-5">En las voces y vivencias de mujeres indígenas de diversos resguardos Nasa en Colombia, encontramos una poderosa lección sobre resistencia y paz después de la firma del acuerdo.<br/><br/>Estos relatos son como ventanas que nos permiten asomarnos a sus vidas y descubrir cómo, desde sus mundos cotidianos, han desafiado la violencia del conflicto. Hablan de resistencia desde la política, el hogar y el arte del tejido, mostrándonos que la paz no solo es un papel firmado, sino tambien una tela tejida con coraje y esperanza en medio de desafíos persistentes. En estas historias, las mujeres indígenas nos enseñan que la paz se construye día a día, hilo a hilo, y que su resistencia es un faro que ilumina caminos hacia un futuro más justo y equitativo.</p>
+        </div>
+    </div>
+    <div class="bg-[#076F28] w-[30%] m-auto left-0 right-0 rounded-2xl absolute translate-y-[-50%] flex flex-col gap-5 px-7 py-5">
+        <p class="text-[#FDE0FF] text-center px-[5%] font-robot">¡BIENVENIDX A LA TELA DE LA RESISTENCIA! </p>
+        <p class="text-[#FDE0FF] text-center px-[5%] font-robot">AQUI CONOCERAS LAS VOCES DE LAS MUJERES NASA Y SUS FORMAS DE RESISTENCIA ANTE EL CONFLICTO.</p>
+    </div>
     <div class="bg-[#19001B] flex flex-row w-full pt-[20vh] items-center px-10 gap-10 pb-12">
+        
         <div class="text-white flex-row w-[20%]">
             <span class="font-tipo">La tela de la resistencia</span>
             <p>Da clic sobre  el chumbe de la derecha y aparecerán puntos de colores. Cada uno de ellos te llevará a las disferentes formas de resistencia de diferentes resguardos indigenas Nasas Yuwe</p>
