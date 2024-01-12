@@ -5,14 +5,7 @@ import SeccionMain from '../Components/SeccionMain.astro'
 import bannerBG from '../../public/assets/Banner.png'
 import bannerContent from '../../public/assets/Banner2.png'
 import { fondoSeccion1, titulo, seccion2BG, seccion2img, seccion3img, seccion3Title, seccion3_2, seccion3_2title } from '../../public/assets/index'
-/* import fondoSeccion1 from '../../public/assets/FondoSeccion1.png';
-import titulo from '../../public/assets/titulo.png';
-import seccion2BG from '../../public/assets/seccion2.png';
-import seccion2img from '../../public/assets/seccion2-2.png'
-import seccion3Title from '../../public/assets/seccion3-1.png'
-import seccion3img from '../../public/assets/seccion3-2.png'
-import seccion3_2 from '../../public/assets/seccion3-3.png'
-import seccion3_2title from '../../public/assets/seccion3-4.png' */
+
 
 ---
 <style>
@@ -48,107 +41,124 @@ import seccion3_2title from '../../public/assets/seccion3-4.png' */
 			</div>
 			<p class=" top-28 z-30 absolute px-[20%] text-center text-[#1E1E1E] font-robot text-lg tracking-[.1rem]">Esta investigación, apoyada por la Beca Atlantic Equity Challenge (AEQ), examina las disposiciones especiales para la igualdad de género en el Acuerdo de Paz de Colombia de 2016. Evalúa la efectividad de su implementación en el Cauca tal como la perciben las mujeres indígenas y afrocolombianas, las mujeres excombatientes y LGBTQ+, los cuatro grupos prioritarios de esta investigación, con el objetivo de imaginar medidas para una ejecución más efectiva, y también extraer lecciones del modelo colombiano para otros entornos de conflicto.</p>
 		</section>
-		<!-- Aqui empieza -->
-		<div id="seccion3" class="w-[500%] flex flex-nowrap overflow-hidden">
-			<div id="seccion3-1" class="panel flex bg-[#292032] flex-row w-[100vw] h-[100vh] px-[10vw] pt-[10vh]">
-				<img src={seccion3img.src} alt="">
-				<div class="flex flex-col">
-					<img src={seccion3Title.src} alt="" class=" w-3/2 mx-auto">
-					<p class="text-[#FDE0FF] font-robot tracking-[.2rem] text-xl px-[10%] mt-10">La implementación del Acuerdo de Paz en los puntos relacionados con el enfoque de género y la mujer rural ha sido lenta.<br/><br/>Aquí te explicamos 3 puntos claves de el acuerdo con áreas para mejorar.</p>
-				</div>
-			</div>
-			<section id="seccion3-2" class="panel flex bg-[red] flex-row w-[100vw] h-[100vh] px-[10vw] pt-[10vh]">
-				<div class="flex flex-row">
-					<img src={seccion3_2.src} alt="" class="w-[100px] h-[100px]">
+		
+		<!-- Aqui empieza  PANELES   -->
+		<div class="w-[98.5vw] overflow-hidden">
+			
+			<div id="seccion3" class="w-[500%] flex flex-nowrap overflow-x-hidden ">
+				<div id="seccion3-1" class="panel pb-10 flex bg-[#292032] flex-row w-[100vw] h-[100vh] px-[10vw] pt-[10vh]">
+					<img src={seccion3img.src} alt="">
 					<div class="flex flex-col">
-						<img src={seccion3_2title.src} class="w-[100%]">
-						<div class="flex flex-col gap-6 tarjetas">
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La primera área de mejora está en la implementación del punto que aborda la reincorporación de las mujeres con enfoque de género</p>
-							</div>
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La politica de reincorporación con enfoque de género en el acuerdo busca facilitar la transición de las mujeres firmantes de paz a la vida civil</p>
-							</div>
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Pero reconociendo las dificultades específicas que enfrentan como mujeres, por ejemplo, los estereotipos y las violencias basadas en género. 
-								</p>
-							</div>
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Desde la visión de las mujeres firmantes de paz, la inclusión del enfoque de género en el acuerdo fue posible gracias a la presión de colectivos de mujeres y de la sociedad civil organizada. </p>
-							</div>
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La incorporación del enfoque de género corresponde a un logro de carácter nacional e internacional, que permitió la apertura social e institucional para continuar posicionando el género en el debate público, las agendas organizativas y las políticas</p>
+						<img src={seccion3Title.src} alt="" class=" w-3/2 mx-auto">
+						<p class="text-[#FDE0FF] font-robot tracking-[.2rem] text-xl px-[10%] mt-10">La implementación del Acuerdo de Paz en los puntos relacionados con el enfoque de género y la mujer rural ha sido lenta.<br/><br/>Aquí te explicamos 3 puntos claves de el acuerdo con áreas para mejorar.</p>
+					</div>
+				</div>
+				<section id="seccion3-2" class="panel pb-10 flex bg-[#292032] flex-row w-[100vw] px-[10vw] pt-[10vh]">
+					<div class="flex flex-row relative">
+						<img src={seccion3_2.src} alt="" class="w-[100px] h-[100px]">
+						<div class="flex flex-col">
+							<img src={seccion3_2title.src} class="w-[100%]">
+							<div class="flex flex-col gap-6 tarjetas">
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La primera área de mejora está en la implementación del punto que aborda la reincorporación de las mujeres con enfoque de género</p>
+								</div>
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La politica de reincorporación con enfoque de género en el acuerdo busca facilitar la transición de las mujeres firmantes de paz a la vida civil</p>
+								</div>
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Pero reconociendo las dificultades específicas que enfrentan como mujeres, por ejemplo, los estereotipos y las violencias basadas en género. 
+									</p>
+								</div>
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Desde la visión de las mujeres firmantes de paz, la inclusión del enfoque de género en el acuerdo fue posible gracias a la presión de colectivos de mujeres y de la sociedad civil organizada. </p>
+								</div>
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La incorporación del enfoque de género corresponde a un logro de carácter nacional e internacional, que permitió la apertura social e institucional para continuar posicionando el género en el debate público, las agendas organizativas y las políticas</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<img src={seccion3img.src} alt="">
-				</div>
-			</section>
-			<section id="seccion3-2-PRUEBA2" class="panel flex bg-[blue] flex-row w-[100vw] h-[100vh] px-[10vw] pt-[10vh]">
-				<div class="flex flex-row">
-					<img src={seccion3_2.src} alt="" class="w-[100px] h-[100px]">
-					<div class="flex flex-col">
-						<img src={seccion3_2title.src} class="w-[100%]">
-						<div class="flex flex-col gap-6">
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La primera área de mejora está en la implementación del punto que aborda la reincorporación de las mujeres con enfoque de género</p>
-							</div>
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La politica de reincorporación con enfoque de género en el acuerdo busca facilitar la transición de las mujeres firmantes de paz a la vida civil</p>
-							</div>
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Pero reconociendo las dificultades específicas que enfrentan como mujeres, por ejemplo, los estereotipos y las violencias basadas en género. 
-								</p>
-							</div>
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Desde la visión de las mujeres firmantes de paz, la inclusión del enfoque de género en el acuerdo fue posible gracias a la presión de colectivos de mujeres y de la sociedad civil organizada. </p>
-							</div>
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La incorporación del enfoque de género corresponde a un logro de carácter nacional e internacional, que permitió la apertura social e institucional para continuar posicionando el género en el debate público, las agendas organizativas y las políticas</p>
+						<div class="flex flex-col">
+							<img src={seccion3img.src} class="h-[100vh]" alt="">
+							<div class="border border-red-600">
+								<blockquote
+								class='tiktok-embed'
+								cite='https://www.tiktok.com/@confiabogado/video/7263275520119409925'
+								data-video-id='7272948728091266309'
+								style='max-width: 325px; min-width: 325px; max-height: 500px; min-height: 500px'>
+									<section class=''></section>
+								</blockquote>
 							</div>
 						</div>
+						
+						
 					</div>
-					<img src={seccion3img.src} alt="">
-				</div>
-			</section>
-			<section id="seccion3-2-PRUEBA" class="panel flex bg-[green] flex-row w-[100vw] h-[100vh] px-[10vw] pt-[10vh]">
-				<div class="flex flex-row">
-					<img src={seccion3_2.src} alt="" class="w-[100px] h-[100px]">
-					<div class="flex flex-col">
-						<img src={seccion3_2title.src} class="w-[100%]">
-						<div class="flex flex-col gap-6">
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La primera área de mejora está en la implementación del punto que aborda la reincorporación de las mujeres con enfoque de género</p>
-							</div>
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La politica de reincorporación con enfoque de género en el acuerdo busca facilitar la transición de las mujeres firmantes de paz a la vida civil</p>
-							</div>
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Pero reconociendo las dificultades específicas que enfrentan como mujeres, por ejemplo, los estereotipos y las violencias basadas en género. 
-								</p>
-							</div>
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Desde la visión de las mujeres firmantes de paz, la inclusión del enfoque de género en el acuerdo fue posible gracias a la presión de colectivos de mujeres y de la sociedad civil organizada. </p>
-							</div>
-							<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-								<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La incorporación del enfoque de género corresponde a un logro de carácter nacional e internacional, que permitió la apertura social e institucional para continuar posicionando el género en el debate público, las agendas organizativas y las políticas</p>
+				</section>
+				<section id="seccion3-2-PRUEBA2" class="panel pb-10 flex bg-[#076F28] flex-row w-[100vw] px-[10vw] pt-[10vh]">
+					<div class="flex flex-row">
+						<img src={seccion3_2.src} alt="" class="w-[100px] h-[100px]">
+						<div class="flex flex-col">
+							<img src={seccion3_2title.src} class="w-[100%]">
+							<div class="flex flex-col gap-6">
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La primera área de mejora está en la implementación del punto que aborda la reincorporación de las mujeres con enfoque de género</p>
+								</div>
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La politica de reincorporación con enfoque de género en el acuerdo busca facilitar la transición de las mujeres firmantes de paz a la vida civil</p>
+								</div>
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Pero reconociendo las dificultades específicas que enfrentan como mujeres, por ejemplo, los estereotipos y las violencias basadas en género. 
+									</p>
+								</div>
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Desde la visión de las mujeres firmantes de paz, la inclusión del enfoque de género en el acuerdo fue posible gracias a la presión de colectivos de mujeres y de la sociedad civil organizada. </p>
+								</div>
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La incorporación del enfoque de género corresponde a un logro de carácter nacional e internacional, que permitió la apertura social e institucional para continuar posicionando el género en el debate público, las agendas organizativas y las políticas</p>
+								</div>
 							</div>
 						</div>
+						<img src={seccion3img.src} class=" h-[100vh]" alt="">
 					</div>
-					<img src={seccion3img.src} alt="">
-				</div>
-			</section>
-			<!-- <div id="seccion3-3" class="">
+				</section>
+				<section id="seccion3-2-PRUEBA" class="panel pb-10 flex bg-[white] flex-row w-[100vw] px-[10vw] pt-[10vh]">
+					<div class="flex flex-row">
+						<img src={seccion3_2.src} alt="" class="w-[100px] h-[100px]">
+						<div class="flex flex-col">
+							<img src={seccion3_2title.src} class="w-[100%]">
+							<div class="flex flex-col gap-6">
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La primera área de mejora está en la implementación del punto que aborda la reincorporación de las mujeres con enfoque de género</p>
+								</div>
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La politica de reincorporación con enfoque de género en el acuerdo busca facilitar la transición de las mujeres firmantes de paz a la vida civil</p>
+								</div>
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Pero reconociendo las dificultades específicas que enfrentan como mujeres, por ejemplo, los estereotipos y las violencias basadas en género. 
+									</p>
+								</div>
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Desde la visión de las mujeres firmantes de paz, la inclusión del enfoque de género en el acuerdo fue posible gracias a la presión de colectivos de mujeres y de la sociedad civil organizada. </p>
+								</div>
+								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La incorporación del enfoque de género corresponde a un logro de carácter nacional e internacional, que permitió la apertura social e institucional para continuar posicionando el género en el debate público, las agendas organizativas y las políticas</p>
+								</div>
+							</div>
+						</div>
+						<img src={seccion3img.src} class=" h-[100vh]" alt="">
+					</div>
+				</section>
+				<!-- <div id="seccion3-3" class="">
 
-			</div>
-			<div id="seccion3-4" class="">
+				</div>
+				<div id="seccion3-4" class="">
 
+				</div>
+				<div id="seccion3-5" class="">
+					</div> 
+				<div id="seccion3-6" class="">
+					</div>  -->
 			</div>
-			<div id="seccion3-5" class="">
-				</div> 
-			<div id="seccion3-6" class="">
-				</div>  -->
-			</div>
+		</div>
 		<!-- <div class="h-[12vh] bg-[#EDEDED] overflow-hidden">
 			<div class="flex h-full w-[200vw]">
 				<img src={lorem.src} class="h-[50%] m-auto">
@@ -159,8 +169,8 @@ import seccion3_2title from '../../public/assets/seccion3-4.png' */
 		
 		<Footer />
 
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js">import gsap from "gsap";
-</script>
+		<script is:inline async src='https://www.tiktok.com/embed.js'></script>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js">import gsap from "gsap";</script>
 		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 		<script is:inline>
 			/* gsap.registerPlugin(ScrollTrigger);
@@ -194,50 +204,44 @@ import seccion3_2title from '../../public/assets/seccion3-4.png' */
 			
 			gsap.defaults({ease: 'none', duration: 2})
 			
-			let sections = gsap.utils.toArray(".panel");
-			console.log(sections);
-			
-			let scrollTween = gsap.to(sections, {
-				xPercent: -100 * (sections.length - 1),
-				ease: "none", // <-- IMPORTANT!
-				scrollTrigger: {
-					trigger: "#seccion3",
-				pin: true,
-				scrub: 0.1,
-				//snap: directionalSnap(1 / (sections.length - 1)),
-				end: "+=4000"
-			}
-		});	
-
-		//Scroll de tarjetas
-		
-			  let scrollTween2 = gsap.to('.tarjetas', {
-				  
-				  ease: "none", // <-- IMPORTANT!
-				scrollTrigger: {
-				trigger: "#seccion3-2",
-				pin: true,
-				scrub: 0.1,
-				snap: directionalSnap(1 / (2 - 1)),
-				end: "+=4000",
-				rotate: 350
-				}
-  			});	
-			/* const tl = gsap.timeline();
-			tl.from('#seccion3-2', {xPercent: -100})
-			  .from('#seccion3-2-PRUEBA2', {xPercent: 100})
-			  .from('#seccion3-2-PRUEBA', {yPercent: -100})
-
+			const tl = gsap.timeline();
+			tl.to('#seccion3-2', {xPercent: -100})
+			  .to('#seccion3-2-PRUEBA2', {xPercent: -200})
+			  .to('#seccion3-2-PRUEBA', {xPercent: -300})
 			ScrollTrigger.create({
 				animation: tl,
 				trigger: '#seccion3',
 				start: 'top top',
-				end: ' +=4000',
-				markers: true,
+				end: '+=3000',
+				/* markers: true, */
 				scrub: true,
 				pin: true,
 				anticipatePin: 1,
-			}) */
+				
+			})
+
+			const tl2 = gsap.timeline();
+			tl2.to('#seccion3-2', {yPercent: -48})
+			ScrollTrigger.create({
+				animation: tl2,
+				trigger: '#seccion3-2',
+				start: '+=1000',
+				end: '+=400',
+				scrub: true,	
+				/* markers: true	 */		
+			})
+
+
+			const tl3 = gsap.timeline();
+			tl3.to('#seccion3-2-PRUEBA2', {yPercent: -48}) 
+			ScrollTrigger.create({
+				animation: tl3,
+				trigger: '#seccion3-2-PRUEBA2',
+				start: '+=2000',
+				end: '+=450',
+				scrub: true,			
+				//markers: true,
+			})
 
 		</script>
 	</body>
