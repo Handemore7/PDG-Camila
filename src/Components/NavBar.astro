@@ -15,10 +15,23 @@ const { path } = Astro.props
         <div id="mainNavBar" class="py-3 m-auto bg-[#FDE0FF] rounded-2xl cursor-pointer hover:bg-[#dcb5df] transition-all border border-[#292032]">
             <img src={navBar.src} class="w-[80%] h-[80%] m-auto">
         </div>
-        <div id="optNavBar" class="backdrop-blur rounded-b-2xl flex-col text-center text-white font-bold font-robot hidden border border-[#292032] border-t-0">
-            <a href="/AreasDeTrabajo">
-                <p class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer">ÁREAS DE TRABAJO</p>
-            </a>
+        <div id="optNavBar" class="hidden backdrop-blur rounded-b-2xl flex-col text-center text-white font-bold font-robot  border border-[#292032] border-t-0">
+            
+            <div class="relative">
+                <p id="navBarAreasDeTrabajo" class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer">ÁREAS DE TRABAJO</p>
+                <div id="modalAreas" class="bg-[#FDE0FF] absolute top-[40%] left-[62%] w-[22vw] rounded-lg text-[#292032] text-md hidden flex-col text-left">
+                    <a href="http://localhost:4321/#seccion3-2">
+                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer hover:rounded-lg">Reincorporación con enfoque de género</p>
+                    </a>
+                    <a href="http://localhost:4321/#seccion3-2-PRUEBA2">
+                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer ">PDTES ALTO PATÍA Y NORTE DEL CAUCA</p>
+                    </a>
+                    <a href="http://localhost:4321/#seccion3-2-PRUEBA">
+                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer hover:rounded-lg">COMUNIDAD LGBT EN CONSTRUCCIÓN DE PAZ</p>
+                    </a>
+                </div>
+            </div>
+            
             <a href="/VocesDeLasComunidades">
                 <p class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer">VOCES DE LAS COMUNIDADES</p>
             </a>
@@ -46,5 +59,11 @@ const { path } = Astro.props
         header.classList.toggle('scale-[.80]',this.window.scrollY > 0)
         options.classList.toggle('scale-[.80]',this.window.scrollY > 0)
         options.classList.toggle('translate-y-[-6vh]',this.window.scrollY > 0)
+    })
+
+    //Submenu de areas de trabajo
+    document.querySelector('#navBarAreasDeTrabajo').addEventListener('click', ()=>{
+        document.querySelector('#modalAreas').classList.toggle('hidden')
+        document.querySelector('#modalAreas').classList.toggle('flex')
     })
 </script>

@@ -18,6 +18,8 @@ import voces_seccion2 from './VocesSeccion2.png'
 import voces_seccion3_1 from './VocesSeccion3-1.png'
 import voces_seccion3_2 from './VocesSeccion3-2.png'
 import video from './video.png'
+import seccion4Banner from './seccion4Banner.png'
+import footerBanner from './FooterBanner.png'
 
 export {
     logoBlanco,
@@ -39,5 +41,7 @@ export {
     voces_seccion2,
     voces_seccion3_1,
     voces_seccion3_2,
-    video
+    video,
+    seccion4Banner,
+    footerBanner
 }

@@ -4,12 +4,17 @@ import Footer from '../Components/Footer.astro'
 import SeccionMain from '../Components/SeccionMain.astro'
 import bannerBG from '../../public/assets/Banner.png'
 import bannerContent from '../../public/assets/Banner2.png'
-import { fondoSeccion1, titulo, seccion2BG, seccion2img, seccion3img, seccion3Title, seccion3_2, seccion3_2title } from '../../public/assets/index'
+import { fondoSeccion1, titulo, seccion2BG, seccion2img, seccion3img, seccion3Title, seccion3_2, seccion3_2title, seccion4Banner, footerBanner } from '../../public/assets/index'
 
 
 ---
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+	@font-face {
+    font-family: "test";
+    src: url("/assets/fonts/Sleepy Rabbit.ttf");
+}
 </style>
 
 <html lang="es">
@@ -80,10 +85,10 @@ import { fondoSeccion1, titulo, seccion2BG, seccion2img, seccion3img, seccion3Ti
 						<div class="flex flex-col">
 							<img src={seccion3img.src} class="h-[100vh]" alt="">
 							<div class="border border-red-600">
-								<blockquote
+								<blockquote 
 								class='tiktok-embed'
-								cite='https://www.tiktok.com/@confiabogado/video/7263275520119409925'
-								data-video-id='7272948728091266309'
+								cite='https://www.tiktok.com/@camilaparedeso_/video/7322294350971407621'
+								data-video-id='7322294350971407621'
 								style='max-width: 325px; min-width: 325px; max-height: 500px; min-height: 500px'>
 									<section class=''></section>
 								</blockquote>
@@ -100,20 +105,17 @@ import { fondoSeccion1, titulo, seccion2BG, seccion2img, seccion3img, seccion3Ti
 							<img src={seccion3_2title.src} class="w-[100%]">
 							<div class="flex flex-col gap-6">
 								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La primera área de mejora está en la implementación del punto que aborda la reincorporación de las mujeres con enfoque de género</p>
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La segunda área de mejora está en la implementación de los Programas de desarrollo con enfoque territorial (PDETS). Nos concentramos en el PDET Norte del Cauca Alto Patía.</p>
 								</div>
 								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La politica de reincorporación con enfoque de género en el acuerdo busca facilitar la transición de las mujeres firmantes de paz a la vida civil</p>
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Están pactados en el punto 1 del Acuerdo de paz de 2016</p>
 								</div>
 								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Pero reconociendo las dificultades específicas que enfrentan como mujeres, por ejemplo, los estereotipos y las violencias basadas en género. 
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Los PDETS son planes especiales del gobierno relacionados con la reforma rural integral que priorizan los municipios más afectados por el conflicto armado. En el Cauca incluyen 170 municipios. 
 									</p>
 								</div>
 								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">Desde la visión de las mujeres firmantes de paz, la inclusión del enfoque de género en el acuerdo fue posible gracias a la presión de colectivos de mujeres y de la sociedad civil organizada. </p>
-								</div>
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La incorporación del enfoque de género corresponde a un logro de carácter nacional e internacional, que permitió la apertura social e institucional para continuar posicionando el género en el debate público, las agendas organizativas y las políticas</p>
+									<p class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]">La Reforma Rural Integral es un conjunto de medidas que toma el gobierno para mejorar la vida en las áreas rurales, incluyendo la distribución de tierras, servicios básicos y desarrollo agrícola, con el objetivo de lograr un cambio positivo y equitativo en estas comunidades. </p>
 								</div>
 							</div>
 						</div>
@@ -147,25 +149,60 @@ import { fondoSeccion1, titulo, seccion2BG, seccion2img, seccion3img, seccion3Ti
 						<img src={seccion3img.src} class=" h-[100vh]" alt="">
 					</div>
 				</section>
-				<!-- <div id="seccion3-3" class="">
+				</div> 
 
-				</div>
-				<div id="seccion3-4" class="">
+			</div>
+			<section id="seccion4" class="">
 
+				<div id="seccion4-1" class=" bg-[#292032] h-[100vh] px-24 flex justify-center items-center">
+					<p class="text-white text-6xl font-[test] leading-[1.4] ">
+						¿SABIAS QUE LA PRIMERA ASOCIACIÓN DE MUJERES FIRMANTES DE PAZ SE ENCUENTRA EN EL CAUCA?
+					</p>
 				</div>
-				<div id="seccion3-5" class="">
-					</div> 
-				<div id="seccion3-6" class="">
-					</div>  -->
+				<div id="seccion4-2" class=" bg-[#292032] h-[100vh] px-24 flex justify-center items-center">
+					<p class="text-white text-6xl font-[test] leading-[1.4] ">
+						UNA ASOCIACIÓN QUE APUESTA POR LA AUTONOMIA ECONOMICA DE LAS MUJERES EN PROCESO DE REINCORPORACIÓN
+					</p>
+				</div>
+				<div id="seccion4-3" class=" bg-[#292032] h-[100vh] px-24 flex justify-center items-center">
+					<p class="text-white text-6xl font-[test] leading-[1.4]">
+						CREANDO ESPACIOS DE CAPACITACIÓN Y EMPRENDEMIENTO ECONOMICO PARA QUE LAS MUJERES PUEDAN GENERAR RECUERSOS DE MANERA INDEPENDIENTE
+					</p>
+				</div> 
+
+			</section>
+		<section class="bg-[#FDE0FF] flex px-36 py-24 justify-center">
+			<div class="">
+				<p class="font-[test] text-7xl">ASOMANUELITAS</p>
+				<p class="font-robot text-2xl w-[45vw] ">Primera asociación de mujeres reincorporadas que apuesta por construir la paz, la autonomia economica y empoderamiento politico de las mujeres </p>
+				<img src={seccion4Banner.src} class="w-[70%]" alt="">
 			</div>
-		</div>
-		<!-- <div class="h-[12vh] bg-[#EDEDED] overflow-hidden">
-			<div class="flex h-full w-[200vw]">
-				<img src={lorem.src} class="h-[50%] m-auto">
+			<div class=" ml-10 ">
+				<div class="flex flex-col gap-2">
+					<div class="flex flex-col">
+						<span>Historicas</span>
+						<div class="bg-[#292032] w-[27vw] h-[20vw]"></div>
+					</div>
+					<div class="flex flex-col">
+						<span>Productivas</span>
+						<div class="bg-[#292032] w-[27vw] h-[20vw]"></div>
+					</div>
+					<div class="flex flex-col">
+						<span>Impactantes</span>
+						<div class="bg-[#292032] w-[27vw] h-[20vw]"></div>
+					</div>
+					<div class="flex flex-col">
+						<span>Futuro</span>
+						<div class="bg-[#292032] w-[27vw] h-[20vw]"></div>
+					</div>
+				</div>
 			</div>
-		</div> -->
+		</section>
 		
 		<!-- <SeccionMain /> -->
+		<div>
+			<img src={footerBanner.src} class="" alt="">
+		</div>
 		
 		<Footer />
 
