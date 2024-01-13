@@ -25,7 +25,7 @@ import { fondoSeccion1, titulo, seccion2BG, seccion2img, seccion3img, seccion3Ti
 		<meta name="generator" content={Astro.generator} />
 		<title>PDG</title>
 	</head>
-	<body>
+	<body class="overflow-x-hidden">
 		<NavBar path="home"/>
 		<section id="banner" class="">
 			<div class=" w-full flex ">
@@ -45,8 +45,37 @@ import { fondoSeccion1, titulo, seccion2BG, seccion2img, seccion3img, seccion3Ti
 				<img id="seccion2img" src={seccion2img.src} alt="" class="absolute bottom-[-300px] ">
 			</div>
 			<p class=" top-28 z-30 absolute px-[20%] text-center text-[#1E1E1E] font-robot text-lg tracking-[.1rem]">Esta investigación, apoyada por la Beca Atlantic Equity Challenge (AEQ), examina las disposiciones especiales para la igualdad de género en el Acuerdo de Paz de Colombia de 2016. Evalúa la efectividad de su implementación en el Cauca tal como la perciben las mujeres indígenas y afrocolombianas, las mujeres excombatientes y LGBTQ+, los cuatro grupos prioritarios de esta investigación, con el objetivo de imaginar medidas para una ejecución más efectiva, y también extraer lecciones del modelo colombiano para otros entornos de conflicto.</p>
+			
 		</section>
-		
+		<div id="modalIntegrantes" class=" overflow-hidden absolute top-[250%] bg-[#442B47] flex text-white font-robot right-0 p-5 rounded-lg transition-all translate-x-[70%] hover:bg-[#614164] hover:cursor-pointer z-50">
+			<div id="integEquipo" class="text-lg mr-7 h-full">Equipo</div>
+			<div id="integEquipo2" class="flex flex-col gap-10">
+				<div>
+					<p class="font-bold">Investigador principal:</p>
+					<a href="https://www.lse.ac.uk/International-Inequalities/People/George-Kunnath/George-Kunnath">
+						<p class="underline">Dr. George Kunnath</p>
+					</a>
+				</div>
+				<div>
+					<p class="font-bold">Co-investigadora principal:</p>
+					<a href="https://www.icesi.edu.co/profesores/cv/erika-marquez;jsessionid=8D39146ACE18D40C32F8A521B7BF78F5">
+						<p class="underline">Dra. Erika Márquez Montaño</p>
+					</a>
+				</div>
+				<div>
+					<p class="font-bold">Investigadorxs:</p>
+					<a href="https://www.funcionpublica.gov.co/web/sigep/hdv/-/directorio/M1993588-8313-5/view">
+						<p class="underline">Alejandra Erazo Gómez</p>
+					</a>
+					<a href="https://www.funcionpublica.gov.co/web/sigep/hdv/-/directorio/M2399656-8025-5/view">
+						<p class="underline">Dilia Consuelo Fuertes</p>
+					</a>
+					<a href="https://afsee.atlanticfellows.org/hobeth-martinez">
+						<p class="underline">Hobeth Martínez Carrillo</p>
+					</a>
+				</div>
+			</div>
+		</div>
 		<!-- Aqui empieza  PANELES   -->
 		<div class="w-[98.5vw] overflow-hidden">
 			
@@ -205,6 +234,13 @@ import { fondoSeccion1, titulo, seccion2BG, seccion2img, seccion3img, seccion3Ti
 		</div>
 		
 		<Footer />
+
+		<script is:inline>
+			document.querySelector('#modalIntegrantes').addEventListener('click', ()=> {
+				document.querySelector('#modalIntegrantes').classList.toggle('translate-x-[70%]')
+				document.querySelector('#modalIntegrantes').classList.toggle('hover:cursor-pointer')
+			})
+		</script>
 
 		<script is:inline async src='https://www.tiktok.com/embed.js'></script>
 		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js">import gsap from "gsap";</script>
