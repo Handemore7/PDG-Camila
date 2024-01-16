@@ -1,8 +1,6 @@
 ---
 import NavBar from "../Components/NavBar.astro";
 import Footer from "../Components/Footer.astro";
-import SeccionMain from "../Components/SeccionMain.astro";
-import bannerBG from "../../public/assets/Banner.png";
 import bannerContent from "../../public/assets/Banner2.png";
 import {
 	fondoSeccion1,
@@ -18,6 +16,7 @@ import {
 	footerBanner,
 	seccion3_6,
 	seccion3_7,
+	mobile1,
 } from "../../public/assets/index";
 ---
 
@@ -40,97 +39,522 @@ import {
 	</head>
 	<body class="overflow-x-hidden">
 		<NavBar path="home" />
-		<section id="banner" class="">
-			<div class="w-full flex">
-				<img src={fondoSeccion1.src} class="w-full" />
-			</div>
+
+		<!-- PRIMERA SECCION PC -->
+		<div class="max-sm:hidden">
+			<section id="banner">
+				<div class="w-full flex">
+					<img src={fondoSeccion1.src} class="w-full" />
+				</div>
+				<div
+					class="h-[80vh] mt-[20vh] top-20 w-full absolute flex flex-col gap-96"
+				>
+					<div>
+						<img class="w-[70%] m-auto" src={titulo.src} />
+						<p
+							class="text-white font-robot text-center px-[30%] tracking-[.5rem] text-xl"
+						>
+							Lecciones del acuerdo de paz en Colombia de 2016
+						</p>
+					</div>
+					<img class="w-[40%] m-auto" src={bannerContent.src} />
+				</div>
+			</section>
+			<section id="seccion2" class="relative w-full z-50 h-[88vh]">
+				<div class="relative -top-[35vh] z-0">
+					<img src={seccion2BG.src} class="" />
+					<img
+						id="seccion2img"
+						src={seccion2img.src}
+						alt=""
+						class="absolute bottom-[-300px]"
+					/>
+				</div>
+				<p
+					class="top-28 z-30 absolute px-[20%] text-center text-[#1E1E1E] font-robot text-lg tracking-[.1rem]"
+				>
+					Esta investigación, apoyada por la Beca Atlantic Equity
+					Challenge (AEQ), examina las disposiciones especiales para
+					la igualdad de género en el Acuerdo de Paz de Colombia de
+					2016. Evalúa la efectividad de su implementación en el Cauca
+					tal como la perciben las mujeres indígenas y
+					afrocolombianas, las mujeres excombatientes y LGBTQ+, los
+					cuatro grupos prioritarios de esta investigación, con el
+					objetivo de imaginar medidas para una ejecución más
+					efectiva, y también extraer lecciones del modelo colombiano
+					para otros entornos de conflicto.
+				</p>
+			</section>
 			<div
-				class="h-[80vh] mt-[20vh] top-20 w-full absolute flex flex-col gap-96"
+				id="modalIntegrantes"
+				class="overflow-hidden absolute top-[250%] bg-[#442B47] flex text-white font-robot right-0 p-5 rounded-lg transition-all translate-x-[70%] hover:bg-[#614164] hover:cursor-pointer z-50"
 			>
-				<div>
-					<img class="w-[70%] m-auto" src={titulo.src} />
-					<p
-						class="text-white font-robot text-center px-[30%] tracking-[.5rem] text-xl"
+				<div id="integEquipo" class="text-lg mr-7 h-full">Equipo</div>
+				<div id="integEquipo2" class="flex flex-col gap-10">
+					<div>
+						<p class="font-bold">Investigador principal:</p>
+						<a
+							href="https://www.lse.ac.uk/International-Inequalities/People/George-Kunnath/George-Kunnath"
+						>
+							<p class="underline">Dr. George Kunnath</p>
+						</a>
+					</div>
+					<div>
+						<p class="font-bold">Co-investigadora principal:</p>
+						<a
+							href="https://www.icesi.edu.co/profesores/cv/erika-marquez;jsessionid=8D39146ACE18D40C32F8A521B7BF78F5"
+						>
+							<p class="underline">Dra. Erika Márquez Montaño</p>
+						</a>
+					</div>
+					<div>
+						<p class="font-bold">Investigadorxs:</p>
+						<a
+							href="https://www.funcionpublica.gov.co/web/sigep/hdv/-/directorio/M1993588-8313-5/view"
+						>
+							<p class="underline">Alejandra Erazo Gómez</p>
+						</a>
+						<a
+							href="https://www.funcionpublica.gov.co/web/sigep/hdv/-/directorio/M2399656-8025-5/view"
+						>
+							<p class="underline">Dilia Consuelo Fuertes</p>
+						</a>
+						<a
+							href="https://afsee.atlanticfellows.org/hobeth-martinez"
+						>
+							<p class="underline">Hobeth Martínez Carrillo</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="w-[98.5vw] overflow-hidden">
+				<div
+					id="seccion3"
+					class="w-[500%] flex flex-nowrap overflow-x-hidden"
+				>
+					<div
+						id="seccion3-1"
+						class="panel pb-10 flex bg-[#292032] flex-row w-[100vw] h-[100vh] px-[10vw] pt-[10vh]"
 					>
-						Lecciones del acuerdo de paz en Colombia de 2016
+						<img src={seccion3img.src} alt="" />
+						<div class="flex flex-col">
+							<img
+								src={seccion3Title.src}
+								alt=""
+								class="w-3/2 mx-auto"
+							/>
+							<p
+								class="text-[#FDE0FF] font-robot tracking-[.2rem] text-xl px-[10%] mt-10"
+							>
+								La implementación del Acuerdo de Paz en los
+								puntos relacionados con el enfoque de género y
+								la mujer rural ha sido lenta.<br /><br />Aquí te
+								explicamos 3 puntos claves de el acuerdo con
+								áreas para mejorar.
+							</p>
+						</div>
+					</div>
+					<section
+						id="seccion3-2"
+						class="panel pb-10 flex bg-[#292032] flex-row w-[100vw] px-[10vw] pt-[10vh]"
+					>
+						<div class="flex flex-row relative">
+							<img
+								src={seccion3_2.src}
+								alt=""
+								class="w-[100px] h-[100px]"
+							/>
+							<div class="flex flex-col">
+								<img
+									src={seccion3_2title.src}
+									class="w-[100%]"
+								/>
+								<div class="flex flex-col gap-6 tarjetas">
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+										>
+											La primera área de mejora está en la
+											implementación del punto que aborda
+											la reincorporación de las mujeres
+											con enfoque de género
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+										>
+											La politica de reincorporación con
+											enfoque de género en el acuerdo
+											busca facilitar la transición de las
+											mujeres firmantes de paz a la vida
+											civil
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+										>
+											Pero reconociendo las dificultades
+											específicas que enfrentan como
+											mujeres, por ejemplo, los
+											estereotipos y las violencias
+											basadas en género.
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+										>
+											Desde la visión de las mujeres
+											firmantes de paz, la inclusión del
+											enfoque de género en el acuerdo fue
+											posible gracias a la presión de
+											colectivos de mujeres y de la
+											sociedad civil organizada.
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+										>
+											La incorporación del enfoque de
+											género corresponde a un logro de
+											carácter nacional e internacional,
+											que permitió la apertura social e
+											institucional para continuar
+											posicionando el género en el debate
+											público, las agendas organizativas y
+											las políticas
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="flex flex-col">
+								<img
+									src={seccion3img.src}
+									class="h-[100vh]"
+									alt=""
+								/>
+								<div class="border border-red-600">
+									<blockquote
+										class="tiktok-embed"
+										cite="https://www.tiktok.com/@camilaparedeso_/video/7322294350971407621"
+										data-video-id="7322294350971407621"
+										style="max-width: 325px; min-width: 325px; max-height: 500px; min-height: 500px"
+									>
+										<section class=""></section>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section
+						id="seccion3-2-PRUEBA2"
+						class="panel flex bg-[#076F28] flex-row w-[100vw] px-[10vw] pt-[12vh]"
+					>
+						<div class="flex flex-row">
+							<img
+								src={seccion3_6.src}
+								alt=""
+								class="w-[100px] h-[100px]"
+							/>
+							<div class="flex flex-col">
+								<img
+									src={seccion3_5title.src}
+									class="w-[100%]"
+								/>
+								<div class="flex flex-col gap-6">
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+										>
+											La segunda área de mejora está en la
+											implementación de los Programas de
+											desarrollo con enfoque territorial
+											(PDETS). Nos concentramos en el PDET
+											Norte del Cauca Alto Patía.
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+										>
+											Están pactados en el punto 1 del
+											Acuerdo de paz de 2016
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+										>
+											Los PDETS son planes especiales del
+											gobierno relacionados con la reforma
+											rural integral que priorizan los
+											municipios más afectados por el
+											conflicto armado. En el Cauca
+											incluyen 170 municipios.
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+										>
+											La Reforma Rural Integral es un
+											conjunto de medidas que toma el
+											gobierno para mejorar la vida en las
+											áreas rurales, incluyendo la
+											distribución de tierras, servicios
+											básicos y desarrollo agrícola, con
+											el objetivo de lograr un cambio
+											positivo y equitativo en estas
+											comunidades.
+										</p>
+									</div>
+								</div>
+							</div>
+							<img
+								src={seccion3img.src}
+								class="h-[100vh]"
+								alt=""
+							/>
+						</div>
+					</section>
+					<section
+						id="seccion3-2-PRUEBA"
+						class="panel pb-10 flex bg-[white] flex-row w-[100vw] px-[10vw] pt-[10vh]"
+					>
+						<div class="flex flex-row justify-evenly w-full">
+							<div class="flex flex-col">
+								<img
+									src={seccion3_7.src}
+									class="h-[80vh] mt-5"
+								/>
+							</div>
+							<img
+								src={seccion3img.src}
+								class="h-[100vh]"
+								alt=""
+							/>
+						</div>
+					</section>
+				</div>
+			</div>
+			<section id="seccion4" class="">
+				<div
+					id="seccion4-1"
+					class="pregunta bg-[#292032] h-[100vh] px-24 flex justify-center items-center"
+				>
+					<p class="text-white text-6xl font-[test] leading-[1.4]">
+						¿SABIAS QUE LA PRIMERA ASOCIACIÓN DE MUJERES FIRMANTES
+						DE PAZ SE ENCUENTRA EN EL CAUCA?
 					</p>
 				</div>
-				<img class="w-[40%] m-auto" src={bannerContent.src} />
-			</div>
-		</section>
-		<section id="seccion2" class="relative w-full z-50 h-[88vh]">
-			<div class="relative -top-[35vh] z-0">
-				<img src={seccion2BG.src} class="" />
-				<img
-					id="seccion2img"
-					src={seccion2img.src}
-					alt=""
-					class="absolute bottom-[-300px]"
-				/>
-			</div>
-			<p
-				class="top-28 z-30 absolute px-[20%] text-center text-[#1E1E1E] font-robot text-lg tracking-[.1rem]"
-			>
-				Esta investigación, apoyada por la Beca Atlantic Equity
-				Challenge (AEQ), examina las disposiciones especiales para la
-				igualdad de género en el Acuerdo de Paz de Colombia de 2016.
-				Evalúa la efectividad de su implementación en el Cauca tal como
-				la perciben las mujeres indígenas y afrocolombianas, las mujeres
-				excombatientes y LGBTQ+, los cuatro grupos prioritarios de esta
-				investigación, con el objetivo de imaginar medidas para una
-				ejecución más efectiva, y también extraer lecciones del modelo
-				colombiano para otros entornos de conflicto.
-			</p>
-		</section>
-		<div
-			id="modalIntegrantes"
-			class="overflow-hidden absolute top-[250%] bg-[#442B47] flex text-white font-robot right-0 p-5 rounded-lg transition-all translate-x-[70%] hover:bg-[#614164] hover:cursor-pointer z-50"
-		>
-			<div id="integEquipo" class="text-lg mr-7 h-full">Equipo</div>
-			<div id="integEquipo2" class="flex flex-col gap-10">
-				<div>
-					<p class="font-bold">Investigador principal:</p>
-					<a
-						href="https://www.lse.ac.uk/International-Inequalities/People/George-Kunnath/George-Kunnath"
-					>
-						<p class="underline">Dr. George Kunnath</p>
-					</a>
-				</div>
-				<div>
-					<p class="font-bold">Co-investigadora principal:</p>
-					<a
-						href="https://www.icesi.edu.co/profesores/cv/erika-marquez;jsessionid=8D39146ACE18D40C32F8A521B7BF78F5"
-					>
-						<p class="underline">Dra. Erika Márquez Montaño</p>
-					</a>
-				</div>
-				<div>
-					<p class="font-bold">Investigadorxs:</p>
-					<a
-						href="https://www.funcionpublica.gov.co/web/sigep/hdv/-/directorio/M1993588-8313-5/view"
-					>
-						<p class="underline">Alejandra Erazo Gómez</p>
-					</a>
-					<a
-						href="https://www.funcionpublica.gov.co/web/sigep/hdv/-/directorio/M2399656-8025-5/view"
-					>
-						<p class="underline">Dilia Consuelo Fuertes</p>
-					</a>
-					<a href="https://afsee.atlanticfellows.org/hobeth-martinez">
-						<p class="underline">Hobeth Martínez Carrillo</p>
-					</a>
-				</div>
-			</div>
-		</div>
-		<!-- Aqui empieza  PANELES   -->
-		<div class="w-[98.5vw] overflow-hidden">
-			<div
-				id="seccion3"
-				class="w-[500%] flex flex-nowrap overflow-x-hidden"
-			>
 				<div
-					id="seccion3-1"
-					class="panel pb-10 flex bg-[#292032] flex-row w-[100vw] h-[100vh] px-[10vw] pt-[10vh]"
+					id="seccion4-2"
+					class="pregunta bg-[#292032] h-[100vh] px-24 flex justify-center items-center"
+				>
+					<p class="text-white text-6xl font-[test] leading-[1.4]">
+						UNA ASOCIACIÓN QUE APUESTA POR LA AUTONOMIA ECONOMICA DE
+						LAS MUJERES EN PROCESO DE REINCORPORACIÓN
+					</p>
+				</div>
+				<div
+					id="seccion4-3"
+					class="pregunta bg-[#292032] h-[100vh] px-24 flex justify-center items-center"
+				>
+					<p class="text-white text-6xl font-[test] leading-[1.4]">
+						CREANDO ESPACIOS DE CAPACITACIÓN Y EMPRENDEMIENTO
+						ECONOMICO PARA QUE LAS MUJERES PUEDAN GENERAR RECUERSOS
+						DE MANERA INDEPENDIENTE
+					</p>
+				</div>
+			</section>
+			<section class="bg-[#FDE0FF] flex px-36 pt-24 pb-14 justify-center">
+				<div class="flex flex-col">
+					<p class="font-[test] text-[#292032] text-7xl">
+						ASOMANUELITAS
+					</p>
+					<p class="font-robot text-2xl w-[45vw]">
+						Primera asociación de mujeres reincorporadas que apuesta
+						por construir la paz, la autonomia economica y
+						empoderamiento politico de las mujeres
+					</p>
+					<div class="w-full flex">
+						<img
+							src={seccion4Banner.src}
+							class="w-[67%] m-auto translate-y-[-5%]"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="ml-10">
+					<div class="flex flex-col gap-2 h-[82vh] overflow-y-scroll">
+						<div class="flex flex-col">
+							<span class="font-robot text-[#292032] text-lg"
+								>Historicas</span
+							>
+							<div class="bg-[#292032]">
+								<iframe
+									src="https://drive.google.com/file/d/1r4IZtPiWXQ7ajgT1KuIhRFqY-OYCMoEn/preview"
+									width="380"
+									height="220"
+									allow="autoplay"></iframe>
+							</div>
+						</div>
+						<div class="flex flex-col">
+							<span class="font-robot text-[#292032] text-lg"
+								>Productivas</span
+							>
+							<div class="">
+								<iframe
+									src="https://drive.google.com/file/d/1rccKiYVj7r1D7wRxwttNdaqhXSYRiPzK/preview"
+									width="380"
+									height="220"
+									allow="autoplay"></iframe>
+							</div>
+						</div>
+						<div class="flex flex-col">
+							<span class="font-robot text-[#292032] text-lg"
+								>Impactantes</span
+							>
+							<div class="">
+								<iframe
+									src="https://drive.google.com/file/d/1zuB7F7ZpAGKlbvCheVlvsNE9O7PGDrXz/preview"
+									width="380"
+									height="220"
+									allow="autoplay"></iframe>
+							</div>
+						</div>
+						<div class="flex flex-col">
+							<span class="font-robot text-[#292032] text-lg"
+								>Futuro</span
+							>
+							<div class="">
+								<iframe
+									src="https://drive.google.com/file/d/1F9tH3-4MZkDFwyocmcERLku3DlThVscm/preview"
+									width="380"
+									height="220"
+									allow="autoplay"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div>
+				<img src={footerBanner.src} class="" alt="" />
+			</div>
+
+			<Footer />
+		</div>
+
+		<!-- PRIMERA SECCION MOBILE -->
+		<div class="sm:hidden">
+			<section id="banner">
+				<div class="pt-[15vh] w-full flex flex-col bg-[#292032]">
+					<div>
+						<img class="w-[80%] m-auto" src={titulo.src} />
+						<p
+							class="text-white font-robot text-center px-[22%] tracking-[.1rem] text-sm"
+						>
+							Lecciones del acuerdo de paz en Colombia de 2016
+						</p>
+					</div>
+					<img src={mobile1.src} alt="" />
+				</div>
+			</section>
+			<section id="seccion2" class="relative w-full z-50 h-[70vh]">
+				<p
+					class="pt-[20vh] pb-[5vh] z-30 absolute px-[12%] text-center text-[#1E1E1E] font-robot text-sm"
+				>
+					Esta investigación, apoyada por la Beca Atlantic Equity
+					Challenge (AEQ), examina las disposiciones especiales para
+					la igualdad de género en el Acuerdo de Paz de Colombia de
+					2016. Evalúa la efectividad de su implementación en el Cauca
+					tal como la perciben las mujeres indígenas y
+					afrocolombianas, las mujeres excombatientes y LGBTQ+, los
+					cuatro grupos prioritarios de esta investigación, con el
+					objetivo de imaginar medidas para una ejecución más
+					efectiva, y también extraer lecciones del modelo colombiano
+					para otros entornos de conflicto.
+				</p>
+			</section>
+			<div class="w-full overflow-x-hidden absolute top-[73%] z-50">
+				<div
+					id="modalIntegrantesMobile"
+					class="overflow-hidden bg-[#442B47] flex text-white font-robot right-0 p-1 rounded-lg transition-all translate-x-[90%] hover:bg-[#614164] hover:cursor-pointer z-50"
+				>
+					<div
+						id="integEquipoMobile"
+						class="text-sm mt-5 mr-2 h-full -rotate-90"
+					>
+						Equipo
+					</div>
+					<div id="integEquipo2" class="flex flex-col gap-10">
+						<div>
+							<p class="font-bold">Investigador principal:</p>
+							<a
+								href="https://www.lse.ac.uk/International-Inequalities/People/George-Kunnath/George-Kunnath"
+							>
+								<p class="underline">Dr. George Kunnath</p>
+							</a>
+						</div>
+						<div>
+							<p class="font-bold">Co-investigadora principal:</p>
+							<a
+								href="https://www.icesi.edu.co/profesores/cv/erika-marquez;jsessionid=8D39146ACE18D40C32F8A521B7BF78F5"
+							>
+								<p class="underline">
+									Dra. Erika Márquez Montaño
+								</p>
+							</a>
+						</div>
+						<div>
+							<p class="font-bold">Investigadorxs:</p>
+							<a
+								href="https://www.funcionpublica.gov.co/web/sigep/hdv/-/directorio/M1993588-8313-5/view"
+							>
+								<p class="underline">Alejandra Erazo Gómez</p>
+							</a>
+							<a
+								href="https://www.funcionpublica.gov.co/web/sigep/hdv/-/directorio/M2399656-8025-5/view"
+							>
+								<p class="underline">Dilia Consuelo Fuertes</p>
+							</a>
+							<a
+								href="https://afsee.atlanticfellows.org/hobeth-martinez"
+							>
+								<p class="underline">
+									Hobeth Martínez Carrillo
+								</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="seccion3-mobile" class="flex flex-wrap">
+				<div
+					id="seccion3-1-mobile"
+					class="panel pb-10 flex bg-[#292032] flex-row w-[100vw] h-[40vh] px-[3vw] pt-[3vh]"
 				>
 					<img src={seccion3img.src} alt="" />
 					<div class="flex flex-col">
@@ -139,9 +563,7 @@ import {
 							alt=""
 							class="w-3/2 mx-auto"
 						/>
-						<p
-							class="text-[#FDE0FF] font-robot tracking-[.2rem] text-xl px-[10%] mt-10"
-						>
+						<p class="text-[#FDE0FF] font-robot text-xs mt-4">
 							La implementación del Acuerdo de Paz en los puntos
 							relacionados con el enfoque de género y la mujer
 							rural ha sido lenta.<br /><br />Aquí te explicamos 3
@@ -149,303 +571,363 @@ import {
 						</p>
 					</div>
 				</div>
-				<section
-					id="seccion3-2"
-					class="panel pb-10 flex bg-[#292032] flex-row w-[100vw] px-[10vw] pt-[10vh]"
-				>
-					<div class="flex flex-row relative">
-						<img
-							src={seccion3_2.src}
-							alt=""
-							class="w-[100px] h-[100px]"
-						/>
-						<div class="flex flex-col">
-							<img src={seccion3_2title.src} class="w-[100%]" />
-							<div class="flex flex-col gap-6 tarjetas">
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+			</div>
+			<div class="w-[100vw] overflow-x-scroll">
+				<div class="w-[300vw] flex flex-nowrap overflow-x-scroll">
+					<section
+						id="seccion3-2-mobile"
+						class="panel-mobile pb-10 flex bg-[#292032] flex-row w-[100vw] px-[2vw] pt-[5vh]"
+					>
+						<div class="flex flex-col relative">
+							<div class="flex flex-row">
+								<img
+									src={seccion3_2.src}
+									alt=""
+									class="w-[30px] h-[30px]"
+								/>
+								<img
+									src={seccion3img.src}
+									class="h-[20vh]"
+									alt=""
+								/>
+								<img
+									src={seccion3_2title.src}
+									class="w-[60%] h-[20vh]"
+								/>
+							</div>
+							<div class="flex flex-col">
+								<div class="flex flex-col gap-6 tarjetas">
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-2 py-4"
 									>
-										La primera área de mejora está en la
-										implementación del punto que aborda la
-										reincorporación de las mujeres con
-										enfoque de género
-									</p>
+										<p
+											class="text-[#292032] text-center font-robot text-sm"
+										>
+											La primera área de mejora está en la
+											implementación del punto que aborda
+											la reincorporación de las mujeres
+											con enfoque de género
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-2 py-4"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-sm"
+										>
+											La politica de reincorporación con
+											enfoque de género en el acuerdo
+											busca facilitar la transición de las
+											mujeres firmantes de paz a la vida
+											civil
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-2 py-4"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-sm"
+										>
+											Pero reconociendo las dificultades
+											específicas que enfrentan como
+											mujeres, por ejemplo, los
+											estereotipos y las violencias
+											basadas en género.
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-2 py-4"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-sm"
+										>
+											Desde la visión de las mujeres
+											firmantes de paz, la inclusión del
+											enfoque de género en el acuerdo fue
+											posible gracias a la presión de
+											colectivos de mujeres y de la
+											sociedad civil organizada.
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-2 py-4"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-sm"
+										>
+											La incorporación del enfoque de
+											género corresponde a un logro de
+											carácter nacional e internacional,
+											que permitió la apertura social e
+											institucional para continuar
+											posicionando el género en el debate
+											público, las agendas organizativas y
+											las políticas
+										</p>
+									</div>
 								</div>
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+							</div>
+							<!-- <div class="border border-red-600">
+									<blockquote
+										class="tiktok-embed"
+										cite="https://www.tiktok.com/@camilaparedeso_/video/7322294350971407621"
+										data-video-id="7322294350971407621"
+										style="max-width: 325px; min-width: 325px; max-height: 500px; min-height: 500px"
 									>
-										La politica de reincorporación con
-										enfoque de género en el acuerdo busca
-										facilitar la transición de las mujeres
-										firmantes de paz a la vida civil
-									</p>
-								</div>
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+										<section class=""></section>
+									</blockquote>
+								</div> -->
+						</div>
+					</section>
+					<section
+						id="seccion3-2-PRUEBA2-mobile"
+						class="panel-mobile flex bg-[#076F28] flex-row w-[100vw] px-[2vw] pt-[5vh]"
+					>
+						<div class="flex flex-col relative">
+							<div class="flex flex-row">
+								<img
+									src={seccion3_6.src}
+									alt=""
+									class="w-[30px] h-[30px]"
+								/>
+								<img
+									src={seccion3img.src}
+									class="h-[20vh]"
+									alt=""
+								/>
+								<img
+									src={seccion3_5title.src}
+									class="w-[70%] h-[15vh]"
+								/>
+							</div>
+							<div class="flex flex-col">
+								<div class="flex flex-col gap-6">
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
 									>
-										Pero reconociendo las dificultades
-										específicas que enfrentan como mujeres,
-										por ejemplo, los estereotipos y las
-										violencias basadas en género.
-									</p>
-								</div>
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+										<p
+											class="text-[#292032] text-center font-robot text-sm"
+										>
+											La segunda área de mejora está en la
+											implementación de los Programas de
+											desarrollo con enfoque territorial
+											(PDETS). Nos concentramos en el PDET
+											Norte del Cauca Alto Patía.
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
 									>
-										Desde la visión de las mujeres firmantes
-										de paz, la inclusión del enfoque de
-										género en el acuerdo fue posible gracias
-										a la presión de colectivos de mujeres y
-										de la sociedad civil organizada.
-									</p>
-								</div>
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
+										<p
+											class="text-[#292032] text-center font-robot text-sm"
+										>
+											Están pactados en el punto 1 del
+											Acuerdo de paz de 2016
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
 									>
-										La incorporación del enfoque de género
-										corresponde a un logro de carácter
-										nacional e internacional, que permitió
-										la apertura social e institucional para
-										continuar posicionando el género en el
-										debate público, las agendas
-										organizativas y las políticas
-									</p>
+										<p
+											class="text-[#292032] text-center font-robot text-sm"
+										>
+											Los PDETS son planes especiales del
+											gobierno relacionados con la reforma
+											rural integral que priorizan los
+											municipios más afectados por el
+											conflicto armado. En el Cauca
+											incluyen 170 municipios.
+										</p>
+									</div>
+									<div
+										class="bg-[#FDE0FF] rounded-2xl px-6 py-8"
+									>
+										<p
+											class="text-[#292032] text-center font-robot text-sm"
+										>
+											La Reforma Rural Integral es un
+											conjunto de medidas que toma el
+											gobierno para mejorar la vida en las
+											áreas rurales, incluyendo la
+											distribución de tierras, servicios
+											básicos y desarrollo agrícola, con
+											el objetivo de lograr un cambio
+											positivo y equitativo en estas
+											comunidades.
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="flex flex-col">
-							<img
-								src={seccion3img.src}
-								class="h-[100vh]"
-								alt=""
-							/>
-							<div class="border border-red-600">
-								<blockquote
-									class="tiktok-embed"
-									cite="https://www.tiktok.com/@camilaparedeso_/video/7322294350971407621"
-									data-video-id="7322294350971407621"
-									style="max-width: 325px; min-width: 325px; max-height: 500px; min-height: 500px"
-								>
-									<section class=""></section>
-								</blockquote>
+					</section>
+					<section
+						id="seccion3-2-PRUEBA-mobile"
+						class="panel-mobile pb-10 flex bg-[white] flex-row w-[100vw] px-[2vw] pt-[5vh]"
+					>
+						<div class="flex flex-row justify-evenly w-full">
+							<div class="flex flex-col">
+								<img
+									src={seccion3_7.src}
+									class="h-[60vh] mt-5"
+								/>
 							</div>
 						</div>
-					</div>
-				</section>
-				<section
-					id="seccion3-2-PRUEBA2"
-					class="panel flex bg-[#076F28] flex-row w-[100vw] px-[10vw] pt-[12vh]"
-				>
-					<div class="flex flex-row">
-						<img
-							src={seccion3_6.src}
-							alt=""
-							class="w-[100px] h-[100px]"
-						/>
-						<div class="flex flex-col">
-							<img src={seccion3_5title.src} class="w-[100%]" />
-							<div class="flex flex-col gap-6">
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
-									>
-										La segunda área de mejora está en la
-										implementación de los Programas de
-										desarrollo con enfoque territorial
-										(PDETS). Nos concentramos en el PDET
-										Norte del Cauca Alto Patía.
-									</p>
-								</div>
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
-									>
-										Están pactados en el punto 1 del Acuerdo
-										de paz de 2016
-									</p>
-								</div>
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
-									>
-										Los PDETS son planes especiales del
-										gobierno relacionados con la reforma
-										rural integral que priorizan los
-										municipios más afectados por el
-										conflicto armado. En el Cauca incluyen
-										170 municipios.
-									</p>
-								</div>
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
-									>
-										La Reforma Rural Integral es un conjunto
-										de medidas que toma el gobierno para
-										mejorar la vida en las áreas rurales,
-										incluyendo la distribución de tierras,
-										servicios básicos y desarrollo agrícola,
-										con el objetivo de lograr un cambio
-										positivo y equitativo en estas
-										comunidades.
-									</p>
-								</div>
-							</div>
-						</div>
-						<img src={seccion3img.src} class="h-[100vh]" alt="" />
-					</div>
-				</section>
-				<section
-					id="seccion3-2-PRUEBA"
-					class="panel pb-10 flex bg-[white] flex-row w-[100vw] px-[10vw] pt-[10vh]"
-				>
-					<div class="flex flex-row justify-evenly w-full">
-						<div class="flex flex-col">
-							<img src={seccion3_7.src} class="h-[80vh] mt-5" />
-						</div>
-						<img src={seccion3img.src} class="h-[100vh]" alt="" />
-					</div>
-				</section>
-			</div>
-		</div>
-		<section id="seccion4" class="">
-			<div
-				id="seccion4-1"
-				class="pregunta bg-[#292032] h-[100vh] px-24 flex justify-center items-center"
-			>
-				<p class="text-white text-6xl font-[test] leading-[1.4]">
-					¿SABIAS QUE LA PRIMERA ASOCIACIÓN DE MUJERES FIRMANTES DE
-					PAZ SE ENCUENTRA EN EL CAUCA?
-				</p>
-			</div>
-			<div
-				id="seccion4-2"
-				class="pregunta bg-[#292032] h-[100vh] px-24 flex justify-center items-center"
-			>
-				<p class="text-white text-6xl font-[test] leading-[1.4]">
-					UNA ASOCIACIÓN QUE APUESTA POR LA AUTONOMIA ECONOMICA DE LAS
-					MUJERES EN PROCESO DE REINCORPORACIÓN
-				</p>
-			</div>
-			<div
-				id="seccion4-3"
-				class="pregunta bg-[#292032] h-[100vh] px-24 flex justify-center items-center"
-			>
-				<p class="text-white text-6xl font-[test] leading-[1.4]">
-					CREANDO ESPACIOS DE CAPACITACIÓN Y EMPRENDEMIENTO ECONOMICO
-					PARA QUE LAS MUJERES PUEDAN GENERAR RECUERSOS DE MANERA
-					INDEPENDIENTE
-				</p>
-			</div>
-		</section>
-		<section class="bg-[#FDE0FF] flex px-36 pt-24 pb-14 justify-center">
-			<div class="flex flex-col">
-				<p class="font-[test] text-[#292032] text-7xl">ASOMANUELITAS</p>
-				<p class="font-robot text-2xl w-[45vw]">
-					Primera asociación de mujeres reincorporadas que apuesta por
-					construir la paz, la autonomia economica y empoderamiento
-					politico de las mujeres
-				</p>
-				<div class="w-full flex">
-					<img
-						src={seccion4Banner.src}
-						class="w-[67%] m-auto translate-y-[-5%]"
-						alt=""
-					/>
+					</section>
 				</div>
 			</div>
-			<div class="ml-10">
-				<div class="flex flex-col gap-2 h-[82vh] overflow-y-scroll">
-					<div class="flex flex-col">
-						<span class="font-robot text-[#292032] text-lg"
-							>Historicas</span
-						>
-						<div class="bg-[#292032]">
-							<iframe
-								src="https://drive.google.com/file/d/1r4IZtPiWXQ7ajgT1KuIhRFqY-OYCMoEn/preview"
-								width="380"
-								height="220"
-								allow="autoplay"></iframe>
-						</div>
+			<section id="seccion4-mobile" class=" w-[100vw]">
+				<div
+					id="seccion4-1-mobile"
+					class="pregunta-mobile bg-[#292032] h-[50vh] px-5 flex justify-center items-center"
+				>
+					<p class="text-white text-xl font-[test] ">
+						¿SABIAS QUE LA PRIMERA ASOCIACIÓN DE MUJERES FIRMANTES DE
+						PAZ SE ENCUENTRA EN EL CAUCA?
+					</p>
+				</div>
+				<div
+					id="seccion4-2-mobile"
+					class="pregunta-mobile bg-[#292032] h-[50vh] px-5 flex justify-center items-center"
+				>
+					<p class="text-white text-xl font-[test] ">
+						UNA ASOCIACIÓN QUE APUESTA POR LA AUTONOMIA ECONOMICA DE LAS
+						MUJERES EN PROCESO DE REINCORPORACIÓN
+					</p>
+				</div>
+				<div
+					id="seccion4-3-mobile"
+					class="pregunta-mobile bg-[#292032] h-[50vh] px-5 flex justify-center items-center"
+				>
+					<p class="text-white text-xl font-[test] ">
+						CREANDO ESPACIOS DE CAPACITACIÓN Y EMPRENDEMIENTO ECONOMICO
+						PARA QUE LAS MUJERES PUEDAN GENERAR RECUERSOS DE MANERA
+						INDEPENDIENTE
+					</p>
+				</div>
+			</section>
+
+
+
+			<section class="bg-[#FDE0FF] flex flex-col px-4 pt-10 pb-14 justify-center w-[100vw]">
+				<div class="flex flex-col">
+					<p class="font-[test] text-[#292032] text-4xl text-center">ASOMANUELITAS</p>
+					<p class="font-robot text-lg w-[80vw] m-auto text-center leading-[1.4rem]">
+						Primera asociación de mujeres reincorporadas que apuesta por
+						construir la paz, la autonomia economica y empoderamiento
+						politico de las mujeres
+					</p>
+					<div class="w-full flex">
+						<img
+							src={seccion4Banner.src}
+							class="w-[67%] m-auto translate-y-[-5%]"
+							alt=""
+						/>
 					</div>
-					<div class="flex flex-col">
-						<span class="font-robot text-[#292032] text-lg"
-							>Productivas</span
-						>
-						<div class="">
-							<iframe
-								src="https://drive.google.com/file/d/1rccKiYVj7r1D7wRxwttNdaqhXSYRiPzK/preview"
-								width="380"
-								height="220"
-								allow="autoplay"></iframe>
+				</div>
+				<div class="">
+					<div class="flex flex-col gap-4 h-[50vh] overflow-y-scroll">
+						<div class="flex flex-col">
+							<span class="font-robot ml-4 text-[#292032] text-2xl"
+								>Historicas</span
+							>
+							<div class="m-auto">
+								<iframe
+									src="https://drive.google.com/file/d/1r4IZtPiWXQ7ajgT1KuIhRFqY-OYCMoEn/preview"
+									width="330"
+									height="220"
+									allow="autoplay"></iframe>
+							</div>
 						</div>
-					</div>
-					<div class="flex flex-col">
-						<span class="font-robot text-[#292032] text-lg"
-							>Impactantes</span
-						>
-						<div class="">
-							<iframe
-								src="https://drive.google.com/file/d/1zuB7F7ZpAGKlbvCheVlvsNE9O7PGDrXz/preview"
-								width="380"
-								height="220"
-								allow="autoplay"></iframe>
+						<div class="flex flex-col">
+							<span class="font-robot ml-4 text-[#292032] text-2xl"
+								>Productivas</span
+							>
+							<div class="m-auto">
+								<iframe
+									src="https://drive.google.com/file/d/1rccKiYVj7r1D7wRxwttNdaqhXSYRiPzK/preview"
+									width="330"
+									height="220"
+									allow="autoplay"></iframe>
+							</div>
 						</div>
-					</div>
-					<div class="flex flex-col">
-						<span class="font-robot text-[#292032] text-lg"
-							>Futuro</span
-						>
-						<div class="">
-							<iframe
-								src="https://drive.google.com/file/d/1F9tH3-4MZkDFwyocmcERLku3DlThVscm/preview"
-								width="380"
-								height="220"
-								allow="autoplay"></iframe>
+						<div class="flex flex-col">
+							<span class="font-robot ml-4 text-[#292032] text-2xl"
+								>Impactantes</span
+							>
+							<div class="m-auto">
+								<iframe
+									src="https://drive.google.com/file/d/1zuB7F7ZpAGKlbvCheVlvsNE9O7PGDrXz/preview"
+									width="330"
+									height="220"
+									allow="autoplay"></iframe>
+							</div>
+						</div>
+						<div class="flex flex-col">
+							<span class="font-robot ml-4 text-[#292032] text-2xl"
+								>Futuro</span
+							>
+							<div class="m-auto">
+								<iframe
+									src="https://drive.google.com/file/d/1F9tH3-4MZkDFwyocmcERLku3DlThVscm/preview"
+									width="330"
+									height="220"
+									allow="autoplay"></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-
-		<!-- <SeccionMain /> -->
-		<div>
-			<img src={footerBanner.src} class="" alt="" />
+			</section>
+			<div>
+				<img src={footerBanner.src} class="" alt="" />
+			</div> 
+			<Footer />			
 		</div>
+	</body>
 
-		<Footer />
+	<script is:inline>
+		document
+			.querySelector("#modalIntegrantes")
+			.addEventListener("click", () => {
+				document
+					.querySelector("#modalIntegrantes")
+					.classList.toggle("translate-x-[70%]");
+				document
+					.querySelector("#modalIntegrantes")
+					.classList.toggle("hover:cursor-pointer");
+			});
+		document
+			.querySelector("#modalIntegrantesMobile")
+			.addEventListener("click", () => {
+				document
+					.querySelector("#modalIntegrantesMobile")
+					.classList.toggle("translate-x-[90%]");
+				document
+					.querySelector("#modalIntegrantesMobile")
+					.classList.toggle("translate-x-[20%]");
+				document
+					.querySelector("#modalIntegrantesMobile")
+					.classList.toggle(
+						"bg-[linear-gradient(90deg,_#442B47_10%,_#614164_10%_100%)]",
+					);
+				document
+					.querySelector("#modalIntegrantesMobile")
+					.classList.toggle("bg-[#442B47]");
+			});
+	</script>
 
-		<script is:inline>
-			document
-				.querySelector("#modalIntegrantes")
-				.addEventListener("click", () => {
-					document
-						.querySelector("#modalIntegrantes")
-						.classList.toggle("translate-x-[70%]");
-					document
-						.querySelector("#modalIntegrantes")
-						.classList.toggle("hover:cursor-pointer");
-				});
-		</script>
-
-		<script is:inline async src="https://www.tiktok.com/embed.js"></script>
-		<script
-			is:inline
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-		>
-			import gsap from "gsap";
-		</script>
-		<script
-			is:inline
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
-		></script>
-		<script is:inline>
-			/* gsap.registerPlugin(ScrollTrigger);
+	<script is:inline async src="https://www.tiktok.com/embed.js"></script>
+	<script
+		is:inline
+		src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+	>
+		import gsap from "gsap";
+	</script>
+	<script
+		is:inline
+		src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+	></script>
+	<script is:inline>
+		/* gsap.registerPlugin(ScrollTrigger);
 				gsap.to("#seccion2", {
 			scrollTrigger: {
 				start: 'center', // top center bottom 
@@ -457,58 +939,57 @@ import {
 			rotation: 360,
 			duration: 2
 			}); */
-			gsap.registerPlugin(ScrollTrigger);
-			gsap.defaults({ ease: "none", duration: 2 });
+		gsap.registerPlugin(ScrollTrigger);
+		gsap.defaults({ ease: "none", duration: 2 });
 
-			gsap.to("#seccion2img", {
-				scrollTrigger: {
-					start: "top bottom",
-					/* markers: true, */
-					trigger: "#seccion2img", // start animation when ".box" enters the viewport
-					toggleActions: "play none none none", //play pause resume reverse restart reset complete none - 4 parametors, Accion desde 'Arriba abajo '
-				},
-				y: -300,
-				duration: 1,
-			});
-
-			//Secciones scroll horizontal
-
-			const tl = gsap.timeline();
-			tl.to("#seccion3-2", { xPercent: -100 })
-				.to("#seccion3-2-PRUEBA2", { xPercent: -200 })
-				.to("#seccion3-2-PRUEBA", { xPercent: -300 });
-			ScrollTrigger.create({
-				animation: tl,
-				trigger: "#seccion3",
-				start: "top top",
-				end: "+=3000",
+		gsap.to("#seccion2img", {
+			scrollTrigger: {
+				start: "top bottom",
 				/* markers: true, */
-				scrub: true,
-				pin: true,
-				anticipatePin: 1,
-			});
+				trigger: "#seccion2img", // start animation when ".box" enters the viewport
+				toggleActions: "play none none none", //play pause resume reverse restart reset complete none - 4 parametors, Accion desde 'Arriba abajo '
+			},
+			y: -300,
+			duration: 1,
+		});
 
-			const tl2 = gsap.timeline();
-			tl2.to("#seccion3-2", { yPercent: -48 });
-			ScrollTrigger.create({
-				animation: tl2,
-				trigger: "#seccion3-2",
-				start: "+=1000",
-				end: "+=400",
-				scrub: true,
-				/* markers: true	 */
-			});
+		//Secciones scroll horizontal
 
-			const tl3 = gsap.timeline();
-			tl3.to("#seccion3-2-PRUEBA2", { yPercent: -30 });
-			ScrollTrigger.create({
-				animation: tl3,
-				trigger: "#seccion3-2-PRUEBA2",
-				start: "+=2000",
-				end: "+=450",
-				scrub: true,
-				//markers: true,
-			});
-		</script>
-	</body>
+		const tl = gsap.timeline();
+		tl.to("#seccion3-2", { xPercent: -100 })
+			.to("#seccion3-2-PRUEBA2", { xPercent: -200 })
+			.to("#seccion3-2-PRUEBA", { xPercent: -300 });
+		ScrollTrigger.create({
+			animation: tl,
+			trigger: "#seccion3",
+			start: "top top",
+			end: "+=3000",
+			/* markers: true, */
+			scrub: true,
+			pin: true,
+			anticipatePin: 1,
+		});
+
+		const tl2 = gsap.timeline();
+		tl2.to("#seccion3-2", { yPercent: -48 });
+		ScrollTrigger.create({
+			animation: tl2,
+			trigger: "#seccion3-2",
+			start: "+=1000",
+			end: "+=400",
+			scrub: true,
+			/* markers: true	 */
+		});
+
+		const tl3 = gsap.timeline();
+		tl3.to("#seccion3-2-PRUEBA2", { yPercent: -30 });
+		ScrollTrigger.create({
+			animation: tl3,
+			trigger: "#seccion3-2-PRUEBA2",
+			start: "+=2000",
+			end: "+=450",
+			scrub: true,
+			//markers: true,
+		});
+	</script>
 </html>

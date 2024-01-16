@@ -25,8 +25,10 @@ import seccion3_6 from './seccion3-6.png'
 import seccion3_7 from './seccion3-7.png'
 import seccionVoces from './vocesBanner.png'
 import voces2 from './voces2.png'
+import mobile1 from './mobile1.png'
 
 export {
+    mobile1,
     logoBlanco,
     logoNegro,
     navBar,
