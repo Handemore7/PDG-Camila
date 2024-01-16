@@ -13,8 +13,11 @@ import {
 	seccion3Title,
 	seccion3_2,
 	seccion3_2title,
+	seccion3_5title,
 	seccion4Banner,
 	footerBanner,
+	seccion3_6,
+	seccion3_7,
 } from "../../public/assets/index";
 ---
 
@@ -236,16 +239,16 @@ import {
 				</section>
 				<section
 					id="seccion3-2-PRUEBA2"
-					class="panel pb-10 flex bg-[#076F28] flex-row w-[100vw] px-[10vw] pt-[10vh]"
+					class="panel flex bg-[#076F28] flex-row w-[100vw] px-[10vw] pt-[12vh]"
 				>
 					<div class="flex flex-row">
 						<img
-							src={seccion3_2.src}
+							src={seccion3_6.src}
 							alt=""
 							class="w-[100px] h-[100px]"
 						/>
 						<div class="flex flex-col">
-							<img src={seccion3_2title.src} class="w-[100%]" />
+							<img src={seccion3_5title.src} class="w-[100%]" />
 							<div class="flex flex-col gap-6">
 								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
 									<p
@@ -301,70 +304,9 @@ import {
 					id="seccion3-2-PRUEBA"
 					class="panel pb-10 flex bg-[white] flex-row w-[100vw] px-[10vw] pt-[10vh]"
 				>
-					<div class="flex flex-row">
-						<img
-							src={seccion3_2.src}
-							alt=""
-							class="w-[100px] h-[100px]"
-						/>
+					<div class="flex flex-row justify-evenly w-full">
 						<div class="flex flex-col">
-							<img src={seccion3_2title.src} class="w-[100%]" />
-							<div class="flex flex-col gap-6">
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
-									>
-										La primera área de mejora está en la
-										implementación del punto que aborda la
-										reincorporación de las mujeres con
-										enfoque de género
-									</p>
-								</div>
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
-									>
-										La politica de reincorporación con
-										enfoque de género en el acuerdo busca
-										facilitar la transición de las mujeres
-										firmantes de paz a la vida civil
-									</p>
-								</div>
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
-									>
-										Pero reconociendo las dificultades
-										específicas que enfrentan como mujeres,
-										por ejemplo, los estereotipos y las
-										violencias basadas en género.
-									</p>
-								</div>
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
-									>
-										Desde la visión de las mujeres firmantes
-										de paz, la inclusión del enfoque de
-										género en el acuerdo fue posible gracias
-										a la presión de colectivos de mujeres y
-										de la sociedad civil organizada.
-									</p>
-								</div>
-								<div class="bg-[#FDE0FF] rounded-2xl px-6 py-8">
-									<p
-										class="text-[#292032] text-center font-robot text-xl tracking-[.05rem]"
-									>
-										La incorporación del enfoque de género
-										corresponde a un logro de carácter
-										nacional e internacional, que permitió
-										la apertura social e institucional para
-										continuar posicionando el género en el
-										debate público, las agendas
-										organizativas y las políticas
-									</p>
-								</div>
-							</div>
+							<img src={seccion3_7.src} class="h-[80vh] mt-5" />
 						</div>
 						<img src={seccion3img.src} class="h-[100vh]" alt="" />
 					</div>
@@ -401,33 +343,71 @@ import {
 				</p>
 			</div>
 		</section>
-		<section class="bg-[#FDE0FF] flex px-36 py-24 justify-center">
-			<div class="">
-				<p class="font-[test] text-7xl">ASOMANUELITAS</p>
+		<section class="bg-[#FDE0FF] flex px-36 pt-24 pb-14 justify-center">
+			<div class="flex flex-col">
+				<p class="font-[test] text-[#292032] text-7xl">ASOMANUELITAS</p>
 				<p class="font-robot text-2xl w-[45vw]">
 					Primera asociación de mujeres reincorporadas que apuesta por
 					construir la paz, la autonomia economica y empoderamiento
 					politico de las mujeres
 				</p>
-				<img src={seccion4Banner.src} class="w-[70%]" alt="" />
+				<div class="w-full flex">
+					<img
+						src={seccion4Banner.src}
+						class="w-[67%] m-auto translate-y-[-5%]"
+						alt=""
+					/>
+				</div>
 			</div>
 			<div class="ml-10">
-				<div class="flex flex-col gap-2">
+				<div class="flex flex-col gap-2 h-[82vh] overflow-y-scroll">
 					<div class="flex flex-col">
-						<span>Historicas</span>
-						<div class="bg-[#292032] w-[27vw] h-[20vw]"></div>
+						<span class="font-robot text-[#292032] text-lg"
+							>Historicas</span
+						>
+						<div class="bg-[#292032]">
+							<iframe
+								src="https://drive.google.com/file/d/1r4IZtPiWXQ7ajgT1KuIhRFqY-OYCMoEn/preview"
+								width="380"
+								height="220"
+								allow="autoplay"></iframe>
+						</div>
 					</div>
 					<div class="flex flex-col">
-						<span>Productivas</span>
-						<div class="bg-[#292032] w-[27vw] h-[20vw]"></div>
+						<span class="font-robot text-[#292032] text-lg"
+							>Productivas</span
+						>
+						<div class="">
+							<iframe
+								src="https://drive.google.com/file/d/1rccKiYVj7r1D7wRxwttNdaqhXSYRiPzK/preview"
+								width="380"
+								height="220"
+								allow="autoplay"></iframe>
+						</div>
 					</div>
 					<div class="flex flex-col">
-						<span>Impactantes</span>
-						<div class="bg-[#292032] w-[27vw] h-[20vw]"></div>
+						<span class="font-robot text-[#292032] text-lg"
+							>Impactantes</span
+						>
+						<div class="">
+							<iframe
+								src="https://drive.google.com/file/d/1zuB7F7ZpAGKlbvCheVlvsNE9O7PGDrXz/preview"
+								width="380"
+								height="220"
+								allow="autoplay"></iframe>
+						</div>
 					</div>
 					<div class="flex flex-col">
-						<span>Futuro</span>
-						<div class="bg-[#292032] w-[27vw] h-[20vw]"></div>
+						<span class="font-robot text-[#292032] text-lg"
+							>Futuro</span
+						>
+						<div class="">
+							<iframe
+								src="https://drive.google.com/file/d/1F9tH3-4MZkDFwyocmcERLku3DlThVscm/preview"
+								width="380"
+								height="220"
+								allow="autoplay"></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -478,6 +458,7 @@ import {
 			duration: 2
 			}); */
 			gsap.registerPlugin(ScrollTrigger);
+			gsap.defaults({ ease: "none", duration: 2 });
 
 			gsap.to("#seccion2img", {
 				scrollTrigger: {
@@ -490,28 +471,7 @@ import {
 				duration: 1,
 			});
 
-			//Seccion de scroll textos
-
-			const sections = gsap.utils.toArray(".pregunta");
-
-			sections.forEach((section) => {
-				gsap.to(section, {
-					opacity: 0,
-					scale: 0.9,
-					y: 50,
-					scrollTrigger: {
-						trigger: section,
-						scrub: true,
-						start: "bottom bottom",
-						pin: true,
-						pinSpacing: false,
-					},
-				});
-			});
-
 			//Secciones scroll horizontal
-
-			gsap.defaults({ ease: "none", duration: 2 });
 
 			const tl = gsap.timeline();
 			tl.to("#seccion3-2", { xPercent: -100 })
@@ -540,7 +500,7 @@ import {
 			});
 
 			const tl3 = gsap.timeline();
-			tl3.to("#seccion3-2-PRUEBA2", { yPercent: -48 });
+			tl3.to("#seccion3-2-PRUEBA2", { yPercent: -30 });
 			ScrollTrigger.create({
 				animation: tl3,
 				trigger: "#seccion3-2-PRUEBA2",
