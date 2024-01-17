@@ -139,7 +139,7 @@ import { telaResistencia1, telaResistencia2, TelaRojo1, TelaRojo2, TelaRojo3, Te
                 <p class="text-[#FDE0FF] font-robot w-[100%] text-justify px-3 mt-5">En las voces y vivencias de mujeres indígenas de diversos resguardos Nasa en Colombia, encontramos una poderosa lección sobre resistencia y paz después de la firma del acuerdo.<br/><br/>Estos relatos son como ventanas que nos permiten asomarnos a sus vidas y descubrir cómo, desde sus mundos cotidianos, han desafiado la violencia del conflicto. Hablan de resistencia desde la política, el hogar y el arte del tejido, mostrándonos que la paz no solo es un papel firmado, sino tambien una tela tejida con coraje y esperanza en medio de desafíos persistentes. En estas historias, las mujeres indígenas nos enseñan que la paz se construye día a día, hilo a hilo, y que su resistencia es un faro que ilumina caminos hacia un futuro más justo y equitativo.</p>
             </div>
         </div>
-        <div class="bg-[#076F28] w-[70%] m-auto left-0 right-0 rounded-2xl absolute translate-y-[-77%] flex flex-col gap-2 px-3 py-3">
+        <div class="bg-[#076F28] w-[70%] m-auto left-0 right-0 rounded-2xl absolute translate-y-[-30%] flex flex-col gap-2 px-3 py-3">
             <p class="text-[#FDE0FF] text-center px-[5%] font-robot font-bold">¡BIENVENIDX A LA TELA DE LA RESISTENCIA! </p>
             <p class="text-[#FDE0FF] text-center px-[5%] text-sm font-robot">AQUI CONOCERAS LAS VOCES DE LAS MUJERES NASA Y SUS FORMAS DE RESISTENCIA ANTE EL CONFLICTO.</p>
         </div>
@@ -180,7 +180,7 @@ import { telaResistencia1, telaResistencia2, TelaRojo1, TelaRojo2, TelaRojo3, Te
                 <div id="amarillos" class="bg-[#F4C664] amarillas3 opacity-0 w-[45px] h-[70px] absolute top-[63%] left-[72%] hover:scale-125 transition-all cursor-pointer" onclick="showModal2(infoButtons.amarillo1);"/>
             </div>
                         
-            <p class="text-white translate-y-[-350%] font-robot m-auto text-center text-lg w-[90%]">clickea en los dibujos para conocer los relatos</p>
+            <p class="text-white translate-y-[-220%] font-robot m-auto text-center text-lg w-[90%] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">clickea en los dibujos para conocer los relatos</p>
         </div>
         <div id="modal2" class="hidden fixed top-0 w-[100vw] h-[100vh] pt-[10vh] ">
             <div id="backDropModal2" class=" w-full h-full absolute top-0 backdrop-blur-md" onclick="closeModal2()"></div>
@@ -423,16 +423,14 @@ import { telaResistencia1, telaResistencia2, TelaRojo1, TelaRojo2, TelaRojo3, Te
             document.querySelector('#changeColor2').classList.toggle(`bg-[${data.color}]`);
             document.querySelector('#svgComilla2').classList.toggle(`fill-[${data.color}]`)
     
-            console.log(data.color);
             if (data.color === '#F4C664') {
-                console.log('cambio de color');
                 document.querySelector('#modalAbajo2').classList.toggle('text-white');
                 document.querySelector('#modalAbajo2').classList.toggle('text-black');
             }
         }
 
         function closeModal2() {
-            console.log('xdd');
+
             document.querySelector('#modal2').classList.add('hidden')
             document.querySelector('#backDropModal2').classList.add('hidden')
             document.querySelector('#changeColor2').classList.remove(`bg-[#076F28]`);
