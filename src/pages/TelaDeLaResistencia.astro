@@ -39,89 +39,170 @@ import { telaResistencia1, telaResistencia2, TelaRojo1, TelaRojo2, TelaRojo3, Te
 }
 </style>
 
-
-<html lang="es">
+<html class="scroll-smooth" lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<title>Mujeres y paz en relato</title>
+	</head>
+	<body class="">
     <NavBar path="TelaDeLaResistencia"/>
-    <div class="bg-[#FDE0FF] w-full flex pb-[20vh]">
-        <div class="relative w-[60%]  bg-[#292032] flex flex-col mx-auto mt-[25vh] rounded-2xl px-7 pt-5 pb-10">
-            <img src={telaResistencia1.src} class="w-[60%]" alt="">
-            <img src={telaResistencia2.src} class=" w-[35%] absolute top-0 right-0" alt="">
-            <p class="text-[#FDE0FF] font-robot w-[80%] pl-7 mt-5">En las voces y vivencias de mujeres indígenas de diversos resguardos Nasa en Colombia, encontramos una poderosa lección sobre resistencia y paz después de la firma del acuerdo.<br/><br/>Estos relatos son como ventanas que nos permiten asomarnos a sus vidas y descubrir cómo, desde sus mundos cotidianos, han desafiado la violencia del conflicto. Hablan de resistencia desde la política, el hogar y el arte del tejido, mostrándonos que la paz no solo es un papel firmado, sino tambien una tela tejida con coraje y esperanza en medio de desafíos persistentes. En estas historias, las mujeres indígenas nos enseñan que la paz se construye día a día, hilo a hilo, y que su resistencia es un faro que ilumina caminos hacia un futuro más justo y equitativo.</p>
-        </div>
-    </div>
-    <div class="bg-[#076F28] w-[30%] m-auto left-0 right-0 rounded-2xl absolute translate-y-[-50%] flex flex-col gap-5 px-7 py-5">
-        <p class="text-[#FDE0FF] text-center px-[5%] font-robot">¡BIENVENIDX A LA TELA DE LA RESISTENCIA! </p>
-        <p class="text-[#FDE0FF] text-center px-[5%] font-robot">AQUI CONOCERAS LAS VOCES DE LAS MUJERES NASA Y SUS FORMAS DE RESISTENCIA ANTE EL CONFLICTO.</p>
-    </div>
-    <div class="bg-[#19001B] flex flex-row w-full pt-[20vh] items-center px-10 gap-10 pb-12">
-        
-        <!-- <div class="text-white flex-row w-[20%]">
-            <span class="font-tipo">La tela de la resistencia</span>
-            <p>Da clic sobre  el chumbe de la derecha y aparecerán puntos de colores. Cada uno de ellos te llevará a las disferentes formas de resistencia de diferentes resguardos indigenas Nasas Yuwe</p>
-        </div> -->
-        <div class="relative m-auto">
-            <div class="flex"> 
-                <img src={Tela.src} class="h-[650px] w-[700px] m-auto" alt="">
-                <!-- <img id="TelaDefault" src={TelaDefault.src} class="h-[650px] w-[700px] absolute top-0 transition-all m-auto" alt=""> -->
-                <img id="TelaRojo1" src={TelaRojo1.src} class="breathing h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
-                <img id="TelaRojo2" src={TelaRojo2.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
-                <img id="TelaRojo3" src={TelaRojo3.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
-                <img id="TelaVerdes1" src={TelaVerde1.src} class="breathing h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
-                <img id="TelaVerdes2" src={TelaVerde2.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
-                <img id="TelaVerdes3" src={TelaVerde3.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
-                <img id="TelaMoradas1" src={TelaMorada1.src} class="breathing h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
-                <img id="TelaMoradas2" src={TelaMorada2.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
-                <img id="TelaMoradas3" src={TelaMorada3.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
-                <img id="TelaAmarillas1" src={TelaAmarilla1.src} class="breathing h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
-                <img id="TelaAmarillas2" src={TelaAmarilla2.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
-                <img id="TelaAmarillas3" src={TelaAmarilla3.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+    <div class="max-sm:hidden">
+        <div class="bg-[#FDE0FF] w-full flex pb-[20vh]">
+            <div class="relative w-[60%]  bg-[#292032] flex flex-col mx-auto mt-[25vh] rounded-2xl px-7 pt-5 pb-10">
+                <img src={telaResistencia1.src} class="w-[60%]" alt="">
+                <img src={telaResistencia2.src} class=" w-[35%] absolute top-0 right-0" alt="">
+                <p class="text-[#FDE0FF] font-robot w-[80%] pl-7 mt-5">En las voces y vivencias de mujeres indígenas de diversos resguardos Nasa en Colombia, encontramos una poderosa lección sobre resistencia y paz después de la firma del acuerdo.<br/><br/>Estos relatos son como ventanas que nos permiten asomarnos a sus vidas y descubrir cómo, desde sus mundos cotidianos, han desafiado la violencia del conflicto. Hablan de resistencia desde la política, el hogar y el arte del tejido, mostrándonos que la paz no solo es un papel firmado, sino tambien una tela tejida con coraje y esperanza en medio de desafíos persistentes. En estas historias, las mujeres indígenas nos enseñan que la paz se construye día a día, hilo a hilo, y que su resistencia es un faro que ilumina caminos hacia un futuro más justo y equitativo.</p>
             </div>
-            <div id="rojos" onclick="showModal(infoButtons.rojo1);" class="bg-[#FF6D6D] rojos1 opacity-0 w-[70px] h-[100px] absolute top-[20%] left-[46%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo1);"/>
-            <div id="rojos" onclick="showModal(infoButtons.rojo2);" class=" bg-[#FF6D6D] rojos2 opacity-0 w-[100px] h-[70px] absolute top-[20%] left-[30%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo2);"/>
-            <div id="rojos" onclick="showModal(infoButtons.rojo3);" class="bg-[#FF6D6D] rojos3 opacity-0 w-[100px] h-[70px] absolute top-[20%] left-[57%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo3);"/>
-            <div id="verdes" onclick="showModal(infoButtons.verde1);" class="bg-[#088831] verdes1 opacity-0 w-[70px] h-[70px] absolute top-[58%] left-[7%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde1);"/>
-            <div id="verdes" onclick="showModal(infoButtons.verde2);" class="bg-[#088831] verdes2 opacity-0 w-[70px] h-[70px] absolute top-[57%] left-[19%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde2);"/>
-            <div id="verdes" onclick="showModal(infoButtons.verde3);" class="bg-[#088831] verdes3 opacity-0 w-[180px] h-[100px] absolute top-[62%] left-[37%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde3);"/>
-            <div id="morados" onclick="showModal(infoButtons.morado1);" class="bg-[#79097E] moradas1 opacity-0 w-[70px] h-[40px] absolute top-[50%] left-[8%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado1);"/>
-            <div id="morados" onclick="showModal(infoButtons.morado2);" class="bg-[#79097E] moradas2 opacity-0 w-[90px] h-[50px] absolute top-[48%] left-[62%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado2);"/>
-            <div id="morados" onclick="showModal(infoButtons.morado3);" class="bg-[#79097E] moradas3 opacity-0 w-[90px] h-[40px] absolute top-[48%] left-[79%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado3);"/>
-            <div id="amarillos" onclick="showModal(infoButtons.amarillo1);" class="bg-[#F4C664] amarillas1 opacity-0 w-[60px] h-[50px] absolute top-[40%] left-[78%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo3);"/>
-            <div id="amarillos" onclick="showModal(infoButtons.amarillo2);" class="bg-[#F4C664] amarillas2 opacity-0 w-[45px] h-[70px] absolute top-[63%] left-[80%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo2);"/>
-            <div id="amarillos" onclick="showModal(infoButtons.amarillo3);" class="bg-[#F4C664] amarillas3 opacity-0 w-[45px] h-[70px] absolute top-[63%] left-[72%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo1);"/>
         </div>
-        <!-- <div class="ml-10">
-            <img id="verde" src={ChumbeVerde.src}      class="opacity-80 hover:opacity-100 hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
-            <img id="rojo" src={ChumbeRojo.src}       class=" opacity-80 hover:opacity-100 hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
-            <img id="amarillo" src={ChumbeAmarillo.src}   class="opacity-60 hover:opacity-100 hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
-            <img id="morado" src={ChumbeMorado.src}     class="opacity-60 hover:opacity-100 hover:scale-105 transition-all grayscale hover:grayscale-0" onclick="showPoints(event);" />
-        </div> -->
-        
-    </div>
-    <div id="modal" class=" fixed top-0 w-[100vw] h-[100vh] pt-[10vh] hidden">
-        <div id="backDropModal" class=" w-full h-full absolute top-0 backdrop-blur-md" onclick="closeModal()"></div>
-            <div id="changeColor" class=" border border-black w-[70%] h-[80%] m-auto rounded-2xl flex relative">
-                <img src={parejita.src} class="absolute top-2 right-2 z-0" alt="">
-                <span id="modalTitle" class="text-white font-[test] text-4xl textVertical flex w-[15%] justify-center items-center z-10">Resistencia en lo politico</span>
-                <div class="w-[85%] py-[5%] pr-[5%] flex flex-col gap-5 m-auto z-10">
-                    <div class="bg-white px-[5%] rounded-2xl border border-black">
-                        <div>
-                            <div class="flex w-full justify-between">
-                                <hr class="h-[1px] my-8 bg-black border-0 w-[45%]">
-                                <div class="m-auto">
-                                    <svg width="28" height="18" viewBox="0 0 28 18" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="svgComilla" class="" d="M20.9357 17.7593C19.7943 17.7593 18.7813 17.4597 17.8967 16.8605C17.0121 16.2612 16.313 15.448 15.7994 14.4207C15.2858 13.3935 15.029 12.2521 15.029 10.9965C15.029 8.94199 15.6995 6.93027 17.0407 4.96136C18.4104 2.96391 20.3365 1.32314 22.819 0.0390625L27.6129 2.60722C25.9864 3.4062 24.6025 4.33359 23.4611 5.38938C22.3482 6.44518 21.592 7.68645 21.1925 9.1132C22.5337 9.22735 23.618 9.6411 24.4455 10.3545C25.3016 11.0393 25.7296 11.9952 25.7296 13.2222C25.7296 14.4493 25.2873 15.5193 24.4027 16.4324C23.5467 17.317 22.391 17.7593 20.9357 17.7593ZM6.63966 17.7593C5.49826 17.7593 4.48527 17.4597 3.60068 16.8605C2.71609 16.2612 2.01699 15.448 1.50336 14.4207C0.989725 13.3935 0.73291 12.2521 0.73291 10.9965C0.73291 8.94199 1.40348 6.93027 2.74463 4.96136C4.11431 2.96391 6.04043 1.32314 8.52297 0.0390625L13.3169 2.60722C11.6904 3.4062 10.3064 4.33359 9.16501 5.38938C8.05215 6.44518 7.29597 7.68645 6.89648 9.1132C8.23762 9.22735 9.32196 9.6411 10.1495 10.3545C11.0055 11.0393 11.4335 11.9952 11.4335 13.2222C11.4335 14.4493 10.9913 15.5193 10.1067 16.4324C9.25062 17.317 8.09495 17.7593 6.63966 17.7593Z" fill="#076F28"/>
-                                    </svg>
-                                </div>
-                                <hr class="h-[1px] my-8 bg-black border-0 w-[45%]">
-                            </div>
-                        </div>
-                        <p id="modalArriba" class="italic text-center mb-5">"A veces a los hombres se les sube como la cerveza, entonces consultan las ideas con nosotras, por si no es descabellada. Por eso le digo yo que en ese tema de resistencia acá, nosotras hemos sido fundamentales. Las mujeres somos como un polo a tierra de la organización"</p>
-                    </div>
-                    <p id="modalAbajo" class="text-white font-robot text-[1.3rem] leading-[1.5rem]">Aunque los hombres suelen hablar primero, siempre piden la opinión de las mujeres para asegurarse de que las decisiones sean sensatas. Por ejemplo, en la consejeria de Caldono, hay 3 hombres y 3 mujeres, y al momento de tomar una desición los hombres se aseguran de consultarlo con ellas, porque son más aterrizadas. Esto demuestra que las mujeres no solo equilibran las decisiones, sino que también las enriquecen. Es como si fueran la base sólida en la organización, asegurándose de que todo funcione bien</p>
+        <div class="bg-[#076F28] w-[30%] m-auto left-0 right-0 rounded-2xl absolute translate-y-[-50%] flex flex-col gap-5 px-7 py-5">
+            <p class="text-[#FDE0FF] text-center px-[5%] font-robot">¡BIENVENIDX A LA TELA DE LA RESISTENCIA! </p>
+            <p class="text-[#FDE0FF] text-center px-[5%] font-robot">AQUI CONOCERAS LAS VOCES DE LAS MUJERES NASA Y SUS FORMAS DE RESISTENCIA ANTE EL CONFLICTO.</p>
+        </div>
+        <div class="bg-[#19001B] flex flex-row w-full pt-[20vh] items-center px-10 gap-5 pb-5">
+            
+            <!-- <div class="text-white flex-row w-[20%]">
+                <span class="font-tipo">La tela de la resistencia</span>
+                <p>Da clic sobre  el chumbe de la derecha y aparecerán puntos de colores. Cada uno de ellos te llevará a las disferentes formas de resistencia de diferentes resguardos indigenas Nasas Yuwe</p>
+            </div> -->
+            <div class="relative m-auto">
+                <div class="flex"> 
+                    <img src={Tela.src} class="h-[650px] w-[700px] m-auto" alt="">
+                    <!-- <img id="TelaDefault" src={TelaDefault.src} class="h-[650px] w-[700px] absolute top-0 transition-all m-auto" alt=""> -->
+                    <img id="TelaRojo1" src={TelaRojo1.src} class="breathing h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaRojo2" src={TelaRojo2.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaRojo3" src={TelaRojo3.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaVerdes1" src={TelaVerde1.src} class="breathing h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaVerdes2" src={TelaVerde2.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaVerdes3" src={TelaVerde3.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaMoradas1" src={TelaMorada1.src} class="breathing h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaMoradas2" src={TelaMorada2.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaMoradas3" src={TelaMorada3.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaAmarillas1" src={TelaAmarilla1.src} class="breathing h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaAmarillas2" src={TelaAmarilla2.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaAmarillas3" src={TelaAmarilla3.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
                 </div>
+                <div id="rojos" onclick="showModal(infoButtons.rojo1);" class="bg-[#FF6D6D] rojos1 opacity-0 w-[70px] h-[100px] absolute top-[20%] left-[46%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo1);"/>
+                <div id="rojos" onclick="showModal(infoButtons.rojo2);" class=" bg-[#FF6D6D] rojos2 opacity-0 w-[100px] h-[70px] absolute top-[20%] left-[30%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo2);"/>
+                <div id="rojos" onclick="showModal(infoButtons.rojo3);" class="bg-[#FF6D6D] rojos3 opacity-0 w-[100px] h-[70px] absolute top-[20%] left-[57%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo3);"/>
+                <div id="verdes" onclick="showModal(infoButtons.verde1);" class="bg-[#088831] verdes1 opacity-0 w-[70px] h-[70px] absolute top-[58%] left-[7%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde1);"/>
+                <div id="verdes" onclick="showModal(infoButtons.verde2);" class="bg-[#088831] verdes2 opacity-0 w-[70px] h-[70px] absolute top-[57%] left-[19%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde2);"/>
+                <div id="verdes" onclick="showModal(infoButtons.verde3);" class="bg-[#088831] verdes3 opacity-0 w-[180px] h-[100px] absolute top-[62%] left-[37%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde3);"/>
+                <div id="morados" onclick="showModal(infoButtons.morado1);" class="bg-[#79097E] moradas1 opacity-0 w-[70px] h-[40px] absolute top-[50%] left-[8%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado1);"/>
+                <div id="morados" onclick="showModal(infoButtons.morado2);" class="bg-[#79097E] moradas2 opacity-0 w-[90px] h-[50px] absolute top-[48%] left-[62%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado2);"/>
+                <div id="morados" onclick="showModal(infoButtons.morado3);" class="bg-[#79097E] moradas3 opacity-0 w-[90px] h-[40px] absolute top-[48%] left-[79%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado3);"/>
+                <div id="amarillos" onclick="showModal(infoButtons.amarillo1);" class="bg-[#F4C664] amarillas1 opacity-0 w-[60px] h-[50px] absolute top-[40%] left-[78%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo3);"/>
+                <div id="amarillos" onclick="showModal(infoButtons.amarillo2);" class="bg-[#F4C664] amarillas2 opacity-0 w-[45px] h-[70px] absolute top-[63%] left-[80%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo2);"/>
+                <div id="amarillos" onclick="showModal(infoButtons.amarillo3);" class="bg-[#F4C664] amarillas3 opacity-0 w-[45px] h-[70px] absolute top-[63%] left-[72%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo1);"/>
             </div>
+                        
+            <p class="text-white text-2xl font-robot translate-x-[-10%] w-[30%]">Mueve el mouse por la pantalla y clickea en los dibujos para conocer los relatos</p>
+        </div>
+        <div id="modal" class=" fixed top-0 w-[100vw] h-[100vh] pt-[10vh] hidden">
+            <div id="backDropModal" class=" w-full h-full absolute top-0 backdrop-blur-md" onclick="closeModal()"></div>
+                <div id="changeColor" class=" border border-black w-[70%] h-[80%] m-auto rounded-2xl flex relative">
+                    <img src={parejita.src} class="absolute top-2 right-2 z-0" alt="">
+                    <span id="modalTitle" class="text-white font-[test] text-4xl textVertical flex w-[15%] py-5 justify-center items-center z-10">Resistencia en lo politico</span>
+                    <div class="w-[85%] py-[5%] pr-[5%] flex flex-col gap-5 m-auto z-10">
+                        <div class="bg-white px-[5%] rounded-2xl border border-black">
+                            <div>
+                                <div class="flex w-full justify-between">
+                                    <hr class="h-[1px] my-8 bg-black border-0 w-[45%]">
+                                    <div class="m-auto">
+                                        <svg width="28" height="18" viewBox="0 0 28 18" xmlns="http://www.w3.org/2000/svg">
+                                            <path id="svgComilla" class="" d="M20.9357 17.7593C19.7943 17.7593 18.7813 17.4597 17.8967 16.8605C17.0121 16.2612 16.313 15.448 15.7994 14.4207C15.2858 13.3935 15.029 12.2521 15.029 10.9965C15.029 8.94199 15.6995 6.93027 17.0407 4.96136C18.4104 2.96391 20.3365 1.32314 22.819 0.0390625L27.6129 2.60722C25.9864 3.4062 24.6025 4.33359 23.4611 5.38938C22.3482 6.44518 21.592 7.68645 21.1925 9.1132C22.5337 9.22735 23.618 9.6411 24.4455 10.3545C25.3016 11.0393 25.7296 11.9952 25.7296 13.2222C25.7296 14.4493 25.2873 15.5193 24.4027 16.4324C23.5467 17.317 22.391 17.7593 20.9357 17.7593ZM6.63966 17.7593C5.49826 17.7593 4.48527 17.4597 3.60068 16.8605C2.71609 16.2612 2.01699 15.448 1.50336 14.4207C0.989725 13.3935 0.73291 12.2521 0.73291 10.9965C0.73291 8.94199 1.40348 6.93027 2.74463 4.96136C4.11431 2.96391 6.04043 1.32314 8.52297 0.0390625L13.3169 2.60722C11.6904 3.4062 10.3064 4.33359 9.16501 5.38938C8.05215 6.44518 7.29597 7.68645 6.89648 9.1132C8.23762 9.22735 9.32196 9.6411 10.1495 10.3545C11.0055 11.0393 11.4335 11.9952 11.4335 13.2222C11.4335 14.4493 10.9913 15.5193 10.1067 16.4324C9.25062 17.317 8.09495 17.7593 6.63966 17.7593Z" fill="#076F28"/>
+                                        </svg>
+                                    </div>
+                                    <hr class="h-[1px] my-8 bg-black border-0 w-[45%]">
+                                </div>
+                            </div>
+                            <p id="modalArriba" class="italic text-center mb-5">"A veces a los hombres se les sube como la cerveza, entonces consultan las ideas con nosotras, por si no es descabellada. Por eso le digo yo que en ese tema de resistencia acá, nosotras hemos sido fundamentales. Las mujeres somos como un polo a tierra de la organización"</p>
+                        </div>
+                        <p id="modalAbajo" class="text-white font-robot text-[1.3rem] leading-[1.5rem]">Aunque los hombres suelen hablar primero, siempre piden la opinión de las mujeres para asegurarse de que las decisiones sean sensatas. Por ejemplo, en la consejeria de Caldono, hay 3 hombres y 3 mujeres, y al momento de tomar una desición los hombres se aseguran de consultarlo con ellas, porque son más aterrizadas. Esto demuestra que las mujeres no solo equilibran las decisiones, sino que también las enriquecen. Es como si fueran la base sólida en la organización, asegurándose de que todo funcione bien</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="sm:hidden">
+        <div class="bg-[#FDE0FF] w-full flex pb-[10vh]">
+            <div class="relative w-[90%]  bg-[#292032] flex flex-col mx-auto mt-[15vh] rounded-2xl px-2 pt-5 pb-10">
+                <img src={telaResistencia1.src} class="w-[60%]" alt="">
+                <img src={telaResistencia2.src} class=" w-[35%] absolute top-0 right-0" alt="">
+                <p class="text-[#FDE0FF] font-robot w-[100%] text-justify px-3 mt-5">En las voces y vivencias de mujeres indígenas de diversos resguardos Nasa en Colombia, encontramos una poderosa lección sobre resistencia y paz después de la firma del acuerdo.<br/><br/>Estos relatos son como ventanas que nos permiten asomarnos a sus vidas y descubrir cómo, desde sus mundos cotidianos, han desafiado la violencia del conflicto. Hablan de resistencia desde la política, el hogar y el arte del tejido, mostrándonos que la paz no solo es un papel firmado, sino tambien una tela tejida con coraje y esperanza en medio de desafíos persistentes. En estas historias, las mujeres indígenas nos enseñan que la paz se construye día a día, hilo a hilo, y que su resistencia es un faro que ilumina caminos hacia un futuro más justo y equitativo.</p>
+            </div>
+        </div>
+        <div class="bg-[#076F28] w-[70%] m-auto left-0 right-0 rounded-2xl absolute translate-y-[-77%] flex flex-col gap-2 px-3 py-3">
+            <p class="text-[#FDE0FF] text-center px-[5%] font-robot font-bold">¡BIENVENIDX A LA TELA DE LA RESISTENCIA! </p>
+            <p class="text-[#FDE0FF] text-center px-[5%] text-sm font-robot">AQUI CONOCERAS LAS VOCES DE LAS MUJERES NASA Y SUS FORMAS DE RESISTENCIA ANTE EL CONFLICTO.</p>
+        </div>
+        <div class="bg-[#19001B] flex flex-col w-full pt-[10vh] items-center px-2 gap-5 pb-5">
+            
+            <!-- <div class="text-white flex-row w-[20%]">
+                <span class="font-tipo">La tela de la resistencia</span>
+                <p>Da clic sobre  el chumbe de la derecha y aparecerán puntos de colores. Cada uno de ellos te llevará a las disferentes formas de resistencia de diferentes resguardos indigenas Nasas Yuwe</p>
+            </div> -->
+            <div class="relative m-auto scale-y-75">
+                <div class="flex"> 
+                    <img src={Tela.src} class="h-[650px] w-[700px] m-auto" alt="">
+                    <!-- <img id="TelaDefault" src={TelaDefault.src} class="h-[650px] w-[700px] absolute top-0 transition-all m-auto" alt=""> -->
+                    <img id="TelaRojo1" src={TelaRojo1.src} class="breathing h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaRojo2" src={TelaRojo2.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaRojo3" src={TelaRojo3.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaVerdes1" src={TelaVerde1.src} class="breathing h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaVerdes2" src={TelaVerde2.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaVerdes3" src={TelaVerde3.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaMoradas1" src={TelaMorada1.src} class="breathing h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaMoradas2" src={TelaMorada2.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaMoradas3" src={TelaMorada3.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaAmarillas1" src={TelaAmarilla1.src} class="breathing h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaAmarillas2" src={TelaAmarilla2.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                    <img id="TelaAmarillas3" src={TelaAmarilla3.src} class="h-[650px] w-[700px] absolute top-0 opacity-0 transition-all m-auto" alt="">
+                </div>
+                <div id="rojos" onclick="showModal(infoButtons.rojo1);" class="bg-[#FF6D6D] rojos1 opacity-0 w-[70px] h-[100px] absolute top-[20%] left-[46%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo1);"/>
+                <div id="rojos" onclick="showModal(infoButtons.rojo2);" class=" bg-[#FF6D6D] rojos2 opacity-0 w-[100px] h-[70px] absolute top-[20%] left-[30%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo2);"/>
+                <div id="rojos" onclick="showModal(infoButtons.rojo3);" class="bg-[#FF6D6D] rojos3 opacity-0 w-[100px] h-[70px] absolute top-[20%] left-[57%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.rojo3);"/>
+                <div id="verdes" onclick="showModal(infoButtons.verde1);" class="bg-[#088831] verdes1 opacity-0 w-[70px] h-[70px] absolute top-[58%] left-[7%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde1);"/>
+                <div id="verdes" onclick="showModal(infoButtons.verde2);" class="bg-[#088831] verdes2 opacity-0 w-[70px] h-[70px] absolute top-[57%] left-[19%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde2);"/>
+                <div id="verdes" onclick="showModal(infoButtons.verde3);" class="bg-[#088831] verdes3 opacity-0 w-[180px] h-[100px] absolute top-[62%] left-[37%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.verde3);"/>
+                <div id="morados" onclick="showModal(infoButtons.morado1);" class="bg-[#79097E] moradas1 opacity-0 w-[70px] h-[40px] absolute top-[50%] left-[8%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado1);"/>
+                <div id="morados" onclick="showModal(infoButtons.morado2);" class="bg-[#79097E] moradas2 opacity-0 w-[90px] h-[50px] absolute top-[48%] left-[62%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado2);"/>
+                <div id="morados" onclick="showModal(infoButtons.morado3);" class="bg-[#79097E] moradas3 opacity-0 w-[90px] h-[40px] absolute top-[48%] left-[79%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.morado3);"/>
+                <div id="amarillos" onclick="showModal(infoButtons.amarillo1);" class="bg-[#F4C664] amarillas1 opacity-0 w-[60px] h-[50px] absolute top-[40%] left-[78%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo3);"/>
+                <div id="amarillos" onclick="showModal(infoButtons.amarillo2);" class="bg-[#F4C664] amarillas2 opacity-0 w-[45px] h-[70px] absolute top-[63%] left-[80%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo2);"/>
+                <div id="amarillos" onclick="showModal(infoButtons.amarillo3);" class="bg-[#F4C664] amarillas3 opacity-0 w-[45px] h-[70px] absolute top-[63%] left-[72%] hover:scale-125 transition-all cursor-pointer" onclick="showModal(infoButtons.amarillo1);"/>
+            </div>
+                        
+            <p class="text-white translate-y-[-350%] font-robot m-auto text-center text-lg w-[90%]">clickea en los dibujos para conocer los relatos</p>
+        </div>
+        <div id="modal" class=" fixed top-0 w-[100vw] h-[100vh] pt-[10vh] hidden">
+            <div id="backDropModal" class=" w-full h-full absolute top-0 backdrop-blur-md" onclick="closeModal()"></div>
+                <div id="changeColor" class=" border border-black w-[70%] h-[80%] m-auto rounded-2xl flex relative">
+                    <img src={parejita.src} class="absolute top-2 right-2 z-0" alt="">
+                    <span id="modalTitle" class="text-white font-[test] text-4xl textVertical flex w-[15%] py-5 justify-center items-center z-10">Resistencia en lo politico</span>
+                    <div class="w-[85%] py-[5%] pr-[5%] flex flex-col gap-5 m-auto z-10">
+                        <div class="bg-white px-[5%] rounded-2xl border border-black">
+                            <div>
+                                <div class="flex w-full justify-between">
+                                    <hr class="h-[1px] my-8 bg-black border-0 w-[45%]">
+                                    <div class="m-auto">
+                                        <svg width="28" height="18" viewBox="0 0 28 18" xmlns="http://www.w3.org/2000/svg">
+                                            <path id="svgComilla" class="" d="M20.9357 17.7593C19.7943 17.7593 18.7813 17.4597 17.8967 16.8605C17.0121 16.2612 16.313 15.448 15.7994 14.4207C15.2858 13.3935 15.029 12.2521 15.029 10.9965C15.029 8.94199 15.6995 6.93027 17.0407 4.96136C18.4104 2.96391 20.3365 1.32314 22.819 0.0390625L27.6129 2.60722C25.9864 3.4062 24.6025 4.33359 23.4611 5.38938C22.3482 6.44518 21.592 7.68645 21.1925 9.1132C22.5337 9.22735 23.618 9.6411 24.4455 10.3545C25.3016 11.0393 25.7296 11.9952 25.7296 13.2222C25.7296 14.4493 25.2873 15.5193 24.4027 16.4324C23.5467 17.317 22.391 17.7593 20.9357 17.7593ZM6.63966 17.7593C5.49826 17.7593 4.48527 17.4597 3.60068 16.8605C2.71609 16.2612 2.01699 15.448 1.50336 14.4207C0.989725 13.3935 0.73291 12.2521 0.73291 10.9965C0.73291 8.94199 1.40348 6.93027 2.74463 4.96136C4.11431 2.96391 6.04043 1.32314 8.52297 0.0390625L13.3169 2.60722C11.6904 3.4062 10.3064 4.33359 9.16501 5.38938C8.05215 6.44518 7.29597 7.68645 6.89648 9.1132C8.23762 9.22735 9.32196 9.6411 10.1495 10.3545C11.0055 11.0393 11.4335 11.9952 11.4335 13.2222C11.4335 14.4493 10.9913 15.5193 10.1067 16.4324C9.25062 17.317 8.09495 17.7593 6.63966 17.7593Z" fill="#076F28"/>
+                                        </svg>
+                                    </div>
+                                    <hr class="h-[1px] my-8 bg-black border-0 w-[45%]">
+                                </div>
+                            </div>
+                            <p id="modalArriba" class="italic text-center mb-5">"A veces a los hombres se les sube como la cerveza, entonces consultan las ideas con nosotras, por si no es descabellada. Por eso le digo yo que en ese tema de resistencia acá, nosotras hemos sido fundamentales. Las mujeres somos como un polo a tierra de la organización"</p>
+                        </div>
+                        <p id="modalAbajo" class="text-white font-robot text-[1.3rem] leading-[1.5rem]">Aunque los hombres suelen hablar primero, siempre piden la opinión de las mujeres para asegurarse de que las decisiones sean sensatas. Por ejemplo, en la consejeria de Caldono, hay 3 hombres y 3 mujeres, y al momento de tomar una desición los hombres se aseguran de consultarlo con ellas, porque son más aterrizadas. Esto demuestra que las mujeres no solo equilibran las decisiones, sino que también las enriquecen. Es como si fueran la base sólida en la organización, asegurándose de que todo funcione bien</p>
+                    </div>
+                </div>
+        </div>
     </div>
     <Footer />
+</body>
 </html>
 <script is:inline>
     // ROJOS
