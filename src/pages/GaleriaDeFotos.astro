@@ -1,0 +1,41 @@
+---
+import {
+	galeria1,
+    galeria2,
+    galeria3,
+    galeria4,
+    galeria5,
+    galeria6,
+    galeria7,
+    galeria8,
+    galeria9,
+} from "../../public/assets/index";
+import NavBar from "../Components/NavBar.astro";
+import Footer from "../Components/Footer.astro";
+---
+<style>
+    @font-face {
+		font-family: "test";
+		src: url("/assets/fonts/Sleepy Rabbit.ttf");
+	}
+</style>
+
+<NavBar />
+<div class="px-[5vw] flex flex-col mb-10">
+    <div class="pt-[25vh]">
+        <p class="font-[test] text-[#076F28] w-[30%] text-7xl leading-[6rem]">GALERÍA DE FOTOS</p>
+        <p class="py-[15vh] font-robot tracking-widest w-[60%] text-center m-auto text-xl">Estas imagenes pertenecen a diferentes momentos del trabajo de campo y talleres pedagogicos que se realizaron de la mano con las mujeres y lxs investigadores en el Departamento del Cauca</p>
+    </div>
+    <div class="flex flex-wrap gap-5 w-full justify-between">
+        <img src={galeria1.src} class="w-[49%] " alt="">
+        <img src={galeria2.src} class="w-[49%] " alt="">
+        <img src={galeria3.src} class="w-[100%] " alt="">
+        <img src={galeria4.src} class="w-[49%] " alt="">
+        <img src={galeria5.src} class="w-[49%] " alt="">
+        <img src={galeria6.src} class="w-[100%] " alt="">
+        <img src={galeria7.src} class="w-[20%] " alt="">
+        <img src={galeria8.src} class="w-[30%] h-[20%]" alt="">
+        <img src={galeria9.src} class="w-[45%] " alt="">
+    </div>
+</div>
+<Footer />

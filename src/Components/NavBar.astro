@@ -29,7 +29,7 @@ const { path } = Astro.props
                 <p id="navBarAreasDeTrabajo" class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer">ÁREAS DE TRABAJO</p>
                 <div id="modalAreas" class="bg-[#FDE0FF] absolute top-[40%] left-[62%] w-[22vw] rounded-lg text-[#292032] text-md hidden flex-col text-left">
                     <a href="https://pdgcamila.netlify.app/#seccion3-2">
-                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer hover:rounded-lg">Reincorporación con enfoque de género</p>
+                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer hover:rounded-lg">REINCORPORACIÓN CON ENFOQUE DE GÉNERO</p>
                     </a>
                     <a href="https://pdgcamila.netlify.app/#seccion3-2-PRUEBA2">
                         <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer ">PDTES ALTO PATÍA Y NORTE DEL CAUCA</p>
@@ -46,9 +46,18 @@ const { path } = Astro.props
             <a href="/Asomanuelitas">
                 <p class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer">ASOMANUELITAS</p>
             </a>
-            <a href="/GaleriaDigital">
-                <p class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer">GALERIA DIGITAL</p>
-            </a>
+            <div class="relative transition-all">
+                <p id="navBarGaleriaDigital" class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer">GALERIA DIGITAL</p>
+                <div id="modalGaleria" class="bg-[#FDE0FF] absolute top-[40%] left-[62%] w-[22vw] rounded-lg text-[#292032] text-md hidden flex-col text-left">
+                    <a href="/GaleriaDigital">
+                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer hover:rounded-lg">INFOGRAFÍAS</p>
+                    </a>
+                    <a href="/GaleriaDeFotos">
+                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer ">GALERÍA DE FOTOS</p>
+                    </a>
+                </div>
+            </div>
+                
         </div>
     </div>
 </nav>
@@ -72,5 +81,10 @@ const { path } = Astro.props
     document.querySelector('#navBarAreasDeTrabajo').addEventListener('click', ()=>{
         document.querySelector('#modalAreas').classList.toggle('hidden')
         document.querySelector('#modalAreas').classList.toggle('flex')
+    })
+    //Submenu de galeria digital
+    document.querySelector('#navBarGaleriaDigital').addEventListener('click', ()=>{
+        document.querySelector('#modalGaleria').classList.toggle('hidden')
+        document.querySelector('#modalGaleria').classList.toggle('flex')
     })
 </script>

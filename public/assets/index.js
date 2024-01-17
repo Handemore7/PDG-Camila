@@ -41,10 +41,28 @@ import TelaAmarilla2 from './TelaAmarilla2.png'
 import TelaAmarilla3 from './TelaAmarilla3.png' 
 import parejita from './parejita.png' 
 import galeriaBanner from './galeriaBanner.png'
+import galeria1 from './Galeria/DSC04222.png'
+import galeria2 from './Galeria/DSC_9752.png'
+import galeria3 from './Galeria/DSC_9782.png'
+import galeria4 from './Galeria/DSC_9789.png'
+import galeria5 from './Galeria/DSC_9819.png'
+import galeria6 from './Galeria/DSC_9876.png'
+import galeria7 from './Galeria/IMG_20220608_124149270.png'
+import galeria8 from './Galeria/IMG_6214.png'
+import galeria9 from './Galeria/DSC04180.png'
 /* import comilla from './comilla.svg'  */
 
 export {
     /* comilla, */
+    galeria1,
+    galeria2,
+    galeria3,
+    galeria4,
+    galeria5,
+    galeria6,
+    galeria7,
+    galeria8,
+    galeria9,
     galeriaBanner,
     parejita,
     TelaAmarilla1,
