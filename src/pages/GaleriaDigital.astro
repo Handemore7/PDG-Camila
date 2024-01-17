@@ -11,8 +11,18 @@ import { galeriaBanner} from '../../public/assets/index'
 	}
 </style>
 
-<div>
-    <NavBar path="GaleriaDigital"/>
+<html class="scroll-smooth" lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<title>Mujeres y paz en relato</title>
+	</head>
+	<body class="">
+        <NavBar path="GaleriaDigital"/>
+    
+<div class="max-sm:hidden">
     <div id="GaleriaBanner">
         <img src={galeriaBanner.src} class="h-[100vh] w-full" alt="">
         <span class="absolute bottom-10 left-10 text-[#076F28] font-[test] text-6xl">INFOGRAFÍAS</span>
@@ -33,3 +43,25 @@ import { galeriaBanner} from '../../public/assets/index'
     </section>
     <Footer />
 </div>
+
+<!-- CELULAR -->
+<div class="sm:hidden">
+    <div id="GaleriaBanner">
+        <img src={galeriaBanner.src} class="h-[30vh] w-full" alt="">
+        <span class="absolute top-[22vh] left-8 text-[#076F28] font-[test] text-3xl">INFOGRAFÍAS</span>
+    </div>
+    <section id="GaleriaEnfoque" class="px-4 pt-16">
+        <div class="flex items-center">
+            <span class="font-[test] text-[#442B47] text-lg">REINCORPORACIÓN CON ENFOQUE DE GÉNERO</span>
+        </div>
+        <iframe src="https://drive.google.com/file/d/1-7wc8EKodx_lORr6kh0TsOf344eB1KIJ/preview" width="350" height="400" allow="autoplay"></iframe>
+    </section>
+    <section id="GaleriaPdets" class="px-4 py-16">
+        <div class="flex items-center">
+            <span class="font-[test] text-[#442B47] text-lg">PDETS - ALTO PATÍA Y NORTE DEL CAUCA</span>
+        </div>
+        <iframe src="https://drive.google.com/file/d/1N0cQTGnv9KYRBB4tdh3BdZ99nswp5Vb2/preview" width="350" height="400" allow="autoplay"></iframe>
+    </section>
+    <Footer />
+</div>
+</body>

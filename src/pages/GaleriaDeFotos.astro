@@ -20,22 +20,66 @@ import Footer from "../Components/Footer.astro";
 	}
 </style>
 
+<html class="scroll-smooth" lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<title>Mujeres y paz en relato</title>
+	</head>
+	<body class="">
 <NavBar />
-<div class="px-[5vw] flex flex-col mb-10">
-    <div class="pt-[25vh]">
-        <p class="font-[test] text-[#076F28] w-[30%] text-7xl leading-[6rem]">GALERÍA DE FOTOS</p>
-        <p class="py-[15vh] font-robot tracking-widest w-[60%] text-center m-auto text-xl">Estas imagenes pertenecen a diferentes momentos del trabajo de campo y talleres pedagógicos que se realizaron de la mano con las mujeres y lxs investigadores en el Departamento del Cauca</p>
-    </div>
-    <div class="flex flex-wrap gap-3 w-full justify-between">
-        <img src={galeria1.src} class="w-[49%] " alt="">
-        <img src={galeria2.src} class="w-[49%] " alt="">
-        <img src={galeria3.src} class="w-[100%] " alt="">
-        <img src={galeria4.src} class="w-[49%] " alt="">
-        <img src={galeria5.src} class="w-[49%] " alt="">
-        <img src={galeria6.src} class="w-[100%] " alt="">
-        <img src={galeria7.src} class="w-[18%] " alt="">
-        <img src={galeria8.src} class="w-[27%] h-[20%]" alt="">
-        <img src={galeria9.src} class="w-[53%] " alt="">
+<div class="max-sm:hidden">
+    <div class="px-[5vw] flex flex-col mb-10">
+        <div class="pt-[25vh]">
+            <p class="font-[test] text-[#076F28] w-[30%] text-7xl leading-[6rem]">GALERÍA DE FOTOS</p>
+            <p class="py-[15vh] font-robot tracking-widest w-[60%] text-center m-auto text-xl">Estas imagenes pertenecen a diferentes momentos del trabajo de campo y talleres pedagógicos que se realizaron de la mano con las mujeres y lxs investigadores en el Departamento del Cauca</p>
+        </div>
+        <div class="flex flex-wrap gap-3 w-full justify-between">
+            <img src={galeria1.src} class="w-[49%] " alt="">
+            <img src={galeria2.src} class="w-[49%] " alt="">
+            <img src={galeria3.src} class="w-[100%] " alt="">
+            <img src={galeria4.src} class="w-[49%] " alt="">
+            <img src={galeria5.src} class="w-[49%] " alt="">
+            <img src={galeria6.src} class="w-[100%] " alt="">
+            <img src={galeria7.src} class="w-[18%] " alt="">
+            <img src={galeria8.src} class="w-[27%] h-[20%]" alt="">
+            <img src={galeria9.src} class="w-[53%] " alt="">
+            <iframe
+                    src="https://drive.google.com/file/d/1cc2p6MJS2-MEgQwTD6B8tNSjBuTh1Ven/preview"
+                    width="1100"
+                    height="560"
+                    allow="autoplay"
+                    class="m-auto mb-10"></iframe>
+        </div>
     </div>
 </div>
+<div class="sm:hidden">
+    <div class="px-[5vw] flex flex-col mb-10">
+        <div class="pt-[18vh]">
+            <p class="font-[test] text-[#076F28] w-[100%] text-center text-4xl leading-[2rem]">GALERÍA DE FOTOS</p>
+            <p class="py-[5vh] font-robot tracking-wide w-[90%] text-center m-auto text-lg">Estas imagenes pertenecen a diferentes momentos del trabajo de campo y talleres pedagógicos que se realizaron de la mano con las mujeres y lxs investigadores en el Departamento del Cauca</p>
+        </div>
+        <div class="flex flex-wrap gap-2 w-full justify-between">
+            <img src={galeria1.src} class="w-[48%] " alt="">
+            <img src={galeria2.src} class="w-[48%] " alt="">
+            <img src={galeria3.src} class="w-[100%] " alt="">
+            <img src={galeria4.src} class="w-[48%] " alt="">
+            <img src={galeria5.src} class="w-[48%] " alt="">
+            <img src={galeria6.src} class="w-[100%] " alt="">
+            <img src={galeria7.src} class="w-[20%] " alt="">
+            <img src={galeria8.src} class="w-[30%] h-[20%]" alt="">
+            <img src={galeria9.src} class="w-[45%] h-[20%]" alt="">
+            <iframe
+                    src="https://drive.google.com/file/d/1cc2p6MJS2-MEgQwTD6B8tNSjBuTh1Ven/preview"
+                    width="350"
+                    height="240"
+                    allow="autoplay"
+                    class="m-auto mb-10"></iframe>
+        </div>
+    </div>
+</div>
+
 <Footer />
+    </body>

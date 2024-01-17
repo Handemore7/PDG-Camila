@@ -21,6 +21,17 @@ import {
     }
 </style>
 
+<html class="scroll-smooth" lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="referrer" content="origin" />
+		
+		<title>Mujeres y paz en relato</title>
+	</head>
+	<body class="overflow-x-hidden">
+    
 <div>
     <NavBar path="VocesDeLasComunidades" />
     <!-- VERSION PC -->
@@ -92,14 +103,15 @@ import {
         </div>
         <Footer />
     </div>
+
     <!-- VERSION MOBILE -->
     <div class=" bg-[#FDE0FF] sm:hidden">
         
-        <div class="relative pt-[10vh]">
+        <div class="relative pt-[15vh]">
             <img src={voces_seccion1_1.src} class="w-full h-[20vh]" alt="" />
             <img
                 src={voces_seccion1_2.src}
-                class="absolute w-[38%] top-[11vh] mx-auto left-[5%]"
+                class="absolute w-[38%] top-[17vh] mx-auto left-[5%]"
                 alt=""
             />
             <img
@@ -115,25 +127,25 @@ import {
             </a>
         </div>
     
-        <div class="bg-[#FDE0FF] flex flex-col m-auto gap-10 w-[70%] text-white ">
+        <div class="bg-[#FDE0FF] flex flex-col m-auto gap-5 w-[70%] text-white ">
             <a href="/TelaDeLaResistencia">
                 <div
-                    class="bg-[#076F28] flex flex-col w-[100%] rounded-3xl px-5 pt-5 m-auto relative gap-5 hover:cursor-pointer hover:scale-105 transition-all"
+                    class="bg-[#076F28] flex flex-col w-[100%] rounded-3xl px-5 pt-5 mt-5 m-auto relative  transition-all"
                 >
-                    <img src={voces_seccion3_1.src} class="w-[90%] m-auto mb-5" alt="" />
-                    <p class="font-semibold font-[test] tracking-wider text-6xl leading-[5rem]">
+                    <img src={voces_seccion3_1.src} class="w-[90%] m-auto " alt="" />
+                    <p class="font-semibold font-[test] tracking-wider text-lg mb-3 px-3 py-3 ">
                         RESISTENCIA MUJERES NASA
                     </p>
                 </div>
             </a>
             <a href="https://pdgcamila.netlify.app/#seccion3-2-PRUEBA">
                 <div
-                class="bg-[#FF6D6D] flex flex-col w-[100%] rounded-3xl px-5 pt-5 m-auto relative gap-5 mb-10 hover:cursor-pointer hover:scale-105 transition-all"
+                class="bg-[#FF6D6D] flex flex-col w-[100%] rounded-3xl px-5 pt-5 m-auto relative  mb-10 transition-all"
                 >
                     <div class="bg-[#FF6D6D] flex flex-col">
                         <img src={voces_seccion3_2.src} class="w-[90%] m-auto" alt="" />
                         <p
-                            class="px-3 py-3 font-semibold font-[test] tracking-wider leading-[5rem] text-6xl"
+                            class="px-3 py-3 font-semibold font-[test] tracking-wider text-lg"
                         >
                             COMUNIDAD LGBTQ+ EN CONSTRUCCIÓN DE PAZ
                         </p>
@@ -148,8 +160,8 @@ import {
             <div class="flex">
                 <iframe
                     src="https://drive.google.com/file/d/1cc2p6MJS2-MEgQwTD6B8tNSjBuTh1Ven/preview"
-                    width="800"
-                    height="480"
+                    width="350"
+                    height="240"
                     allow="autoplay"
                     class="m-auto mb-10"></iframe>
             </div>
@@ -158,3 +170,4 @@ import {
     </div>
     
 </div>
+</body>
