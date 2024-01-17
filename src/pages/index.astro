@@ -19,6 +19,8 @@ import {
 	mobile1,
 } from "../../public/assets/index";
 import Test from "../Components/Test";
+import Test2 from "../Components/Test2";
+import Test3 from "../Components/Test3";
 ---
 
 <style>
@@ -30,15 +32,13 @@ import Test from "../Components/Test";
 	}
 </style>
 
-<html lang="es">
+<html class="scroll-smooth" lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="referrer" content="origin" />
-		<link rel="stylesheet" href="./node_modules/react-responsive-carousel/lib/styles/carousel.min.css"/>
-		<script async src="https://www.tiktok.com/embed.js"></script>
 		
 		<title>Mujeres y paz en relato</title>
 	</head>
@@ -142,7 +142,7 @@ import Test from "../Components/Test";
 				>
 					<div
 						id="seccion3-1"
-						class="panel pb-10 flex bg-[#292032] flex-row w-[100vw] h-[100vh] px-[10vw] pt-[10vh]"
+						class="panel relative pb-10 flex bg-[#292032] flex-row w-[100vw] h-[100vh] px-[10vw] pt-[10vh]"
 					>
 						<img src={seccion3img.src} alt="" />
 						<div class="flex flex-col">
@@ -161,6 +161,7 @@ import Test from "../Components/Test";
 								áreas para mejorar.
 							</p>
 						</div>
+						<span class="text-white font-robot absolute bottom-12 text-lg right-36">Scroll</span>
 					</div>
 					<section
 						id="seccion3-2"
@@ -252,13 +253,15 @@ import Test from "../Components/Test";
 										las políticas
 									</p>
 								</div>
+							</div>
+							<div class="w-full mt-10 flex m-auto">
 								<Test client:visible />
 							</div>
 						</div>
 					</section>
 					<section
 						id="seccion3-2-PRUEBA2"
-						class="panel flex bg-[#076F28] flex-row w-[100vw] px-[10vw] pt-[12vh]"
+						class="panel flex bg-[#076F28] flex-col w-[100vw] px-[10vw] pt-[12vh]"
 					>
 						<div class="flex flex-row">
 							<img
@@ -334,10 +337,13 @@ import Test from "../Components/Test";
 								alt=""
 							/>
 						</div>
+						<div class="w-full mt-10 flex m-auto ">
+							<Test2 client:visible />
+						</div>
 					</section>
 					<section
 						id="seccion3-2-PRUEBA"
-						class="panel pb-10 flex bg-[white] flex-row w-[100vw] px-[10vw] pt-[10vh]"
+						class="panel pb-10 flex bg-[white] flex-col w-[100vw] px-[10vw] pt-[10vh]"
 					>
 						<div class="flex flex-row justify-evenly w-full">
 							<div class="flex flex-col">
@@ -351,6 +357,9 @@ import Test from "../Components/Test";
 								class="h-[100vh]"
 								alt=""
 							/>
+						</div>
+						<div class="w-full  mt-10 flex m-auto">
+							<Test3 client:visible />
 						</div>
 					</section>
 				</div>
@@ -903,7 +912,6 @@ import Test from "../Components/Test";
 			});
 	</script>
 
-	<script is:inline async src="https://www.tiktok.com/embed.js"></script>
 	<script
 		is:inline
 		src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
@@ -977,7 +985,7 @@ import Test from "../Components/Test";
 			start: "+=2000",
 			end: "+=450",
 			scrub: true,
-			//markers: true,
+			/* markers: true, */
 		});
 	</script>
 </html>
