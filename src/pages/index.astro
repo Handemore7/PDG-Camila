@@ -345,22 +345,23 @@ import Test3 from "../Components/Test3";
 						id="seccion3-2-PRUEBA"
 						class="panel pb-10 flex bg-[white] flex-col w-[100vw] px-[10vw] pt-[10vh]"
 					>
-						<div class="flex flex-row justify-evenly w-full">
+						<div class="flex flex-row justify-between w-full">
 							<div class="flex flex-col">
 								<img
 									src={seccion3_7.src}
-									class="h-[80vh] mt-5"
+									class="h-[85vh] w-[45vw] mt-12"
 								/>
 							</div>
-							<img
+							<div class="w-full  mt-12 flex m-auto">
+								<Test3 client:visible />
+							</div>
+							<!-- <img
 								src={seccion3img.src}
 								class="h-[100vh]"
 								alt=""
-							/>
+							/> -->
 						</div>
-						<div class="w-full  mt-10 flex m-auto">
-							<Test3 client:visible />
-						</div>
+						
 					</section>
 				</div>
 			</div>
