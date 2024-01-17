@@ -5,7 +5,6 @@ const Test2 = () => {
     style={{
       display: 'flex',
       justifyContent: 'center',
-      height: '200vh',
       margin: 'auto'
     }}
   >

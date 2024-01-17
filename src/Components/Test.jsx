@@ -5,7 +5,7 @@ const Test = () => {
     style={{
       display: 'flex',
       justifyContent: 'center',
-      height: '200vh'
+      
     }}
   >
     <TikTokEmbed

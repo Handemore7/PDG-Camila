@@ -166,7 +166,7 @@ import Icon from '../../public/assets/Icon.png'
 					</div>
 					<section
 						id="seccion3-2"
-						class="panel pb-10 flex bg-[#292032] flex-row w-[100vw] px-[10vw] pt-[10vh]"
+						class="panel flex bg-[#292032] pb-[50vh] flex-row w-[100vw] px-[10vw] pt-[10vh]"
 					>
 					<div class="flex flex-row relative">
 						<img
@@ -262,7 +262,7 @@ import Icon from '../../public/assets/Icon.png'
 					</section>
 					<section
 						id="seccion3-2-PRUEBA2"
-						class="panel flex bg-[#076F28] flex-col w-[100vw] px-[10vw] pt-[12vh]"
+						class="panel flex bg-[#076F28] flex-col w-[100vw] px-[10vw] pt-[12vh] "
 					>
 						<div class="flex flex-row">
 							<img
@@ -344,7 +344,7 @@ import Icon from '../../public/assets/Icon.png'
 					</section>
 					<section
 						id="seccion3-2-PRUEBA"
-						class="panel pb-10 flex bg-[white] flex-col w-[100vw] px-[10vw] pt-[10vh]"
+						class="panel flex bg-[white] flex-col w-[100vw] px-[10vw] pt-[10vh] "
 					>
 						<div class="flex flex-row justify-between w-full">
 							<div class="flex flex-col">
@@ -366,30 +366,30 @@ import Icon from '../../public/assets/Icon.png'
 					</section>
 				</div>
 			</div>
-			<section id="seccion4" class="">
+			<section id="seccion4" class="flex flex-row flex-nowrap overflow-x-hidden w-[300vw]">
 				<div
 					id="seccion4-1"
-					class="pregunta bg-[#292032] h-[100vh] px-24 flex justify-center items-center"
+					class="pregunta w-[100vw] px-24 bg-gradient-to-r from-[#292032] to-[#706075] h-[100vh] flex justify-center items-center"
 				>
-					<p class="text-white text-6xl font-[test] leading-[1.4]">
+					<p class="drop-shadow-lg text-white text-6xl font-[test] leading-[1.4]">
 						¿SABIAS QUE LA PRIMERA ASOCIACIÓN DE MUJERES FIRMANTES
 						DE PAZ SE ENCUENTRA EN EL CAUCA?
 					</p>
 				</div>
 				<div
 					id="seccion4-2"
-					class="pregunta bg-[#292032] h-[100vh] px-24 flex justify-center items-center"
+					class="pregunta w-[100vw] px-24 bg-gradient-to-r from-[#706077] to-[#B59FBA] h-[100vh] flex justify-center items-center"
 				>
-					<p class="text-white text-6xl font-[test] leading-[1.4]">
+					<p class="drop-shadow-lg text-white text-6xl font-[test] leading-[1.4]">
 						UNA ASOCIACIÓN QUE APUESTA POR LA AUTONOMIA ECONOMICA DE
 						LAS MUJERES EN PROCESO DE REINCORPORACIÓN
 					</p>
 				</div>
 				<div
 					id="seccion4-3"
-					class="pregunta bg-[#292032] h-[100vh] px-24 flex justify-center items-center"
+					class="pregunta w-[100vw] px-24 bg-gradient-to-r from-[#B6A0BA] to-[#D2B9D4] h-[100vh] flex justify-center items-center"
 				>
-					<p class="text-white text-6xl font-[test] leading-[1.4]">
+					<p class="drop-shadow-lg text-white text-6xl font-[test] leading-[1.4]">
 						CREANDO ESPACIOS DE CAPACITACIÓN Y EMPRENDEMIENTO
 						ECONOMICO PARA QUE LAS MUJERES PUEDAN GENERAR RECUERSOS
 						DE MANERA INDEPENDIENTE
@@ -924,6 +924,11 @@ import Icon from '../../public/assets/Icon.png'
 		is:inline
 		src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
 	></script>
+	<script 
+		is:inline
+		src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/PixiPlugin.min.js">
+	</script>
+	
 	<script is:inline>
 		/* gsap.registerPlugin(ScrollTrigger);
 				gsap.to("#seccion2", {
@@ -937,7 +942,7 @@ import Icon from '../../public/assets/Icon.png'
 			rotation: 360,
 			duration: 2
 			}); */
-		gsap.registerPlugin(ScrollTrigger);
+		gsap.registerPlugin(ScrollTrigger,PixiPlugin);
 		gsap.defaults({ ease: "none", duration: 2 });
 
 		gsap.to("#seccion2img", {
@@ -969,7 +974,7 @@ import Icon from '../../public/assets/Icon.png'
 		});
 
 		const tl2 = gsap.timeline();
-		tl2.to("#seccion3-2", { yPercent: -48 });
+		tl2.to("#seccion3-2", { yPercent: -60 });
 		ScrollTrigger.create({
 			animation: tl2,
 			trigger: "#seccion3-2",
@@ -980,7 +985,7 @@ import Icon from '../../public/assets/Icon.png'
 		});
 
 		const tl3 = gsap.timeline();
-		tl3.to("#seccion3-2-PRUEBA2", { yPercent: -30 });
+		tl3.to("#seccion3-2-PRUEBA2", { yPercent: -50 });
 		ScrollTrigger.create({
 			animation: tl3,
 			trigger: "#seccion3-2-PRUEBA2",
@@ -989,5 +994,21 @@ import Icon from '../../public/assets/Icon.png'
 			scrub: true,
 			/* markers: true, */
 		});
+		
+		const tl4 = gsap.timeline();
+		tl4.to("#seccion4-1", { xPercent: -0 })
+			.to("#seccion4-2", { xPercent: -100 })
+			.to("#seccion4-3", { xPercent: -200 });
+		ScrollTrigger.create({
+			animation: tl4,
+			trigger: "#seccion4",
+			start: "top top",
+			end: "+=2000",
+			/* markers: true, */
+			scrub: true,
+			pin: true,
+			anticipatePin: 1,
+		});
+		
 	</script>
 </html>
