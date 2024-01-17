@@ -24,7 +24,7 @@ import {
 <div>
     <NavBar path="VocesDeLasComunidades" />
     <!-- VERSION PC -->
-    <div class="max-sm:hidden ">
+    <div class="hidden">
         <div class="relative">
             <img src={voces_seccion1_1.src} class="w-full h-[100vh]" alt="" />
             <img
@@ -44,19 +44,21 @@ import {
         </div>
     
         <div class="bg-[#FDE0FF] flex flex-col w-full gap-10 px-[10%] text-white ">
-            <div
-                class="bg-[#076F28] flex flex-row w-[80%] rounded-xl px-5 pt-5 m-auto relative gap-5 hover:cursor-pointer hover:scale-105 transition-all"
-            >
-                <img src={voces_seccion3_1.src} class="w-[40%] mb-5" alt="" />
-                <p class="font-semibold font-[test] tracking-wider text-7xl">
-                    RESISTENCIA MUJERES NASA
-                </p>
-                <img
-                    src={voces2.src}
-                    class="absolute bottom-0 right-0 w-[30%]"
-                    alt=""
-                />
-            </div>
+            <a href="/TelaDeLaResistencia">
+                <div
+                    class="bg-[#076F28] flex flex-row w-[80%] rounded-xl px-5 pt-5 m-auto relative gap-5 hover:cursor-pointer hover:scale-105 transition-all"
+                >
+                    <img src={voces_seccion3_1.src} class="w-[40%] mb-5" alt="" />
+                    <p class="font-semibold font-[test] tracking-wider text-7xl">
+                        RESISTENCIA MUJERES NASA
+                    </p>
+                    <img
+                        src={voces2.src}
+                        class="absolute bottom-0 right-0 w-[30%]"
+                        alt=""
+                    />
+                </div>
+            </a>
     
             <div
                 class="bg-[#FF6D6D] flex flex-col w-[80%] rounded-xl px-5 pt-5 m-auto relative gap-5 mb-10 hover:cursor-pointer hover:scale-105 transition-all"
@@ -108,15 +110,16 @@ import {
         </div>
     
         <div class="bg-[#FDE0FF] flex flex-col m-auto gap-10 w-[70%] text-white ">
-            <div
-                class="bg-[#076F28] flex flex-col w-[100%] rounded-3xl px-5 pt-5 m-auto relative gap-5 hover:cursor-pointer hover:scale-105 transition-all"
-            >
-                <img src={voces_seccion3_1.src} class="w-[90%] m-auto mb-5" alt="" />
-                <p class="font-semibold font-[test] tracking-wider text-6xl leading-[5rem]">
-                    RESISTENCIA MUJERES NASA
-                </p>
-            </div>
-    
+            <a href="/TelaDeLaResistencia">
+                <div
+                    class="bg-[#076F28] flex flex-col w-[100%] rounded-3xl px-5 pt-5 m-auto relative gap-5 hover:cursor-pointer hover:scale-105 transition-all"
+                >
+                    <img src={voces_seccion3_1.src} class="w-[90%] m-auto mb-5" alt="" />
+                    <p class="font-semibold font-[test] tracking-wider text-6xl leading-[5rem]">
+                        RESISTENCIA MUJERES NASA
+                    </p>
+                </div>
+            </a>
             <div
                 class="bg-[#FF6D6D] flex flex-col w-[100%] rounded-3xl px-5 pt-5 m-auto relative gap-5 mb-10 hover:cursor-pointer hover:scale-105 transition-all"
             >

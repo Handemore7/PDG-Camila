@@ -26,8 +26,38 @@ import seccion3_7 from './seccion3-7.png'
 import seccionVoces from './vocesBanner.png'
 import voces2 from './voces2.png'
 import mobile1 from './mobile1.png'
+import TelaRojo1 from './TelaRojo1.png'
+import TelaRojo2 from './TelaRojo2.png'
+import TelaRojo3 from './TelaRojo3.png' 
+import TelaDefault from './TelaDefault.png'
+import TelaVerde1 from './TelaVerde1.png'
+import TelaVerde2 from './TelaVerde2.png'
+import TelaVerde3 from './TelaVerde3.png' 
+import TelaMorada1 from './TelaMorada1.png'
+import TelaMorada2 from './TelaMorada2.png'
+import TelaMorada3 from './TelaMorada3.png' 
+import TelaAmarilla1 from './TelaAmarilla1.png'
+import TelaAmarilla2 from './TelaAmarilla2.png'
+import TelaAmarilla3 from './TelaAmarilla3.png' 
+import parejita from './parejita.png' 
+/* import comilla from './comilla.svg'  */
 
 export {
+    /* comilla, */
+    parejita,
+    TelaAmarilla1,
+    TelaAmarilla2,
+    TelaAmarilla3,
+    TelaMorada1,
+    TelaMorada2,
+    TelaMorada3,
+    TelaVerde1,
+    TelaVerde2,
+    TelaVerde3,
+    TelaDefault,
+    TelaRojo1,
+    TelaRojo2,
+    TelaRojo3,
     mobile1,
     logoBlanco,
     logoNegro,
