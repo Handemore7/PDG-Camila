@@ -19,6 +19,7 @@
     "gsap": "^3.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-social-media-embed": "^2.4.1",
     "scrollmagic": "^2.0.8",
     "tailwindcss": "^3.3.3"
   }
