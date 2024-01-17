@@ -24,7 +24,7 @@ import {
 <div>
     <NavBar path="VocesDeLasComunidades" />
     <!-- VERSION PC -->
-    <div class="hidden">
+    <div class="hidden max-sm:hidden">
         <div class="relative">
             <img src={voces_seccion1_1.src} class="w-full h-[100vh]" alt="" />
             <img
@@ -39,8 +39,10 @@ import {
             />
         </div>
     
-        <div class="bg-[#FDE0FF] h-[100vh] w-full flex">
-            <img src={voces_seccion2.src} class="w-[50%] m-auto" alt="" />
+        <div class="bg-[#FDE0FF] pt-10 w-full flex">
+            <a href="https://pdgcamila.netlify.app/#Asomanuelitas" class="flex w-full">
+                <img src={voces_seccion2.src} class="w-[50%] m-auto hover:cursor-pointer hover:scale-105" alt="" />
+            </a>
         </div>
     
         <div class="bg-[#FDE0FF] flex flex-col w-full gap-10 px-[10%] text-white ">
@@ -89,7 +91,7 @@ import {
         <Footer />
     </div>
     <!-- VERSION MOBILE -->
-    <div class=" bg-[#FDE0FF]">
+    <div class=" bg-[#FDE0FF] sm:hidden">
         
         <div class="relative pt-[10vh]">
             <img src={voces_seccion1_1.src} class="w-full h-[20vh]" alt="" />
@@ -106,7 +108,9 @@ import {
         </div>
     
         <div class="bg-[#FDE0FF] pt-10 w-full flex">
-            <img src={voces_seccion2.src} class="w-[70%] m-auto" alt="" />
+            <a href="https://pdgcamila.netlify.app/#Asomanuelitas" class="flex w-full">
+                <img src={voces_seccion2.src} class="w-[50%] m-auto hover:cursor-pointer hover:scale-105" alt="" />
+            </a>
         </div>
     
         <div class="bg-[#FDE0FF] flex flex-col m-auto gap-10 w-[70%] text-white ">
@@ -120,18 +124,20 @@ import {
                     </p>
                 </div>
             </a>
-            <div
+            <a href="https://pdgcamila.netlify.app/#seccion3-2-PRUEBA">
+                <div
                 class="bg-[#FF6D6D] flex flex-col w-[100%] rounded-3xl px-5 pt-5 m-auto relative gap-5 mb-10 hover:cursor-pointer hover:scale-105 transition-all"
-            >
-                <div class="bg-[#FF6D6D] flex flex-col">
-                    <img src={voces_seccion3_2.src} class="w-[90%] m-auto" alt="" />
-                    <p
-                        class="px-3 py-3 font-semibold font-[test] tracking-wider leading-[5rem] text-6xl"
-                    >
-                        COMUNIDAD LGBTQ+ EN CONSTRUCCIÓN DE PAZ
-                    </p>
+                >
+                    <div class="bg-[#FF6D6D] flex flex-col">
+                        <img src={voces_seccion3_2.src} class="w-[90%] m-auto" alt="" />
+                        <p
+                            class="px-3 py-3 font-semibold font-[test] tracking-wider leading-[5rem] text-6xl"
+                        >
+                            COMUNIDAD LGBTQ+ EN CONSTRUCCIÓN DE PAZ
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
         <div class="bg-[#292032] rounded-3xl w-full">
             <div class="flex w-full py-10">
