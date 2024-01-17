@@ -40,10 +40,12 @@ import TelaAmarilla1 from './TelaAmarilla1.png'
 import TelaAmarilla2 from './TelaAmarilla2.png'
 import TelaAmarilla3 from './TelaAmarilla3.png' 
 import parejita from './parejita.png' 
+import galeriaBanner from './galeriaBanner.png'
 /* import comilla from './comilla.svg'  */
 
 export {
     /* comilla, */
+    galeriaBanner,
     parejita,
     TelaAmarilla1,
     TelaAmarilla2,

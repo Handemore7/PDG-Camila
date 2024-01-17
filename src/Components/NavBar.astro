@@ -1,6 +1,7 @@
 ---
 /* import { logoBlanco, logoNegro, navBar, fondoSeccion1 } from '../../public/assets/index' */
 import navBar from '../../public/assets/navBar.png'
+import navBar2 from '../../public/assets/navBar2.png'
 const { path } = Astro.props
 
 ---
@@ -12,12 +13,19 @@ const { path } = Astro.props
 
 <nav id="navBar" class="w-full fixed flex pt-10 z-[100] transition-all">
     <div class="m-auto transition-all max-sm:w-[80%]">
-        <div id="mainNavBar" class="py-3 m-auto bg-[#FDE0FF] rounded-2xl max-sm:rounded-full cursor-pointer hover:bg-[#dcb5df] transition-all border border-[#292032]">
-            <img src={navBar.src} class="w-[80%] h-[80%] m-auto">
+        <div id="containerNavBar" class="bg-[#FDE0FF] rounded-2xl flex flex-row">
+            <a href="/">
+                <div id="mainNavBar2" class="relative py-3 m-auto bg-[#FDE0FF] hover:bg-[#e8c2eb] rounded-l-2xl border-r-0 max-sm:rounded-full cursor-pointer transition-all border border-[#292032]">
+                    <img src={navBar.src} class="transition-all w-[80%] h-[80%] m-auto">
+                </div>
+            </a>
+            <div id="mainNavBar" class="relative py-3 m-auto bg-[#FDE0FF] hover:bg-[#e8c2eb] rounded-r-2xl border-l-0 max-sm:rounded-full cursor-pointer transition-all border border-[#292032]">
+                <img src={navBar2.src} class="transition-all w-[80%] h-[80%] m-auto pr-5">
+            </div>
         </div>
-        <div id="optNavBar" class="hidden backdrop-blur rounded-b-2xl flex-col text-center text-white font-bold font-robot  border border-[#292032] border-t-0">
+        <div id="optNavBar" class=" transition-all hidden backdrop-blur rounded-b-2xl flex-col text-center text-white font-bold font-robot  border border-[#292032] border-t-0">
             
-            <div class="relative">
+            <div class="relative transition-all">
                 <p id="navBarAreasDeTrabajo" class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer">ÁREAS DE TRABAJO</p>
                 <div id="modalAreas" class="bg-[#FDE0FF] absolute top-[40%] left-[62%] w-[22vw] rounded-lg text-[#292032] text-md hidden flex-col text-left">
                     <a href="https://pdgcamila.netlify.app/#seccion3-2">
@@ -47,16 +55,15 @@ const { path } = Astro.props
 
 <script is:inline >
     document.querySelector('#mainNavBar').addEventListener('click', () => {document.querySelector('#optNavBar').classList.toggle('hidden')})
-    document.querySelector('#mainNavBar').addEventListener('click', () => {document.querySelector('#mainNavBar').classList.toggle('rounded-t-2xl')})
-    document.querySelector('#mainNavBar').addEventListener('click', () => {document.querySelector('#mainNavBar').classList.toggle('rounded-2xl')})
+    
+    
 
     window.addEventListener('scroll', function () {
         var navbar = this.document.querySelector('#navBar')
-        var header = this.document.querySelector('#mainNavBar')
         var options = this.document.querySelector('#optNavBar')
 
         navbar.classList.toggle('translate-y-[-5vh]',this.window.scrollY > 0)
-        header.classList.toggle('scale-[.80]',this.window.scrollY > 0)
+        this.document.querySelector('#containerNavBar').classList.toggle('scale-[.80]',this.window.scrollY > 0)
         options.classList.toggle('scale-[.80]',this.window.scrollY > 0)
         options.classList.toggle('translate-y-[-6vh]',this.window.scrollY > 0)
     })

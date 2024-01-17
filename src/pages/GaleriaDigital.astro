@@ -1,7 +1,46 @@
 ---
 import NavBar from "../Components/NavBar.astro";
+import { galeriaBanner} from '../../public/assets/index'
 ---
+
+<style>
+    @font-face {
+		font-family: "test";
+		src: url("/assets/fonts/Sleepy Rabbit.ttf");
+	}
+</style>
 
 <div>
     <NavBar path="GaleriaDigital"/>
+    <div id="GaleriaBanner">
+        <img src={galeriaBanner.src} class="h-[100vh] w-full" alt="">
+        <span class="absolute bottom-10 left-10 text-[#076F28] font-[test] text-6xl">INFOGRAFÍAS</span>
+    </div>
+    <section id="GaleriaEnfoque" class="px-32 pt-16">
+        <div class="flex items-center">
+            <span class="font-[test] text-[#442B47] text-xl">REINCORPORACIÓN CON ENFOQUE DE GÉNERO</span>
+            <hr class="h-[1px] my-8 bg-black border-0 w-full">
+        </div>
+        <div class="h-[50vh] bg-black w-[20vw]">
+
+        </div>
+    </section>
+    <section id="GaleriaPdets" class="px-32 pt-16">
+        <div class="flex items-center">
+            <span class="font-[test] text-[#442B47] text-xl">PDETS - ALTO PATÍA Y NORTE DEL CAUCA</span>
+            <hr class="h-[1px] my-8 bg-black border-0 w-full">
+        </div>
+        <div class="h-[50vh] bg-black w-[20vw]">
+
+        </div>
+    </section>
+    <section id="GaleriaLgbt" class="px-32 pt-16">
+        <div class="flex items-center">
+            <span class="font-[test] text-[#442B47] text-xl">COMUNIDAD LGBITQ+ EN CONSTRUCCIÓN DE PAZ</span>
+            <hr class="h-[1px] my-8 bg-black border-0 w-full">
+        </div>
+        <div class="h-[50vh] bg-black w-[20vw]">
+
+        </div>
+    </section>
 </div>
