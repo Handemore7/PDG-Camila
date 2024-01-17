@@ -15,11 +15,11 @@ const { path } = Astro.props
     <div class="m-auto transition-all max-sm:w-[80%]">
         <div id="containerNavBar" class="bg-[#FDE0FF] border border-[#292032] rounded-2xl flex flex-row">
             <a href="/">
-                <div id="mainNavBar2" class="relative py-3 m-auto bg-[#FDE0FF] hover:bg-[#e8c2eb] rounded-l-2xl border-r-0 max-sm:rounded-full cursor-pointer transition-all ">
+                <div id="mainNavBar2" class="relative py-3 m-auto bg-[#FDE0FF] hover:bg-[#e8c2eb] rounded-l-2xl border-r-0  cursor-pointer transition-all ">
                     <img src={navBar.src} class="transition-all w-[80%] h-[80%] m-auto">
                 </div>
             </a>
-            <div id="mainNavBar" class="relative py-3 m-auto bg-[#FDE0FF] hover:bg-[#e8c2eb] rounded-r-2xl border-l-0 max-sm:rounded-full cursor-pointer transition-all ">
+            <div id="mainNavBar" class="relative py-3 m-auto bg-[#FDE0FF] hover:bg-[#e8c2eb] rounded-r-2xl border-l-0  cursor-pointer transition-all ">
                 <img src={navBar2.src} class="transition-all w-[80%] h-[80%] m-auto pr-5">
             </div>
         </div>
@@ -27,15 +27,15 @@ const { path } = Astro.props
             
             <div class="relative transition-all">
                 <p id="navBarAreasDeTrabajo" class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">ÁREAS DE TRABAJO</p>
-                <div id="modalAreas" class="bg-[#FDE0FF] absolute top-[40%] left-[62%] w-[22vw] rounded-lg text-[#292032] text-md hidden flex-col text-left z-50">
+                <div id="modalAreas" class="bg-[#FDE0FF] absolute top-[40%] left-[62%] w-[22vw] max-sm:w-[30vw] rounded-lg text-[#292032] text-md hidden flex-col text-left z-50">
                     <a href="https://pdgcamila.netlify.app/#seccion3-2">
-                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer hover:rounded-lg">REINCORPORACIÓN CON ENFOQUE DE GÉNERO</p>
+                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer max-sm:text-xs hover:rounded-lg">REINCORPORACIÓN CON ENFOQUE DE GÉNERO</p>
                     </a>
                     <a href="https://pdgcamila.netlify.app/#seccion3-2-PRUEBA2">
-                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer ">PDTES ALTO PATÍA Y NORTE DEL CAUCA</p>
+                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer max-sm:text-xs ">PDTES ALTO PATÍA Y NORTE DEL CAUCA</p>
                     </a>
                     <a href="https://pdgcamila.netlify.app/#seccion3-2-PRUEBA">
-                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer hover:rounded-lg">COMUNIDAD LGBT EN CONSTRUCCIÓN DE PAZ</p>
+                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer max-sm:text-xs hover:rounded-lg">COMUNIDAD LGBT EN CONSTRUCCIÓN DE PAZ</p>
                     </a>
                 </div>
             </div>
@@ -48,12 +48,12 @@ const { path } = Astro.props
             </a>
             <div class="relative transition-all">
                 <p id="navBarGaleriaDigital" class=" h-[10vh] flex justify-center w-full items-center hover:bg-[rgba(1,1,1,.5)] transition-all cursor-pointer drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">GALERIA DIGITAL</p>
-                <div id="modalGaleria" class="bg-[#FDE0FF] absolute top-[40%] left-[62%] w-[22vw] rounded-lg text-[#292032] text-md hidden flex-col text-left z-50">
+                <div id="modalGaleria" class="bg-[#FDE0FF] absolute top-[40%] left-[62%] w-[22vw] max-sm:w-[30vw] rounded-lg text-[#292032] text-md hidden flex-col text-left z-50">
                     <a href="/GaleriaDigital">
-                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer hover:rounded-lg">INFOGRAFÍAS</p>
+                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer max-sm:text-xs hover:rounded-lg">INFOGRAFÍAS</p>
                     </a>
                     <a href="/GaleriaDeFotos">
-                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer ">GALERÍA DE FOTOS</p>
+                        <p class="py-3 px-2 hover:bg-[#efc8f1] transition-all cursor-pointer max-sm:text-xs ">GALERÍA DE FOTOS</p>
                     </a>
                 </div>
             </div>
